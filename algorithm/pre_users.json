@@ -1,0 +1,7994 @@
+[
+    {
+        "UserID": 1,
+        "Name": "Walter Torres",
+        "Gender": "Female",
+        "DOB": "2000-04-25",
+        "Interests": [
+            "international_students",
+            "theme_parks",
+            "cooking_shows",
+            "eco_friendly_lifestyle",
+            "time_management",
+            "fantasy_books",
+            "financial_literacy"
+        ],
+        "Seen_post": [
+            [
+                "financial_literacy"
+            ],
+            [
+                "fantasy_books",
+                "theme_parks"
+            ],
+            [
+                "financial_literacy",
+                "eco_friendly_lifestyle",
+                "cooking_shows"
+            ],
+            [
+                "fantasy_books",
+                "cooking_shows",
+                "international_students"
+            ],
+            [
+                "financial_literacy"
+            ],
+            [
+                "time_management"
+            ],
+            [
+                "cooking_shows"
+            ],
+            [
+                "international_students"
+            ],
+            [
+                "theme_parks",
+                "cooking_shows"
+            ]
+        ],
+        "Post_post": [
+            [
+                "international_students",
+                "financial_literacy",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "eco_friendly_lifestyle",
+                "theme_parks",
+                "cooking_shows"
+            ],
+            [
+                "financial_literacy"
+            ],
+            [
+                "time_management",
+                "financial_literacy"
+            ],
+            [
+                "eco_friendly_lifestyle",
+                "fantasy_books",
+                "time_management"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 2,
+        "Name": "Erin Bray",
+        "Gender": "Male",
+        "DOB": "2005-11-29",
+        "Interests": [
+            "nature_photography",
+            "street_food",
+            "indie_games",
+            "magic_shows",
+            "comics",
+            "celebrity_gossip",
+            "graphic_design",
+            "mental_health_awareness",
+            "eco_friendly_lifestyle"
+        ],
+        "Seen_post": [
+            [
+                "comics",
+                "graphic_design",
+                "nature_photography"
+            ],
+            [
+                "celebrity_gossip",
+                "indie_games"
+            ],
+            [
+                "comics",
+                "magic_shows"
+            ],
+            [
+                "nature_photography",
+                "street_food",
+                "graphic_design"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "indie_games",
+                "mental_health_awareness"
+            ],
+            [
+                "nature_photography",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "magic_shows",
+                "comics"
+            ]
+        ],
+        "Post_post": [
+            [
+                "celebrity_gossip"
+            ],
+            [
+                "magic_shows",
+                "indie_games"
+            ],
+            [
+                "graphic_design"
+            ],
+            [
+                "nature_photography",
+                "graphic_design"
+            ],
+            [
+                "magic_shows",
+                "indie_games",
+                "street_food"
+            ],
+            [
+                "indie_games",
+                "graphic_design"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 3,
+        "Name": "Meagan Keller",
+        "Gender": "Male",
+        "DOB": "2003-11-11",
+        "Interests": [
+            "water_sports",
+            "UX_design",
+            "anime_fan",
+            "haunted_places",
+            "indie_games",
+            "detective_stories",
+            "online_shopping",
+            "debate_club",
+            "skiing",
+            "romance_movies"
+        ],
+        "Seen_post": [
+            [
+                "haunted_places",
+                "detective_stories"
+            ],
+            [
+                "UX_design",
+                "skiing"
+            ],
+            [
+                "haunted_places",
+                "online_shopping",
+                "detective_stories"
+            ],
+            [
+                "romance_movies",
+                "anime_fan",
+                "UX_design"
+            ],
+            [
+                "skiing",
+                "UX_design",
+                "water_sports"
+            ]
+        ],
+        "Post_post": [
+            [
+                "water_sports"
+            ],
+            [
+                "anime_fan"
+            ],
+            [
+                "haunted_places",
+                "online_shopping",
+                "detective_stories"
+            ],
+            [
+                "haunted_places",
+                "detective_stories"
+            ],
+            [
+                "online_shopping",
+                "water_sports"
+            ],
+            [
+                "skiing",
+                "online_shopping"
+            ],
+            [
+                "water_sports"
+            ],
+            [
+                "UX_design",
+                "debate_club",
+                "indie_games"
+            ],
+            [
+                "skiing"
+            ],
+            [
+                "anime_fan",
+                "haunted_places",
+                "online_shopping"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 4,
+        "Name": "Paul Keith",
+        "Gender": "Male",
+        "DOB": "2000-11-09",
+        "Interests": [
+            "social_justice",
+            "snowboarding",
+            "webtoons",
+            "manga",
+            "extreme_sports",
+            "hip_hop"
+        ],
+        "Seen_post": [
+            [
+                "hip_hop",
+                "extreme_sports"
+            ],
+            [
+                "hip_hop"
+            ],
+            [
+                "manga"
+            ],
+            [
+                "social_justice",
+                "webtoons"
+            ],
+            [
+                "snowboarding",
+                "manga"
+            ]
+        ],
+        "Post_post": [
+            [
+                "hip_hop",
+                "extreme_sports",
+                "social_justice"
+            ],
+            [
+                "social_justice"
+            ],
+            [
+                "snowboarding",
+                "hip_hop",
+                "social_justice"
+            ],
+            [
+                "webtoons"
+            ],
+            [
+                "social_justice",
+                "snowboarding",
+                "extreme_sports"
+            ],
+            [
+                "manga",
+                "webtoons"
+            ],
+            [
+                "webtoons",
+                "hip_hop"
+            ],
+            [
+                "manga"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 5,
+        "Name": "Raven Huffman",
+        "Gender": "Female",
+        "DOB": "2002-07-31",
+        "Interests": [
+            "career_planning",
+            "series_binging",
+            "sports_events",
+            "budgeting_tips",
+            "karaoke",
+            "mobile_games",
+            "FPS_games"
+        ],
+        "Seen_post": [
+            [
+                "budgeting_tips",
+                "karaoke",
+                "sports_events"
+            ],
+            [
+                "mobile_games"
+            ],
+            [
+                "karaoke",
+                "series_binging",
+                "mobile_games"
+            ],
+            [
+                "FPS_games",
+                "karaoke"
+            ],
+            [
+                "budgeting_tips"
+            ],
+            [
+                "karaoke",
+                "sports_events"
+            ],
+            [
+                "career_planning",
+                "FPS_games",
+                "mobile_games"
+            ],
+            [
+                "mobile_games"
+            ]
+        ],
+        "Post_post": [
+            [
+                "sports_events",
+                "career_planning"
+            ],
+            [
+                "career_planning"
+            ],
+            [
+                "career_planning"
+            ],
+            [
+                "sports_events"
+            ],
+            [
+                "budgeting_tips",
+                "FPS_games"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 6,
+        "Name": "James Mcbride",
+        "Gender": "Male",
+        "DOB": "1999-09-13",
+        "Interests": [
+            "jazz_music",
+            "rock_music",
+            "RPG_games",
+            "costume_parties",
+            "UX_design",
+            "anime_fan",
+            "horror_stories"
+        ],
+        "Seen_post": [
+            [
+                "jazz_music"
+            ],
+            [
+                "costume_parties",
+                "RPG_games"
+            ],
+            [
+                "jazz_music"
+            ],
+            [
+                "costume_parties",
+                "anime_fan"
+            ],
+            [
+                "rock_music",
+                "jazz_music"
+            ],
+            [
+                "horror_stories"
+            ],
+            [
+                "costume_parties",
+                "UX_design",
+                "horror_stories"
+            ],
+            [
+                "costume_parties",
+                "horror_stories",
+                "RPG_games"
+            ],
+            [
+                "anime_fan"
+            ]
+        ],
+        "Post_post": [
+            [
+                "jazz_music"
+            ],
+            [
+                "RPG_games",
+                "horror_stories",
+                "UX_design"
+            ],
+            [
+                "jazz_music",
+                "anime_fan",
+                "RPG_games"
+            ],
+            [
+                "rock_music"
+            ],
+            [
+                "costume_parties"
+            ],
+            [
+                "anime_fan",
+                "jazz_music"
+            ],
+            [
+                "RPG_games"
+            ],
+            [
+                "jazz_music"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 7,
+        "Name": "Aaron Clark",
+        "Gender": "Female",
+        "DOB": "2006-08-25",
+        "Interests": [
+            "romance_movies",
+            "J_pop",
+            "international_students",
+            "costume_parties",
+            "volunteer_work",
+            "horror_stories",
+            "mental_health_awareness",
+            "rock_music",
+            "coding"
+        ],
+        "Seen_post": [
+            [
+                "horror_stories",
+                "volunteer_work",
+                "romance_movies"
+            ],
+            [
+                "rock_music",
+                "coding"
+            ],
+            [
+                "mental_health_awareness",
+                "coding",
+                "horror_stories"
+            ],
+            [
+                "rock_music",
+                "J_pop"
+            ],
+            [
+                "volunteer_work"
+            ],
+            [
+                "costume_parties",
+                "mental_health_awareness"
+            ]
+        ],
+        "Post_post": [
+            [
+                "horror_stories"
+            ],
+            [
+                "J_pop"
+            ],
+            [
+                "mental_health_awareness"
+            ],
+            [
+                "mental_health_awareness"
+            ],
+            [
+                "J_pop",
+                "costume_parties",
+                "horror_stories"
+            ],
+            [
+                "volunteer_work"
+            ],
+            [
+                "volunteer_work",
+                "romance_movies",
+                "mental_health_awareness"
+            ],
+            [
+                "coding",
+                "volunteer_work",
+                "J_pop"
+            ],
+            [
+                "romance_movies",
+                "J_pop"
+            ],
+            [
+                "international_students"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 8,
+        "Name": "Brian Howell",
+        "Gender": "Male",
+        "DOB": "2005-08-03",
+        "Interests": [
+            "social_justice",
+            "sci-fi_movies",
+            "fantasy_books",
+            "hip_hop",
+            "AI_development",
+            "romance_movies",
+            "MOBA_games",
+            "series_binging",
+            "summer_vacations"
+        ],
+        "Seen_post": [
+            [
+                "fantasy_books"
+            ],
+            [
+                "summer_vacations",
+                "fantasy_books",
+                "hip_hop"
+            ],
+            [
+                "fantasy_books",
+                "summer_vacations",
+                "sci-fi_movies"
+            ],
+            [
+                "social_justice",
+                "fantasy_books"
+            ],
+            [
+                "social_justice"
+            ],
+            [
+                "hip_hop",
+                "sci-fi_movies"
+            ]
+        ],
+        "Post_post": [
+            [
+                "fantasy_books",
+                "sci-fi_movies"
+            ],
+            [
+                "series_binging",
+                "MOBA_games"
+            ],
+            [
+                "series_binging",
+                "hip_hop"
+            ],
+            [
+                "sci-fi_movies",
+                "summer_vacations",
+                "series_binging"
+            ],
+            [
+                "romance_movies",
+                "series_binging"
+            ],
+            [
+                "social_justice"
+            ],
+            [
+                "hip_hop",
+                "summer_vacations"
+            ],
+            [
+                "MOBA_games",
+                "fantasy_books"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 9,
+        "Name": "Troy Moore",
+        "Gender": "Female",
+        "DOB": "2000-06-22",
+        "Interests": [
+            "comics",
+            "romance_movies",
+            "machine_learning",
+            "rock_music",
+            "true_crime"
+        ],
+        "Seen_post": [
+            [
+                "rock_music",
+                "romance_movies"
+            ],
+            [
+                "comics",
+                "romance_movies"
+            ],
+            [
+                "machine_learning",
+                "romance_movies"
+            ],
+            [
+                "true_crime",
+                "romance_movies",
+                "rock_music"
+            ],
+            [
+                "rock_music"
+            ],
+            [
+                "rock_music",
+                "true_crime"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "rock_music",
+                "romance_movies"
+            ],
+            [
+                "machine_learning",
+                "rock_music"
+            ]
+        ],
+        "Post_post": [
+            [
+                "machine_learning"
+            ],
+            [
+                "rock_music",
+                "true_crime"
+            ],
+            [
+                "true_crime"
+            ],
+            [
+                "rock_music",
+                "comics"
+            ],
+            [
+                "rock_music"
+            ],
+            [
+                "true_crime",
+                "machine_learning",
+                "comics"
+            ],
+            [
+                "machine_learning",
+                "comics",
+                "true_crime"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 10,
+        "Name": "Dustin Nash",
+        "Gender": "Female",
+        "DOB": "2003-12-07",
+        "Interests": [
+            "public_speaking",
+            "cosplay",
+            "eco_friendly_lifestyle",
+            "academic_research",
+            "mobile_games",
+            "social_media",
+            "machine_learning",
+            "crime_thrillers"
+        ],
+        "Seen_post": [
+            [
+                "crime_thrillers",
+                "machine_learning"
+            ],
+            [
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "mobile_games"
+            ],
+            [
+                "public_speaking",
+                "machine_learning"
+            ],
+            [
+                "crime_thrillers"
+            ],
+            [
+                "crime_thrillers",
+                "social_media",
+                "machine_learning"
+            ],
+            [
+                "public_speaking"
+            ],
+            [
+                "social_media",
+                "public_speaking"
+            ],
+            [
+                "public_speaking",
+                "machine_learning"
+            ]
+        ],
+        "Post_post": [
+            [
+                "mobile_games",
+                "cosplay",
+                "public_speaking"
+            ],
+            [
+                "social_media",
+                "crime_thrillers"
+            ],
+            [
+                "crime_thrillers",
+                "public_speaking",
+                "machine_learning"
+            ],
+            [
+                "public_speaking",
+                "machine_learning"
+            ],
+            [
+                "social_media"
+            ],
+            [
+                "crime_thrillers"
+            ],
+            [
+                "academic_research",
+                "social_media"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 11,
+        "Name": "Crystal Freeman",
+        "Gender": "Male",
+        "DOB": "2004-05-09",
+        "Interests": [
+            "theme_nights",
+            "theme_parks",
+            "comedy_movies",
+            "soundtracks",
+            "water_sports"
+        ],
+        "Seen_post": [
+            [
+                "water_sports",
+                "theme_nights"
+            ],
+            [
+                "theme_parks"
+            ],
+            [
+                "comedy_movies",
+                "water_sports",
+                "theme_nights"
+            ],
+            [
+                "water_sports",
+                "soundtracks"
+            ],
+            [
+                "water_sports",
+                "theme_parks",
+                "soundtracks"
+            ],
+            [
+                "theme_parks"
+            ],
+            [
+                "comedy_movies",
+                "theme_nights"
+            ],
+            [
+                "comedy_movies",
+                "water_sports",
+                "soundtracks"
+            ]
+        ],
+        "Post_post": [
+            [
+                "water_sports",
+                "theme_nights",
+                "soundtracks"
+            ],
+            [
+                "theme_parks",
+                "theme_nights"
+            ],
+            [
+                "water_sports",
+                "theme_nights",
+                "comedy_movies"
+            ],
+            [
+                "theme_parks"
+            ],
+            [
+                "theme_parks",
+                "water_sports",
+                "comedy_movies"
+            ],
+            [
+                "soundtracks",
+                "theme_nights",
+                "theme_parks"
+            ],
+            [
+                "water_sports",
+                "soundtracks",
+                "theme_nights"
+            ],
+            [
+                "comedy_movies",
+                "soundtracks",
+                "water_sports"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 12,
+        "Name": "Tammy Wilson",
+        "Gender": "Female",
+        "DOB": "1999-08-01",
+        "Interests": [
+            "coding",
+            "online_shopping",
+            "productivity_tips",
+            "leadership_skills",
+            "resume_building"
+        ],
+        "Seen_post": [
+            [
+                "productivity_tips"
+            ],
+            [
+                "leadership_skills",
+                "productivity_tips"
+            ],
+            [
+                "leadership_skills",
+                "productivity_tips"
+            ],
+            [
+                "coding",
+                "leadership_skills",
+                "productivity_tips"
+            ],
+            [
+                "productivity_tips"
+            ],
+            [
+                "coding",
+                "resume_building"
+            ]
+        ],
+        "Post_post": [
+            [
+                "leadership_skills",
+                "online_shopping"
+            ],
+            [
+                "online_shopping",
+                "resume_building"
+            ],
+            [
+                "coding",
+                "online_shopping"
+            ],
+            [
+                "resume_building",
+                "online_shopping"
+            ],
+            [
+                "leadership_skills",
+                "online_shopping"
+            ],
+            [
+                "productivity_tips"
+            ],
+            [
+                "online_shopping",
+                "productivity_tips"
+            ],
+            [
+                "leadership_skills",
+                "resume_building",
+                "coding"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 13,
+        "Name": "Christopher Cherry",
+        "Gender": "Male",
+        "DOB": "2003-04-29",
+        "Interests": [
+            "parkour",
+            "mystery_novels",
+            "language_exchange",
+            "eSports",
+            "graphic_design",
+            "jazz_music"
+        ],
+        "Seen_post": [
+            [
+                "language_exchange",
+                "parkour"
+            ],
+            [
+                "parkour",
+                "language_exchange",
+                "graphic_design"
+            ],
+            [
+                "jazz_music"
+            ],
+            [
+                "graphic_design",
+                "jazz_music"
+            ],
+            [
+                "eSports",
+                "graphic_design"
+            ]
+        ],
+        "Post_post": [
+            [
+                "eSports",
+                "graphic_design"
+            ],
+            [
+                "mystery_novels"
+            ],
+            [
+                "language_exchange"
+            ],
+            [
+                "graphic_design"
+            ],
+            [
+                "eSports"
+            ],
+            [
+                "mystery_novels",
+                "jazz_music",
+                "language_exchange"
+            ],
+            [
+                "language_exchange",
+                "jazz_music"
+            ],
+            [
+                "language_exchange",
+                "jazz_music",
+                "parkour"
+            ],
+            [
+                "language_exchange"
+            ],
+            [
+                "jazz_music"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 14,
+        "Name": "David Wood",
+        "Gender": "Female",
+        "DOB": "2006-08-22",
+        "Interests": [
+            "VR_experiences",
+            "magic_shows",
+            "mental_health_awareness",
+            "sci_fi_fantasy",
+            "scientific_innovation"
+        ],
+        "Seen_post": [
+            [
+                "sci_fi_fantasy",
+                "magic_shows",
+                "VR_experiences"
+            ],
+            [
+                "magic_shows"
+            ],
+            [
+                "sci_fi_fantasy",
+                "scientific_innovation",
+                "magic_shows"
+            ],
+            [
+                "VR_experiences"
+            ],
+            [
+                "sci_fi_fantasy"
+            ],
+            [
+                "sci_fi_fantasy",
+                "VR_experiences"
+            ],
+            [
+                "scientific_innovation",
+                "sci_fi_fantasy"
+            ],
+            [
+                "VR_experiences",
+                "magic_shows",
+                "sci_fi_fantasy"
+            ],
+            [
+                "sci_fi_fantasy",
+                "scientific_innovation"
+            ]
+        ],
+        "Post_post": [
+            [
+                "mental_health_awareness"
+            ],
+            [
+                "scientific_innovation",
+                "magic_shows",
+                "mental_health_awareness"
+            ],
+            [
+                "sci_fi_fantasy",
+                "VR_experiences",
+                "scientific_innovation"
+            ],
+            [
+                "VR_experiences",
+                "mental_health_awareness",
+                "sci_fi_fantasy"
+            ],
+            [
+                "magic_shows",
+                "sci_fi_fantasy"
+            ],
+            [
+                "sci_fi_fantasy",
+                "magic_shows",
+                "VR_experiences"
+            ],
+            [
+                "magic_shows",
+                "mental_health_awareness"
+            ],
+            [
+                "sci_fi_fantasy",
+                "mental_health_awareness"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 15,
+        "Name": "Debbie Case",
+        "Gender": "Male",
+        "DOB": "2001-08-29",
+        "Interests": [
+            "classical_music",
+            "financial_literacy",
+            "activism",
+            "pet_lover",
+            "eco_friendly_lifestyle",
+            "photography",
+            "beach_days",
+            "personal_finance"
+        ],
+        "Seen_post": [
+            [
+                "pet_lover",
+                "beach_days"
+            ],
+            [
+                "beach_days"
+            ],
+            [
+                "financial_literacy",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "beach_days"
+            ],
+            [
+                "activism"
+            ]
+        ],
+        "Post_post": [
+            [
+                "pet_lover",
+                "photography",
+                "beach_days"
+            ],
+            [
+                "eco_friendly_lifestyle",
+                "pet_lover",
+                "activism"
+            ],
+            [
+                "personal_finance"
+            ],
+            [
+                "financial_literacy",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "activism",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "photography",
+                "personal_finance",
+                "beach_days"
+            ],
+            [
+                "pet_lover",
+                "activism",
+                "classical_music"
+            ],
+            [
+                "classical_music",
+                "eco_friendly_lifestyle",
+                "personal_finance"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 16,
+        "Name": "Cindy Kim",
+        "Gender": "Male",
+        "DOB": "2004-03-08",
+        "Interests": [
+            "theme_nights",
+            "concert_fan",
+            "mobile_games",
+            "rock_music",
+            "jazz_music"
+        ],
+        "Seen_post": [
+            [
+                "concert_fan",
+                "theme_nights"
+            ],
+            [
+                "concert_fan"
+            ],
+            [
+                "mobile_games",
+                "concert_fan"
+            ],
+            [
+                "rock_music",
+                "jazz_music"
+            ],
+            [
+                "rock_music"
+            ],
+            [
+                "concert_fan",
+                "rock_music"
+            ]
+        ],
+        "Post_post": [
+            [
+                "mobile_games"
+            ],
+            [
+                "concert_fan",
+                "mobile_games",
+                "theme_nights"
+            ],
+            [
+                "jazz_music",
+                "rock_music"
+            ],
+            [
+                "theme_nights"
+            ],
+            [
+                "jazz_music",
+                "theme_nights"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 17,
+        "Name": "April Boyer",
+        "Gender": "Female",
+        "DOB": "1998-11-20",
+        "Interests": [
+            "mindfulness",
+            "food_blogging",
+            "magic_shows",
+            "comics",
+            "summer_vacations",
+            "data_science",
+            "live_streaming",
+            "card_games"
+        ],
+        "Seen_post": [
+            [
+                "card_games",
+                "comics"
+            ],
+            [
+                "food_blogging"
+            ],
+            [
+                "card_games",
+                "comics"
+            ],
+            [
+                "food_blogging"
+            ],
+            [
+                "mindfulness",
+                "magic_shows",
+                "data_science"
+            ]
+        ],
+        "Post_post": [
+            [
+                "data_science"
+            ],
+            [
+                "mindfulness",
+                "summer_vacations"
+            ],
+            [
+                "comics",
+                "summer_vacations"
+            ],
+            [
+                "comics",
+                "magic_shows"
+            ],
+            [
+                "magic_shows",
+                "comics"
+            ],
+            [
+                "mindfulness"
+            ],
+            [
+                "comics",
+                "live_streaming"
+            ],
+            [
+                "card_games"
+            ],
+            [
+                "food_blogging",
+                "summer_vacations"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 18,
+        "Name": "Kenneth Williams",
+        "Gender": "Female",
+        "DOB": "2004-12-12",
+        "Interests": [
+            "summer_vacations",
+            "mindfulness",
+            "fitness_goals",
+            "role_playing",
+            "creature_features",
+            "magic_shows",
+            "time_management",
+            "sci-fi_movies",
+            "fantasy_movies"
+        ],
+        "Seen_post": [
+            [
+                "sci-fi_movies"
+            ],
+            [
+                "mindfulness",
+                "summer_vacations"
+            ],
+            [
+                "mindfulness",
+                "fitness_goals",
+                "sci-fi_movies"
+            ],
+            [
+                "summer_vacations",
+                "mindfulness"
+            ],
+            [
+                "sci-fi_movies",
+                "time_management",
+                "mindfulness"
+            ],
+            [
+                "time_management",
+                "role_playing"
+            ],
+            [
+                "role_playing"
+            ],
+            [
+                "summer_vacations",
+                "time_management",
+                "magic_shows"
+            ]
+        ],
+        "Post_post": [
+            [
+                "creature_features",
+                "sci-fi_movies",
+                "fitness_goals"
+            ],
+            [
+                "role_playing",
+                "summer_vacations"
+            ],
+            [
+                "sci-fi_movies"
+            ],
+            [
+                "role_playing",
+                "fantasy_movies",
+                "summer_vacations"
+            ],
+            [
+                "fitness_goals",
+                "fantasy_movies"
+            ],
+            [
+                "fantasy_movies"
+            ],
+            [
+                "summer_vacations"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 19,
+        "Name": "Andrew Haynes",
+        "Gender": "Male",
+        "DOB": "2000-08-05",
+        "Interests": [
+            "financial_literacy",
+            "theme_parks",
+            "comedy_movies",
+            "social_justice",
+            "community_service",
+            "leadership_skills",
+            "mindfulness",
+            "social_media"
+        ],
+        "Seen_post": [
+            [
+                "leadership_skills"
+            ],
+            [
+                "comedy_movies",
+                "mindfulness",
+                "social_justice"
+            ],
+            [
+                "mindfulness",
+                "leadership_skills",
+                "social_media"
+            ],
+            [
+                "mindfulness",
+                "theme_parks",
+                "social_justice"
+            ],
+            [
+                "theme_parks",
+                "financial_literacy"
+            ],
+            [
+                "community_service",
+                "leadership_skills",
+                "comedy_movies"
+            ],
+            [
+                "financial_literacy",
+                "social_media",
+                "theme_parks"
+            ]
+        ],
+        "Post_post": [
+            [
+                "theme_parks",
+                "community_service",
+                "mindfulness"
+            ],
+            [
+                "social_media",
+                "theme_parks",
+                "financial_literacy"
+            ],
+            [
+                "leadership_skills",
+                "mindfulness"
+            ],
+            [
+                "community_service",
+                "leadership_skills"
+            ],
+            [
+                "social_media"
+            ],
+            [
+                "leadership_skills",
+                "theme_parks",
+                "mindfulness"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 20,
+        "Name": "Ryan Chen",
+        "Gender": "Male",
+        "DOB": "2006-03-09",
+        "Interests": [
+            "critical_thinking",
+            "webtoons",
+            "social_media",
+            "study_groups",
+            "DnD",
+            "classical_music",
+            "internship_hunting",
+            "mental_health_awareness",
+            "theme_nights",
+            "AI_development"
+        ],
+        "Seen_post": [
+            [
+                "DnD",
+                "study_groups"
+            ],
+            [
+                "classical_music",
+                "study_groups"
+            ],
+            [
+                "study_groups",
+                "DnD",
+                "classical_music"
+            ],
+            [
+                "theme_nights",
+                "DnD"
+            ],
+            [
+                "mental_health_awareness",
+                "classical_music"
+            ],
+            [
+                "classical_music"
+            ]
+        ],
+        "Post_post": [
+            [
+                "DnD"
+            ],
+            [
+                "DnD",
+                "critical_thinking",
+                "AI_development"
+            ],
+            [
+                "social_media",
+                "study_groups"
+            ],
+            [
+                "AI_development",
+                "social_media",
+                "webtoons"
+            ],
+            [
+                "critical_thinking"
+            ],
+            [
+                "theme_nights",
+                "critical_thinking"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 21,
+        "Name": "Scott Moore",
+        "Gender": "Male",
+        "DOB": "2003-09-08",
+        "Interests": [
+            "digital_art",
+            "horror_movies",
+            "parkour",
+            "eco_friendly_lifestyle",
+            "classical_music",
+            "personal_finance",
+            "activism",
+            "social_justice",
+            "time_management",
+            "costume_parties"
+        ],
+        "Seen_post": [
+            [
+                "digital_art",
+                "social_justice",
+                "horror_movies"
+            ],
+            [
+                "time_management"
+            ],
+            [
+                "classical_music",
+                "social_justice"
+            ],
+            [
+                "costume_parties",
+                "social_justice",
+                "personal_finance"
+            ],
+            [
+                "parkour",
+                "time_management"
+            ]
+        ],
+        "Post_post": [
+            [
+                "social_justice",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "horror_movies",
+                "eco_friendly_lifestyle",
+                "activism"
+            ],
+            [
+                "costume_parties"
+            ],
+            [
+                "parkour",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "activism",
+                "costume_parties",
+                "social_justice"
+            ],
+            [
+                "costume_parties",
+                "time_management"
+            ],
+            [
+                "personal_finance"
+            ],
+            [
+                "activism",
+                "costume_parties"
+            ],
+            [
+                "parkour",
+                "classical_music",
+                "activism"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 22,
+        "Name": "Russell Miller",
+        "Gender": "Male",
+        "DOB": "2006-08-03",
+        "Interests": [
+            "healthy_eating",
+            "digital_art",
+            "online_shopping",
+            "coding",
+            "camping_trips",
+            "mystery_novels",
+            "skateboarding",
+            "pet_lover",
+            "detective_stories"
+        ],
+        "Seen_post": [
+            [
+                "digital_art",
+                "pet_lover"
+            ],
+            [
+                "skateboarding",
+                "camping_trips",
+                "mystery_novels"
+            ],
+            [
+                "healthy_eating"
+            ],
+            [
+                "mystery_novels",
+                "camping_trips",
+                "online_shopping"
+            ],
+            [
+                "healthy_eating"
+            ]
+        ],
+        "Post_post": [
+            [
+                "online_shopping",
+                "pet_lover"
+            ],
+            [
+                "pet_lover",
+                "coding",
+                "online_shopping"
+            ],
+            [
+                "camping_trips",
+                "online_shopping"
+            ],
+            [
+                "pet_lover"
+            ],
+            [
+                "camping_trips",
+                "mystery_novels"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 23,
+        "Name": "Melanie Lee",
+        "Gender": "Female",
+        "DOB": "2001-02-25",
+        "Interests": [
+            "activism",
+            "creature_features",
+            "DnD",
+            "productivity_tips",
+            "theme_nights"
+        ],
+        "Seen_post": [
+            [
+                "creature_features",
+                "theme_nights",
+                "activism"
+            ],
+            [
+                "activism",
+                "productivity_tips",
+                "theme_nights"
+            ],
+            [
+                "theme_nights",
+                "DnD",
+                "productivity_tips"
+            ],
+            [
+                "productivity_tips",
+                "theme_nights"
+            ],
+            [
+                "DnD",
+                "activism",
+                "theme_nights"
+            ],
+            [
+                "DnD",
+                "creature_features"
+            ],
+            [
+                "productivity_tips",
+                "activism"
+            ],
+            [
+                "theme_nights"
+            ],
+            [
+                "activism",
+                "theme_nights",
+                "DnD"
+            ]
+        ],
+        "Post_post": [
+            [
+                "productivity_tips",
+                "theme_nights",
+                "creature_features"
+            ],
+            [
+                "DnD",
+                "activism",
+                "productivity_tips"
+            ],
+            [
+                "theme_nights"
+            ],
+            [
+                "productivity_tips",
+                "creature_features",
+                "DnD"
+            ],
+            [
+                "DnD"
+            ],
+            [
+                "DnD",
+                "productivity_tips"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 24,
+        "Name": "Sara Waller",
+        "Gender": "Male",
+        "DOB": "1999-04-15",
+        "Interests": [
+            "pop_music",
+            "detective_stories",
+            "coding",
+            "creature_features",
+            "travel_vlogging",
+            "indie_music",
+            "foreign_films",
+            "graphic_design",
+            "international_students"
+        ],
+        "Seen_post": [
+            [
+                "foreign_films"
+            ],
+            [
+                "foreign_films",
+                "international_students"
+            ],
+            [
+                "creature_features",
+                "travel_vlogging"
+            ],
+            [
+                "graphic_design",
+                "creature_features",
+                "pop_music"
+            ],
+            [
+                "pop_music"
+            ],
+            [
+                "graphic_design",
+                "travel_vlogging",
+                "indie_music"
+            ],
+            [
+                "pop_music",
+                "coding"
+            ],
+            [
+                "foreign_films",
+                "detective_stories",
+                "coding"
+            ]
+        ],
+        "Post_post": [
+            [
+                "pop_music",
+                "coding",
+                "international_students"
+            ],
+            [
+                "foreign_films"
+            ],
+            [
+                "foreign_films"
+            ],
+            [
+                "creature_features",
+                "detective_stories",
+                "foreign_films"
+            ],
+            [
+                "coding",
+                "international_students"
+            ],
+            [
+                "detective_stories",
+                "indie_music"
+            ],
+            [
+                "indie_music",
+                "coding",
+                "foreign_films"
+            ],
+            [
+                "graphic_design"
+            ],
+            [
+                "indie_music",
+                "pop_music",
+                "creature_features"
+            ],
+            [
+                "detective_stories",
+                "travel_vlogging"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 25,
+        "Name": "Jennifer Hughes",
+        "Gender": "Male",
+        "DOB": "2000-09-03",
+        "Interests": [
+            "fan_fiction",
+            "volunteer_work",
+            "cultural_exchange",
+            "internship_hunting",
+            "community_service"
+        ],
+        "Seen_post": [
+            [
+                "volunteer_work",
+                "fan_fiction"
+            ],
+            [
+                "internship_hunting",
+                "community_service"
+            ],
+            [
+                "community_service",
+                "fan_fiction",
+                "cultural_exchange"
+            ],
+            [
+                "fan_fiction"
+            ],
+            [
+                "fan_fiction"
+            ]
+        ],
+        "Post_post": [
+            [
+                "internship_hunting"
+            ],
+            [
+                "volunteer_work",
+                "community_service",
+                "fan_fiction"
+            ],
+            [
+                "fan_fiction",
+                "community_service",
+                "cultural_exchange"
+            ],
+            [
+                "internship_hunting"
+            ],
+            [
+                "internship_hunting"
+            ],
+            [
+                "community_service",
+                "fan_fiction",
+                "volunteer_work"
+            ],
+            [
+                "volunteer_work"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 26,
+        "Name": "Laura Berg PhD",
+        "Gender": "Male",
+        "DOB": "2002-07-24",
+        "Interests": [
+            "time_management",
+            "MOBA_games",
+            "series_binging",
+            "reality_TV",
+            "machine_learning",
+            "fantasy_books",
+            "supernatural_thrillers",
+            "cosplay",
+            "soundtracks",
+            "puzzle_games"
+        ],
+        "Seen_post": [
+            [
+                "reality_TV",
+                "time_management"
+            ],
+            [
+                "fantasy_books"
+            ],
+            [
+                "machine_learning",
+                "reality_TV"
+            ],
+            [
+                "time_management",
+                "series_binging"
+            ],
+            [
+                "soundtracks"
+            ],
+            [
+                "puzzle_games"
+            ],
+            [
+                "time_management",
+                "MOBA_games"
+            ],
+            [
+                "time_management",
+                "soundtracks",
+                "supernatural_thrillers"
+            ]
+        ],
+        "Post_post": [
+            [
+                "puzzle_games"
+            ],
+            [
+                "fantasy_books",
+                "series_binging",
+                "machine_learning"
+            ],
+            [
+                "fantasy_books",
+                "soundtracks",
+                "reality_TV"
+            ],
+            [
+                "MOBA_games"
+            ],
+            [
+                "fantasy_books"
+            ],
+            [
+                "soundtracks"
+            ],
+            [
+                "cosplay"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 27,
+        "Name": "Christian Meyer",
+        "Gender": "Male",
+        "DOB": "2004-02-28",
+        "Interests": [
+            "comedy_movies",
+            "beach_days",
+            "water_sports",
+            "fitness_goals",
+            "productivity_tips"
+        ],
+        "Seen_post": [
+            [
+                "water_sports"
+            ],
+            [
+                "beach_days",
+                "productivity_tips",
+                "fitness_goals"
+            ],
+            [
+                "comedy_movies",
+                "water_sports"
+            ],
+            [
+                "fitness_goals"
+            ],
+            [
+                "water_sports",
+                "fitness_goals",
+                "productivity_tips"
+            ],
+            [
+                "productivity_tips"
+            ],
+            [
+                "water_sports"
+            ],
+            [
+                "water_sports",
+                "beach_days",
+                "comedy_movies"
+            ],
+            [
+                "water_sports",
+                "fitness_goals",
+                "beach_days"
+            ]
+        ],
+        "Post_post": [
+            [
+                "beach_days",
+                "comedy_movies"
+            ],
+            [
+                "productivity_tips",
+                "comedy_movies",
+                "fitness_goals"
+            ],
+            [
+                "comedy_movies"
+            ],
+            [
+                "fitness_goals",
+                "water_sports",
+                "comedy_movies"
+            ],
+            [
+                "productivity_tips",
+                "fitness_goals",
+                "water_sports"
+            ],
+            [
+                "beach_days",
+                "fitness_goals"
+            ],
+            [
+                "water_sports",
+                "fitness_goals"
+            ],
+            [
+                "comedy_movies"
+            ],
+            [
+                "water_sports"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 28,
+        "Name": "Beth Meyer",
+        "Gender": "Female",
+        "DOB": "2000-12-12",
+        "Interests": [
+            "foreign_films",
+            "camping_trips",
+            "concert_fan",
+            "memes",
+            "career_planning",
+            "classical_music"
+        ],
+        "Seen_post": [
+            [
+                "classical_music"
+            ],
+            [
+                "camping_trips",
+                "foreign_films",
+                "classical_music"
+            ],
+            [
+                "classical_music",
+                "camping_trips",
+                "concert_fan"
+            ],
+            [
+                "concert_fan"
+            ],
+            [
+                "concert_fan",
+                "classical_music",
+                "foreign_films"
+            ],
+            [
+                "memes",
+                "career_planning",
+                "classical_music"
+            ]
+        ],
+        "Post_post": [
+            [
+                "career_planning",
+                "camping_trips"
+            ],
+            [
+                "classical_music",
+                "foreign_films"
+            ],
+            [
+                "career_planning",
+                "foreign_films",
+                "concert_fan"
+            ],
+            [
+                "foreign_films",
+                "memes",
+                "classical_music"
+            ],
+            [
+                "classical_music"
+            ],
+            [
+                "foreign_films",
+                "concert_fan",
+                "career_planning"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 29,
+        "Name": "Dennis Skinner",
+        "Gender": "Female",
+        "DOB": "2005-10-22",
+        "Interests": [
+            "DnD",
+            "theme_nights",
+            "project_management",
+            "cosplay",
+            "cultural_exchange",
+            "snowboarding"
+        ],
+        "Seen_post": [
+            [
+                "DnD",
+                "snowboarding",
+                "cosplay"
+            ],
+            [
+                "theme_nights"
+            ],
+            [
+                "snowboarding",
+                "theme_nights"
+            ],
+            [
+                "theme_nights",
+                "cultural_exchange",
+                "project_management"
+            ],
+            [
+                "project_management",
+                "cultural_exchange",
+                "cosplay"
+            ],
+            [
+                "cosplay"
+            ]
+        ],
+        "Post_post": [
+            [
+                "theme_nights"
+            ],
+            [
+                "DnD",
+                "theme_nights",
+                "cosplay"
+            ],
+            [
+                "cosplay",
+                "snowboarding",
+                "project_management"
+            ],
+            [
+                "theme_nights",
+                "DnD"
+            ],
+            [
+                "theme_nights",
+                "snowboarding",
+                "DnD"
+            ],
+            [
+                "cosplay",
+                "cultural_exchange"
+            ],
+            [
+                "theme_nights"
+            ],
+            [
+                "DnD",
+                "cultural_exchange"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 30,
+        "Name": "Dana Sweeney",
+        "Gender": "Male",
+        "DOB": "2004-04-08",
+        "Interests": [
+            "creative_writing",
+            "debate_club",
+            "FPS_games",
+            "philosophy_discussions",
+            "social_media",
+            "food_blogging"
+        ],
+        "Seen_post": [
+            [
+                "FPS_games",
+                "social_media",
+                "philosophy_discussions"
+            ],
+            [
+                "debate_club",
+                "food_blogging",
+                "philosophy_discussions"
+            ],
+            [
+                "creative_writing"
+            ],
+            [
+                "FPS_games",
+                "philosophy_discussions",
+                "creative_writing"
+            ],
+            [
+                "FPS_games",
+                "social_media"
+            ],
+            [
+                "philosophy_discussions"
+            ],
+            [
+                "creative_writing",
+                "social_media",
+                "philosophy_discussions"
+            ]
+        ],
+        "Post_post": [
+            [
+                "philosophy_discussions",
+                "debate_club"
+            ],
+            [
+                "debate_club",
+                "philosophy_discussions"
+            ],
+            [
+                "FPS_games",
+                "philosophy_discussions",
+                "creative_writing"
+            ],
+            [
+                "philosophy_discussions"
+            ],
+            [
+                "FPS_games"
+            ],
+            [
+                "philosophy_discussions",
+                "social_media",
+                "debate_club"
+            ],
+            [
+                "creative_writing"
+            ],
+            [
+                "FPS_games",
+                "philosophy_discussions"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 31,
+        "Name": "Logan Wolf",
+        "Gender": "Male",
+        "DOB": "1998-11-09",
+        "Interests": [
+            "detective_stories",
+            "action_movies",
+            "creative_writing",
+            "memes",
+            "live_streaming"
+        ],
+        "Seen_post": [
+            [
+                "action_movies"
+            ],
+            [
+                "live_streaming"
+            ],
+            [
+                "live_streaming",
+                "action_movies",
+                "creative_writing"
+            ],
+            [
+                "memes",
+                "action_movies",
+                "creative_writing"
+            ],
+            [
+                "live_streaming",
+                "detective_stories",
+                "action_movies"
+            ],
+            [
+                "live_streaming",
+                "action_movies",
+                "detective_stories"
+            ],
+            [
+                "live_streaming",
+                "action_movies",
+                "detective_stories"
+            ],
+            [
+                "live_streaming",
+                "memes"
+            ],
+            [
+                "creative_writing",
+                "memes"
+            ]
+        ],
+        "Post_post": [
+            [
+                "detective_stories",
+                "creative_writing"
+            ],
+            [
+                "action_movies",
+                "memes"
+            ],
+            [
+                "creative_writing"
+            ],
+            [
+                "creative_writing"
+            ],
+            [
+                "action_movies",
+                "memes",
+                "creative_writing"
+            ],
+            [
+                "creative_writing",
+                "detective_stories"
+            ],
+            [
+                "action_movies"
+            ],
+            [
+                "action_movies",
+                "detective_stories",
+                "live_streaming"
+            ],
+            [
+                "live_streaming"
+            ],
+            [
+                "live_streaming",
+                "creative_writing"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 32,
+        "Name": "Mrs. Nancy Snyder MD",
+        "Gender": "Male",
+        "DOB": "2004-08-23",
+        "Interests": [
+            "eco_friendly_lifestyle",
+            "live_streaming",
+            "creature_features",
+            "mobile_games",
+            "reality_TV",
+            "concert_fan"
+        ],
+        "Seen_post": [
+            [
+                "mobile_games",
+                "concert_fan",
+                "live_streaming"
+            ],
+            [
+                "concert_fan",
+                "mobile_games"
+            ],
+            [
+                "live_streaming",
+                "creature_features",
+                "reality_TV"
+            ],
+            [
+                "mobile_games"
+            ],
+            [
+                "concert_fan",
+                "creature_features",
+                "reality_TV"
+            ],
+            [
+                "creature_features",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "reality_TV",
+                "eco_friendly_lifestyle"
+            ]
+        ],
+        "Post_post": [
+            [
+                "reality_TV",
+                "live_streaming",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "reality_TV",
+                "creature_features"
+            ],
+            [
+                "concert_fan",
+                "mobile_games",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "reality_TV"
+            ],
+            [
+                "concert_fan",
+                "live_streaming",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "creature_features",
+                "reality_TV"
+            ],
+            [
+                "reality_TV"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 33,
+        "Name": "Lori Hill",
+        "Gender": "Female",
+        "DOB": "2000-12-07",
+        "Interests": [
+            "creative_writing",
+            "supernatural_thrillers",
+            "pop_music",
+            "resume_building",
+            "fitness_goals",
+            "reality_TV",
+            "urban_exploration"
+        ],
+        "Seen_post": [
+            [
+                "fitness_goals"
+            ],
+            [
+                "resume_building",
+                "pop_music",
+                "supernatural_thrillers"
+            ],
+            [
+                "pop_music",
+                "fitness_goals",
+                "reality_TV"
+            ],
+            [
+                "urban_exploration",
+                "supernatural_thrillers"
+            ],
+            [
+                "urban_exploration",
+                "supernatural_thrillers",
+                "creative_writing"
+            ],
+            [
+                "resume_building",
+                "supernatural_thrillers",
+                "fitness_goals"
+            ]
+        ],
+        "Post_post": [
+            [
+                "fitness_goals",
+                "urban_exploration"
+            ],
+            [
+                "supernatural_thrillers",
+                "pop_music"
+            ],
+            [
+                "reality_TV",
+                "urban_exploration"
+            ],
+            [
+                "reality_TV"
+            ],
+            [
+                "pop_music",
+                "resume_building"
+            ],
+            [
+                "pop_music",
+                "fitness_goals"
+            ],
+            [
+                "supernatural_thrillers"
+            ],
+            [
+                "supernatural_thrillers",
+                "urban_exploration"
+            ],
+            [
+                "fitness_goals",
+                "pop_music",
+                "urban_exploration"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 34,
+        "Name": "Dawn Johnson",
+        "Gender": "Female",
+        "DOB": "2001-11-06",
+        "Interests": [
+            "sci-fi_movies",
+            "manga",
+            "skateboarding",
+            "photography",
+            "creative_writing",
+            "parkour",
+            "skiing",
+            "activism",
+            "haunted_places",
+            "VR_experiences"
+        ],
+        "Seen_post": [
+            [
+                "sci-fi_movies",
+                "VR_experiences",
+                "creative_writing"
+            ],
+            [
+                "activism",
+                "creative_writing",
+                "sci-fi_movies"
+            ],
+            [
+                "sci-fi_movies",
+                "VR_experiences",
+                "manga"
+            ],
+            [
+                "creative_writing",
+                "sci-fi_movies",
+                "photography"
+            ],
+            [
+                "parkour"
+            ],
+            [
+                "haunted_places",
+                "VR_experiences",
+                "sci-fi_movies"
+            ],
+            [
+                "skiing"
+            ]
+        ],
+        "Post_post": [
+            [
+                "activism",
+                "creative_writing"
+            ],
+            [
+                "sci-fi_movies",
+                "skateboarding",
+                "VR_experiences"
+            ],
+            [
+                "photography"
+            ],
+            [
+                "sci-fi_movies"
+            ],
+            [
+                "sci-fi_movies"
+            ],
+            [
+                "skateboarding"
+            ],
+            [
+                "skateboarding",
+                "photography",
+                "activism"
+            ],
+            [
+                "haunted_places"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 35,
+        "Name": "Amber Conway",
+        "Gender": "Male",
+        "DOB": "2005-03-04",
+        "Interests": [
+            "haunted_places",
+            "comics",
+            "sci-fi_movies",
+            "K_pop",
+            "J_pop",
+            "concert_fan",
+            "food_blogging",
+            "DnD"
+        ],
+        "Seen_post": [
+            [
+                "concert_fan",
+                "sci-fi_movies"
+            ],
+            [
+                "sci-fi_movies",
+                "J_pop"
+            ],
+            [
+                "food_blogging",
+                "comics",
+                "sci-fi_movies"
+            ],
+            [
+                "sci-fi_movies"
+            ],
+            [
+                "concert_fan"
+            ],
+            [
+                "concert_fan",
+                "DnD"
+            ],
+            [
+                "concert_fan",
+                "haunted_places"
+            ],
+            [
+                "comics",
+                "concert_fan",
+                "J_pop"
+            ],
+            [
+                "K_pop",
+                "comics",
+                "concert_fan"
+            ],
+            [
+                "DnD",
+                "J_pop"
+            ]
+        ],
+        "Post_post": [
+            [
+                "food_blogging",
+                "concert_fan",
+                "J_pop"
+            ],
+            [
+                "K_pop",
+                "concert_fan"
+            ],
+            [
+                "K_pop"
+            ],
+            [
+                "haunted_places"
+            ],
+            [
+                "concert_fan",
+                "DnD"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 36,
+        "Name": "Christopher Hernandez",
+        "Gender": "Male",
+        "DOB": "2005-12-30",
+        "Interests": [
+            "comics",
+            "puzzle_solving",
+            "festivals",
+            "self_improvement",
+            "VR_experiences",
+            "activism",
+            "costume_parties",
+            "stand_up_comedy"
+        ],
+        "Seen_post": [
+            [
+                "activism",
+                "costume_parties",
+                "stand_up_comedy"
+            ],
+            [
+                "VR_experiences",
+                "puzzle_solving",
+                "costume_parties"
+            ],
+            [
+                "VR_experiences",
+                "self_improvement"
+            ],
+            [
+                "costume_parties",
+                "festivals",
+                "VR_experiences"
+            ],
+            [
+                "stand_up_comedy",
+                "festivals"
+            ],
+            [
+                "puzzle_solving",
+                "VR_experiences"
+            ]
+        ],
+        "Post_post": [
+            [
+                "comics",
+                "VR_experiences",
+                "activism"
+            ],
+            [
+                "VR_experiences",
+                "stand_up_comedy"
+            ],
+            [
+                "stand_up_comedy",
+                "comics",
+                "festivals"
+            ],
+            [
+                "costume_parties"
+            ],
+            [
+                "self_improvement"
+            ],
+            [
+                "puzzle_solving"
+            ],
+            [
+                "VR_experiences"
+            ],
+            [
+                "VR_experiences",
+                "festivals",
+                "stand_up_comedy"
+            ],
+            [
+                "stand_up_comedy",
+                "comics",
+                "costume_parties"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 37,
+        "Name": "Zachary Nguyen",
+        "Gender": "Male",
+        "DOB": "2001-03-09",
+        "Interests": [
+            "parkour",
+            "snowboarding",
+            "extreme_sports",
+            "coding",
+            "sci_fi_books",
+            "social_justice",
+            "debate_club",
+            "magic_shows",
+            "sports_events",
+            "career_planning"
+        ],
+        "Seen_post": [
+            [
+                "career_planning",
+                "social_justice",
+                "coding"
+            ],
+            [
+                "debate_club"
+            ],
+            [
+                "parkour"
+            ],
+            [
+                "magic_shows"
+            ],
+            [
+                "social_justice",
+                "extreme_sports",
+                "parkour"
+            ],
+            [
+                "debate_club",
+                "social_justice",
+                "parkour"
+            ],
+            [
+                "extreme_sports"
+            ],
+            [
+                "parkour",
+                "extreme_sports",
+                "snowboarding"
+            ],
+            [
+                "sports_events"
+            ]
+        ],
+        "Post_post": [
+            [
+                "career_planning",
+                "snowboarding",
+                "extreme_sports"
+            ],
+            [
+                "sci_fi_books",
+                "career_planning"
+            ],
+            [
+                "career_planning"
+            ],
+            [
+                "career_planning"
+            ],
+            [
+                "snowboarding",
+                "sports_events",
+                "sci_fi_books"
+            ],
+            [
+                "debate_club",
+                "parkour"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 38,
+        "Name": "James Simon",
+        "Gender": "Male",
+        "DOB": "2005-03-16",
+        "Interests": [
+            "data_science",
+            "summer_vacations",
+            "card_games",
+            "debate_club",
+            "project_management",
+            "sci-fi_movies",
+            "indie_games"
+        ],
+        "Seen_post": [
+            [
+                "sci-fi_movies",
+                "debate_club",
+                "indie_games"
+            ],
+            [
+                "indie_games",
+                "debate_club"
+            ],
+            [
+                "project_management",
+                "data_science",
+                "debate_club"
+            ],
+            [
+                "debate_club",
+                "sci-fi_movies",
+                "data_science"
+            ],
+            [
+                "card_games"
+            ],
+            [
+                "data_science",
+                "sci-fi_movies",
+                "debate_club"
+            ]
+        ],
+        "Post_post": [
+            [
+                "card_games",
+                "indie_games",
+                "summer_vacations"
+            ],
+            [
+                "sci-fi_movies",
+                "data_science"
+            ],
+            [
+                "debate_club"
+            ],
+            [
+                "sci-fi_movies",
+                "card_games",
+                "debate_club"
+            ],
+            [
+                "debate_club",
+                "project_management"
+            ],
+            [
+                "sci-fi_movies",
+                "debate_club",
+                "card_games"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 39,
+        "Name": "Angela Wiggins",
+        "Gender": "Female",
+        "DOB": "2001-12-17",
+        "Interests": [
+            "academic_research",
+            "jazz_music",
+            "drama_movies",
+            "water_sports",
+            "puzzle_games",
+            "sci_fi_books"
+        ],
+        "Seen_post": [
+            [
+                "jazz_music",
+                "drama_movies"
+            ],
+            [
+                "water_sports"
+            ],
+            [
+                "jazz_music",
+                "drama_movies",
+                "puzzle_games"
+            ],
+            [
+                "sci_fi_books",
+                "water_sports"
+            ],
+            [
+                "drama_movies",
+                "puzzle_games"
+            ],
+            [
+                "academic_research",
+                "sci_fi_books"
+            ],
+            [
+                "jazz_music"
+            ]
+        ],
+        "Post_post": [
+            [
+                "water_sports",
+                "academic_research",
+                "drama_movies"
+            ],
+            [
+                "sci_fi_books",
+                "water_sports",
+                "academic_research"
+            ],
+            [
+                "sci_fi_books",
+                "jazz_music"
+            ],
+            [
+                "puzzle_games"
+            ],
+            [
+                "sci_fi_books",
+                "water_sports",
+                "puzzle_games"
+            ],
+            [
+                "puzzle_games"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 40,
+        "Name": "Thomas Ruiz",
+        "Gender": "Female",
+        "DOB": "2003-07-10",
+        "Interests": [
+            "beach_days",
+            "stand_up_comedy",
+            "crime_thrillers",
+            "role_playing",
+            "mystery_novels"
+        ],
+        "Seen_post": [
+            [
+                "crime_thrillers"
+            ],
+            [
+                "beach_days",
+                "stand_up_comedy",
+                "crime_thrillers"
+            ],
+            [
+                "role_playing",
+                "stand_up_comedy"
+            ],
+            [
+                "mystery_novels",
+                "stand_up_comedy",
+                "crime_thrillers"
+            ],
+            [
+                "mystery_novels"
+            ]
+        ],
+        "Post_post": [
+            [
+                "beach_days"
+            ],
+            [
+                "beach_days",
+                "crime_thrillers"
+            ],
+            [
+                "crime_thrillers",
+                "mystery_novels",
+                "stand_up_comedy"
+            ],
+            [
+                "crime_thrillers"
+            ],
+            [
+                "beach_days",
+                "crime_thrillers",
+                "stand_up_comedy"
+            ],
+            [
+                "crime_thrillers"
+            ],
+            [
+                "crime_thrillers"
+            ],
+            [
+                "mystery_novels",
+                "stand_up_comedy"
+            ],
+            [
+                "beach_days",
+                "mystery_novels"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 41,
+        "Name": "Ashley Bell",
+        "Gender": "Male",
+        "DOB": "2002-01-14",
+        "Interests": [
+            "cooking_shows",
+            "personal_finance",
+            "card_games",
+            "snowboarding",
+            "festivals",
+            "photography"
+        ],
+        "Seen_post": [
+            [
+                "snowboarding"
+            ],
+            [
+                "snowboarding",
+                "photography",
+                "cooking_shows"
+            ],
+            [
+                "personal_finance",
+                "cooking_shows",
+                "festivals"
+            ],
+            [
+                "festivals",
+                "snowboarding",
+                "card_games"
+            ],
+            [
+                "personal_finance"
+            ],
+            [
+                "cooking_shows",
+                "photography",
+                "personal_finance"
+            ]
+        ],
+        "Post_post": [
+            [
+                "photography",
+                "festivals"
+            ],
+            [
+                "cooking_shows"
+            ],
+            [
+                "festivals",
+                "snowboarding",
+                "card_games"
+            ],
+            [
+                "cooking_shows",
+                "snowboarding"
+            ],
+            [
+                "personal_finance",
+                "card_games",
+                "photography"
+            ],
+            [
+                "festivals",
+                "personal_finance"
+            ],
+            [
+                "card_games",
+                "personal_finance",
+                "photography"
+            ],
+            [
+                "card_games",
+                "festivals",
+                "photography"
+            ],
+            [
+                "festivals",
+                "snowboarding"
+            ],
+            [
+                "cooking_shows"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 42,
+        "Name": "Peter Gilmore",
+        "Gender": "Male",
+        "DOB": "1998-10-26",
+        "Interests": [
+            "language_exchange",
+            "FPS_games",
+            "sci_fi_fantasy",
+            "DnD",
+            "fantasy_movies",
+            "self_improvement",
+            "crime_thrillers"
+        ],
+        "Seen_post": [
+            [
+                "crime_thrillers",
+                "fantasy_movies"
+            ],
+            [
+                "fantasy_movies"
+            ],
+            [
+                "self_improvement",
+                "sci_fi_fantasy"
+            ],
+            [
+                "language_exchange"
+            ],
+            [
+                "fantasy_movies",
+                "sci_fi_fantasy",
+                "self_improvement"
+            ],
+            [
+                "self_improvement",
+                "FPS_games",
+                "fantasy_movies"
+            ],
+            [
+                "fantasy_movies",
+                "FPS_games",
+                "self_improvement"
+            ]
+        ],
+        "Post_post": [
+            [
+                "sci_fi_fantasy",
+                "crime_thrillers"
+            ],
+            [
+                "self_improvement",
+                "fantasy_movies",
+                "sci_fi_fantasy"
+            ],
+            [
+                "DnD"
+            ],
+            [
+                "DnD",
+                "fantasy_movies",
+                "FPS_games"
+            ],
+            [
+                "language_exchange",
+                "fantasy_movies",
+                "DnD"
+            ],
+            [
+                "language_exchange",
+                "self_improvement"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 43,
+        "Name": "Todd Reynolds",
+        "Gender": "Female",
+        "DOB": "2003-05-24",
+        "Interests": [
+            "horror_movies",
+            "philosophy_discussions",
+            "UX_design",
+            "jazz_music",
+            "anime_fan",
+            "mystery_novels"
+        ],
+        "Seen_post": [
+            [
+                "mystery_novels"
+            ],
+            [
+                "horror_movies",
+                "mystery_novels",
+                "philosophy_discussions"
+            ],
+            [
+                "philosophy_discussions",
+                "jazz_music",
+                "horror_movies"
+            ],
+            [
+                "horror_movies"
+            ],
+            [
+                "horror_movies",
+                "philosophy_discussions",
+                "mystery_novels"
+            ]
+        ],
+        "Post_post": [
+            [
+                "jazz_music",
+                "horror_movies",
+                "UX_design"
+            ],
+            [
+                "UX_design"
+            ],
+            [
+                "jazz_music",
+                "horror_movies",
+                "UX_design"
+            ],
+            [
+                "jazz_music",
+                "horror_movies",
+                "anime_fan"
+            ],
+            [
+                "horror_movies"
+            ],
+            [
+                "jazz_music"
+            ],
+            [
+                "anime_fan",
+                "UX_design"
+            ],
+            [
+                "anime_fan",
+                "UX_design"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 44,
+        "Name": "Veronica Davis",
+        "Gender": "Male",
+        "DOB": "1999-04-19",
+        "Interests": [
+            "reality_TV",
+            "mental_health_awareness",
+            "hip_hop",
+            "meditation_practice",
+            "movie_marathons",
+            "true_crime"
+        ],
+        "Seen_post": [
+            [
+                "true_crime",
+                "movie_marathons"
+            ],
+            [
+                "reality_TV",
+                "true_crime",
+                "mental_health_awareness"
+            ],
+            [
+                "meditation_practice"
+            ],
+            [
+                "reality_TV",
+                "movie_marathons"
+            ],
+            [
+                "hip_hop",
+                "movie_marathons",
+                "true_crime"
+            ],
+            [
+                "movie_marathons",
+                "hip_hop"
+            ],
+            [
+                "movie_marathons",
+                "mental_health_awareness",
+                "hip_hop"
+            ],
+            [
+                "mental_health_awareness",
+                "reality_TV",
+                "meditation_practice"
+            ],
+            [
+                "movie_marathons"
+            ],
+            [
+                "movie_marathons",
+                "reality_TV",
+                "true_crime"
+            ]
+        ],
+        "Post_post": [
+            [
+                "true_crime",
+                "meditation_practice",
+                "hip_hop"
+            ],
+            [
+                "movie_marathons",
+                "true_crime",
+                "mental_health_awareness"
+            ],
+            [
+                "hip_hop",
+                "true_crime"
+            ],
+            [
+                "movie_marathons",
+                "meditation_practice",
+                "true_crime"
+            ],
+            [
+                "reality_TV",
+                "meditation_practice",
+                "mental_health_awareness"
+            ],
+            [
+                "mental_health_awareness",
+                "true_crime",
+                "hip_hop"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 45,
+        "Name": "Douglas Mack",
+        "Gender": "Female",
+        "DOB": "1998-10-28",
+        "Interests": [
+            "RPG_games",
+            "card_games",
+            "online_shopping",
+            "debate_club",
+            "photography"
+        ],
+        "Seen_post": [
+            [
+                "debate_club"
+            ],
+            [
+                "online_shopping",
+                "photography",
+                "debate_club"
+            ],
+            [
+                "card_games",
+                "online_shopping"
+            ],
+            [
+                "card_games",
+                "online_shopping"
+            ],
+            [
+                "debate_club",
+                "photography",
+                "online_shopping"
+            ],
+            [
+                "debate_club",
+                "online_shopping"
+            ],
+            [
+                "card_games"
+            ],
+            [
+                "online_shopping",
+                "card_games"
+            ],
+            [
+                "card_games",
+                "online_shopping",
+                "photography"
+            ]
+        ],
+        "Post_post": [
+            [
+                "RPG_games",
+                "card_games",
+                "photography"
+            ],
+            [
+                "card_games",
+                "debate_club"
+            ],
+            [
+                "online_shopping",
+                "RPG_games",
+                "card_games"
+            ],
+            [
+                "debate_club"
+            ],
+            [
+                "online_shopping",
+                "photography"
+            ],
+            [
+                "photography",
+                "RPG_games",
+                "online_shopping"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 46,
+        "Name": "Jose Pittman",
+        "Gender": "Male",
+        "DOB": "2003-06-16",
+        "Interests": [
+            "retro_gaming",
+            "networking_events",
+            "sustainability",
+            "haunted_places",
+            "coding",
+            "movie_marathons",
+            "manga",
+            "food_blogging"
+        ],
+        "Seen_post": [
+            [
+                "movie_marathons",
+                "food_blogging",
+                "manga"
+            ],
+            [
+                "sustainability",
+                "movie_marathons",
+                "food_blogging"
+            ],
+            [
+                "coding",
+                "movie_marathons",
+                "retro_gaming"
+            ],
+            [
+                "haunted_places",
+                "networking_events",
+                "coding"
+            ],
+            [
+                "retro_gaming"
+            ],
+            [
+                "networking_events"
+            ],
+            [
+                "haunted_places",
+                "retro_gaming"
+            ],
+            [
+                "coding"
+            ]
+        ],
+        "Post_post": [
+            [
+                "haunted_places"
+            ],
+            [
+                "haunted_places",
+                "movie_marathons",
+                "coding"
+            ],
+            [
+                "coding",
+                "retro_gaming"
+            ],
+            [
+                "movie_marathons"
+            ],
+            [
+                "haunted_places",
+                "movie_marathons",
+                "networking_events"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 47,
+        "Name": "Andrew Rose",
+        "Gender": "Male",
+        "DOB": "2003-12-23",
+        "Interests": [
+            "internship_hunting",
+            "budgeting_tips",
+            "cultural_exchange",
+            "public_speaking",
+            "webtoons",
+            "meditation_practice",
+            "resume_building",
+            "VR_experiences",
+            "travel_vlogging",
+            "nature_photography"
+        ],
+        "Seen_post": [
+            [
+                "meditation_practice"
+            ],
+            [
+                "public_speaking"
+            ],
+            [
+                "nature_photography",
+                "internship_hunting",
+                "cultural_exchange"
+            ],
+            [
+                "budgeting_tips",
+                "resume_building"
+            ],
+            [
+                "resume_building"
+            ],
+            [
+                "cultural_exchange"
+            ],
+            [
+                "budgeting_tips"
+            ],
+            [
+                "public_speaking",
+                "cultural_exchange"
+            ]
+        ],
+        "Post_post": [
+            [
+                "public_speaking",
+                "meditation_practice"
+            ],
+            [
+                "resume_building",
+                "meditation_practice"
+            ],
+            [
+                "meditation_practice",
+                "webtoons"
+            ],
+            [
+                "nature_photography",
+                "budgeting_tips"
+            ],
+            [
+                "travel_vlogging",
+                "webtoons",
+                "VR_experiences"
+            ],
+            [
+                "cultural_exchange",
+                "webtoons"
+            ],
+            [
+                "nature_photography",
+                "webtoons",
+                "public_speaking"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 48,
+        "Name": "Anne Russell",
+        "Gender": "Female",
+        "DOB": "2004-07-28",
+        "Interests": [
+            "social_media",
+            "summer_vacations",
+            "travel_vlogging",
+            "reality_TV",
+            "pet_lover",
+            "street_food",
+            "mobile_games",
+            "role_playing",
+            "meditation_practice"
+        ],
+        "Seen_post": [
+            [
+                "travel_vlogging",
+                "role_playing"
+            ],
+            [
+                "reality_TV"
+            ],
+            [
+                "mobile_games",
+                "pet_lover"
+            ],
+            [
+                "pet_lover",
+                "travel_vlogging"
+            ],
+            [
+                "role_playing",
+                "social_media"
+            ]
+        ],
+        "Post_post": [
+            [
+                "summer_vacations"
+            ],
+            [
+                "summer_vacations",
+                "reality_TV",
+                "social_media"
+            ],
+            [
+                "meditation_practice"
+            ],
+            [
+                "role_playing"
+            ],
+            [
+                "reality_TV"
+            ],
+            [
+                "reality_TV",
+                "street_food",
+                "summer_vacations"
+            ],
+            [
+                "pet_lover"
+            ],
+            [
+                "summer_vacations"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 49,
+        "Name": "Jody Lee",
+        "Gender": "Female",
+        "DOB": "1999-04-07",
+        "Interests": [
+            "true_crime",
+            "sustainability",
+            "jazz_music",
+            "academic_research",
+            "cooking_shows",
+            "volunteer_work"
+        ],
+        "Seen_post": [
+            [
+                "academic_research"
+            ],
+            [
+                "cooking_shows",
+                "jazz_music"
+            ],
+            [
+                "sustainability",
+                "cooking_shows"
+            ],
+            [
+                "sustainability"
+            ],
+            [
+                "cooking_shows",
+                "jazz_music",
+                "academic_research"
+            ],
+            [
+                "volunteer_work",
+                "true_crime",
+                "cooking_shows"
+            ],
+            [
+                "sustainability",
+                "academic_research",
+                "true_crime"
+            ]
+        ],
+        "Post_post": [
+            [
+                "true_crime",
+                "cooking_shows"
+            ],
+            [
+                "true_crime",
+                "cooking_shows",
+                "volunteer_work"
+            ],
+            [
+                "volunteer_work",
+                "academic_research",
+                "cooking_shows"
+            ],
+            [
+                "academic_research",
+                "jazz_music"
+            ],
+            [
+                "sustainability",
+                "cooking_shows",
+                "volunteer_work"
+            ],
+            [
+                "true_crime",
+                "volunteer_work",
+                "jazz_music"
+            ],
+            [
+                "volunteer_work",
+                "true_crime"
+            ],
+            [
+                "volunteer_work"
+            ],
+            [
+                "academic_research",
+                "cooking_shows"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 50,
+        "Name": "Victor Pearson",
+        "Gender": "Male",
+        "DOB": "2002-08-09",
+        "Interests": [
+            "stand_up_comedy",
+            "parkour",
+            "celebrity_gossip",
+            "indie_music",
+            "sci_fi_fantasy"
+        ],
+        "Seen_post": [
+            [
+                "parkour"
+            ],
+            [
+                "indie_music",
+                "sci_fi_fantasy"
+            ],
+            [
+                "stand_up_comedy",
+                "celebrity_gossip"
+            ],
+            [
+                "parkour",
+                "celebrity_gossip"
+            ],
+            [
+                "celebrity_gossip",
+                "indie_music",
+                "sci_fi_fantasy"
+            ],
+            [
+                "celebrity_gossip",
+                "parkour",
+                "sci_fi_fantasy"
+            ],
+            [
+                "celebrity_gossip",
+                "indie_music"
+            ],
+            [
+                "stand_up_comedy",
+                "parkour",
+                "indie_music"
+            ]
+        ],
+        "Post_post": [
+            [
+                "stand_up_comedy",
+                "parkour",
+                "indie_music"
+            ],
+            [
+                "parkour"
+            ],
+            [
+                "sci_fi_fantasy"
+            ],
+            [
+                "stand_up_comedy",
+                "indie_music",
+                "parkour"
+            ],
+            [
+                "celebrity_gossip",
+                "parkour"
+            ],
+            [
+                "stand_up_comedy",
+                "parkour"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 51,
+        "Name": "Matthew Clark",
+        "Gender": "Female",
+        "DOB": "2001-05-13",
+        "Interests": [
+            "financial_literacy",
+            "debate_club",
+            "costume_parties",
+            "creative_writing",
+            "parkour"
+        ],
+        "Seen_post": [
+            [
+                "costume_parties"
+            ],
+            [
+                "creative_writing",
+                "parkour",
+                "costume_parties"
+            ],
+            [
+                "debate_club",
+                "costume_parties",
+                "financial_literacy"
+            ],
+            [
+                "parkour",
+                "creative_writing",
+                "costume_parties"
+            ],
+            [
+                "costume_parties",
+                "creative_writing",
+                "parkour"
+            ],
+            [
+                "creative_writing"
+            ]
+        ],
+        "Post_post": [
+            [
+                "costume_parties",
+                "debate_club",
+                "financial_literacy"
+            ],
+            [
+                "debate_club"
+            ],
+            [
+                "creative_writing"
+            ],
+            [
+                "financial_literacy"
+            ],
+            [
+                "creative_writing",
+                "parkour",
+                "costume_parties"
+            ],
+            [
+                "financial_literacy",
+                "debate_club",
+                "parkour"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 52,
+        "Name": "Chad Grimes",
+        "Gender": "Female",
+        "DOB": "2000-01-28",
+        "Interests": [
+            "role_playing",
+            "FPS_games",
+            "cosplay",
+            "urban_exploration",
+            "financial_literacy",
+            "cultural_exchange",
+            "comics",
+            "memes",
+            "stand_up_comedy",
+            "healthy_eating"
+        ],
+        "Seen_post": [
+            [
+                "cosplay"
+            ],
+            [
+                "cultural_exchange",
+                "stand_up_comedy",
+                "memes"
+            ],
+            [
+                "cosplay",
+                "memes"
+            ],
+            [
+                "financial_literacy"
+            ],
+            [
+                "stand_up_comedy",
+                "FPS_games"
+            ],
+            [
+                "cosplay",
+                "memes"
+            ],
+            [
+                "role_playing"
+            ],
+            [
+                "stand_up_comedy",
+                "memes",
+                "healthy_eating"
+            ],
+            [
+                "urban_exploration"
+            ]
+        ],
+        "Post_post": [
+            [
+                "financial_literacy",
+                "healthy_eating"
+            ],
+            [
+                "healthy_eating"
+            ],
+            [
+                "role_playing",
+                "financial_literacy",
+                "urban_exploration"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "cosplay",
+                "cultural_exchange"
+            ],
+            [
+                "cultural_exchange",
+                "FPS_games"
+            ],
+            [
+                "cultural_exchange",
+                "memes"
+            ],
+            [
+                "cosplay"
+            ],
+            [
+                "healthy_eating",
+                "memes"
+            ],
+            [
+                "comics",
+                "memes",
+                "stand_up_comedy"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 53,
+        "Name": "Bernard Lee",
+        "Gender": "Male",
+        "DOB": "2006-07-21",
+        "Interests": [
+            "memes",
+            "self_improvement",
+            "fantasy_movies",
+            "eco_friendly_lifestyle",
+            "parkour",
+            "K_pop",
+            "productivity_tips",
+            "sci_fi_fantasy"
+        ],
+        "Seen_post": [
+            [
+                "sci_fi_fantasy",
+                "fantasy_movies"
+            ],
+            [
+                "productivity_tips",
+                "eco_friendly_lifestyle",
+                "memes"
+            ],
+            [
+                "fantasy_movies",
+                "K_pop",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "self_improvement",
+                "productivity_tips",
+                "fantasy_movies"
+            ],
+            [
+                "memes"
+            ],
+            [
+                "fantasy_movies",
+                "K_pop"
+            ],
+            [
+                "productivity_tips",
+                "sci_fi_fantasy",
+                "memes"
+            ]
+        ],
+        "Post_post": [
+            [
+                "parkour",
+                "sci_fi_fantasy"
+            ],
+            [
+                "memes",
+                "fantasy_movies",
+                "sci_fi_fantasy"
+            ],
+            [
+                "self_improvement"
+            ],
+            [
+                "fantasy_movies",
+                "K_pop",
+                "self_improvement"
+            ],
+            [
+                "fantasy_movies"
+            ],
+            [
+                "self_improvement",
+                "memes"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 54,
+        "Name": "Richard Howard",
+        "Gender": "Male",
+        "DOB": "1999-06-09",
+        "Interests": [
+            "creature_features",
+            "debate_club",
+            "social_media",
+            "travel_vlogging",
+            "leadership_skills",
+            "food_blogging",
+            "VR_experiences",
+            "supernatural_thrillers"
+        ],
+        "Seen_post": [
+            [
+                "debate_club"
+            ],
+            [
+                "travel_vlogging"
+            ],
+            [
+                "social_media",
+                "leadership_skills"
+            ],
+            [
+                "debate_club",
+                "food_blogging"
+            ],
+            [
+                "social_media",
+                "creature_features"
+            ],
+            [
+                "leadership_skills",
+                "debate_club"
+            ]
+        ],
+        "Post_post": [
+            [
+                "travel_vlogging",
+                "creature_features"
+            ],
+            [
+                "debate_club",
+                "VR_experiences"
+            ],
+            [
+                "supernatural_thrillers"
+            ],
+            [
+                "creature_features",
+                "social_media"
+            ],
+            [
+                "social_media"
+            ],
+            [
+                "debate_club",
+                "creature_features",
+                "leadership_skills"
+            ],
+            [
+                "creature_features",
+                "leadership_skills",
+                "VR_experiences"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 55,
+        "Name": "Phillip Miller",
+        "Gender": "Male",
+        "DOB": "1999-12-13",
+        "Interests": [
+            "public_speaking",
+            "romance_movies",
+            "J_pop",
+            "concert_fan",
+            "eco_friendly_lifestyle",
+            "charity_events",
+            "webtoons",
+            "true_crime",
+            "beach_days",
+            "crime_thrillers"
+        ],
+        "Seen_post": [
+            [
+                "webtoons"
+            ],
+            [
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "true_crime",
+                "concert_fan",
+                "romance_movies"
+            ],
+            [
+                "romance_movies"
+            ],
+            [
+                "romance_movies",
+                "webtoons"
+            ]
+        ],
+        "Post_post": [
+            [
+                "concert_fan",
+                "beach_days",
+                "public_speaking"
+            ],
+            [
+                "true_crime",
+                "beach_days"
+            ],
+            [
+                "public_speaking",
+                "true_crime"
+            ],
+            [
+                "romance_movies",
+                "true_crime",
+                "J_pop"
+            ],
+            [
+                "concert_fan",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "crime_thrillers"
+            ],
+            [
+                "beach_days"
+            ],
+            [
+                "concert_fan",
+                "romance_movies"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 56,
+        "Name": "James Perez",
+        "Gender": "Male",
+        "DOB": "2004-11-12",
+        "Interests": [
+            "karaoke",
+            "comics",
+            "memes",
+            "series_binging",
+            "cultural_exchange",
+            "webtoons",
+            "true_crime",
+            "sci_fi_books",
+            "sci-fi_movies"
+        ],
+        "Seen_post": [
+            [
+                "karaoke",
+                "webtoons",
+                "cultural_exchange"
+            ],
+            [
+                "webtoons",
+                "sci_fi_books"
+            ],
+            [
+                "karaoke",
+                "sci-fi_movies",
+                "memes"
+            ],
+            [
+                "memes"
+            ],
+            [
+                "sci_fi_books",
+                "webtoons"
+            ],
+            [
+                "memes"
+            ],
+            [
+                "karaoke"
+            ]
+        ],
+        "Post_post": [
+            [
+                "sci_fi_books"
+            ],
+            [
+                "cultural_exchange",
+                "comics"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "sci-fi_movies"
+            ],
+            [
+                "karaoke",
+                "sci-fi_movies"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 57,
+        "Name": "Barbara Fernandez",
+        "Gender": "Male",
+        "DOB": "2003-12-12",
+        "Interests": [
+            "meditation_practice",
+            "budgeting_tips",
+            "photography",
+            "theme_parks",
+            "project_management"
+        ],
+        "Seen_post": [
+            [
+                "meditation_practice",
+                "theme_parks",
+                "photography"
+            ],
+            [
+                "photography"
+            ],
+            [
+                "theme_parks"
+            ],
+            [
+                "budgeting_tips"
+            ],
+            [
+                "project_management",
+                "photography"
+            ],
+            [
+                "budgeting_tips",
+                "photography",
+                "meditation_practice"
+            ],
+            [
+                "project_management",
+                "meditation_practice"
+            ]
+        ],
+        "Post_post": [
+            [
+                "theme_parks"
+            ],
+            [
+                "project_management",
+                "photography",
+                "theme_parks"
+            ],
+            [
+                "budgeting_tips"
+            ],
+            [
+                "meditation_practice",
+                "theme_parks",
+                "photography"
+            ],
+            [
+                "project_management"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 58,
+        "Name": "Aaron Gutierrez",
+        "Gender": "Female",
+        "DOB": "2000-07-10",
+        "Interests": [
+            "community_service",
+            "theme_parks",
+            "international_students",
+            "manga",
+            "camping_trips",
+            "beach_days",
+            "pet_lover"
+        ],
+        "Seen_post": [
+            [
+                "international_students",
+                "beach_days"
+            ],
+            [
+                "camping_trips",
+                "community_service",
+                "international_students"
+            ],
+            [
+                "community_service",
+                "international_students",
+                "theme_parks"
+            ],
+            [
+                "pet_lover",
+                "community_service"
+            ],
+            [
+                "beach_days"
+            ],
+            [
+                "theme_parks",
+                "beach_days",
+                "camping_trips"
+            ]
+        ],
+        "Post_post": [
+            [
+                "camping_trips",
+                "theme_parks",
+                "pet_lover"
+            ],
+            [
+                "international_students"
+            ],
+            [
+                "camping_trips",
+                "theme_parks"
+            ],
+            [
+                "community_service"
+            ],
+            [
+                "camping_trips"
+            ],
+            [
+                "beach_days",
+                "manga",
+                "camping_trips"
+            ],
+            [
+                "manga",
+                "camping_trips"
+            ],
+            [
+                "pet_lover"
+            ],
+            [
+                "beach_days",
+                "international_students"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 59,
+        "Name": "Adam Burns",
+        "Gender": "Female",
+        "DOB": "2001-05-22",
+        "Interests": [
+            "theme_parks",
+            "DnD",
+            "reality_TV",
+            "stress_management",
+            "K_pop",
+            "hip_hop"
+        ],
+        "Seen_post": [
+            [
+                "K_pop",
+                "DnD",
+                "stress_management"
+            ],
+            [
+                "reality_TV",
+                "theme_parks"
+            ],
+            [
+                "theme_parks",
+                "stress_management",
+                "K_pop"
+            ],
+            [
+                "reality_TV",
+                "DnD",
+                "theme_parks"
+            ],
+            [
+                "stress_management",
+                "theme_parks"
+            ],
+            [
+                "K_pop",
+                "theme_parks",
+                "reality_TV"
+            ],
+            [
+                "theme_parks"
+            ],
+            [
+                "hip_hop",
+                "reality_TV"
+            ],
+            [
+                "reality_TV"
+            ],
+            [
+                "K_pop",
+                "reality_TV"
+            ]
+        ],
+        "Post_post": [
+            [
+                "DnD"
+            ],
+            [
+                "K_pop",
+                "theme_parks"
+            ],
+            [
+                "reality_TV"
+            ],
+            [
+                "reality_TV",
+                "stress_management"
+            ],
+            [
+                "K_pop",
+                "theme_parks"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 60,
+        "Name": "Sue Smith",
+        "Gender": "Female",
+        "DOB": "2005-12-23",
+        "Interests": [
+            "J_pop",
+            "AI_development",
+            "summer_vacations",
+            "internship_hunting",
+            "volunteer_work"
+        ],
+        "Seen_post": [
+            [
+                "AI_development"
+            ],
+            [
+                "summer_vacations"
+            ],
+            [
+                "internship_hunting",
+                "volunteer_work",
+                "summer_vacations"
+            ],
+            [
+                "internship_hunting",
+                "summer_vacations",
+                "J_pop"
+            ],
+            [
+                "summer_vacations",
+                "internship_hunting"
+            ]
+        ],
+        "Post_post": [
+            [
+                "J_pop",
+                "summer_vacations"
+            ],
+            [
+                "summer_vacations",
+                "internship_hunting",
+                "AI_development"
+            ],
+            [
+                "internship_hunting",
+                "volunteer_work"
+            ],
+            [
+                "J_pop",
+                "volunteer_work"
+            ],
+            [
+                "summer_vacations"
+            ],
+            [
+                "summer_vacations"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 61,
+        "Name": "Stephanie Mccann",
+        "Gender": "Female",
+        "DOB": "2002-07-15",
+        "Interests": [
+            "academic_research",
+            "horror_stories",
+            "AI_development",
+            "webtoons",
+            "detective_stories",
+            "creative_writing",
+            "skiing",
+            "escape_rooms",
+            "hip_hop",
+            "YouTube_binge"
+        ],
+        "Seen_post": [
+            [
+                "academic_research"
+            ],
+            [
+                "YouTube_binge",
+                "horror_stories"
+            ],
+            [
+                "webtoons",
+                "hip_hop"
+            ],
+            [
+                "horror_stories"
+            ],
+            [
+                "creative_writing"
+            ]
+        ],
+        "Post_post": [
+            [
+                "escape_rooms"
+            ],
+            [
+                "academic_research",
+                "webtoons",
+                "horror_stories"
+            ],
+            [
+                "YouTube_binge",
+                "skiing",
+                "horror_stories"
+            ],
+            [
+                "detective_stories",
+                "hip_hop",
+                "creative_writing"
+            ],
+            [
+                "AI_development"
+            ],
+            [
+                "detective_stories",
+                "skiing"
+            ],
+            [
+                "detective_stories",
+                "hip_hop"
+            ],
+            [
+                "escape_rooms"
+            ],
+            [
+                "escape_rooms",
+                "detective_stories"
+            ],
+            [
+                "webtoons"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 62,
+        "Name": "Tanya Taylor",
+        "Gender": "Male",
+        "DOB": "2006-10-09",
+        "Interests": [
+            "puzzle_solving",
+            "action_movies",
+            "webtoons",
+            "nature_photography",
+            "concert_fan",
+            "coding",
+            "escape_rooms"
+        ],
+        "Seen_post": [
+            [
+                "puzzle_solving",
+                "action_movies"
+            ],
+            [
+                "puzzle_solving",
+                "concert_fan"
+            ],
+            [
+                "puzzle_solving"
+            ],
+            [
+                "concert_fan",
+                "webtoons",
+                "escape_rooms"
+            ],
+            [
+                "webtoons",
+                "concert_fan"
+            ],
+            [
+                "nature_photography"
+            ],
+            [
+                "action_movies",
+                "concert_fan",
+                "escape_rooms"
+            ],
+            [
+                "webtoons",
+                "coding",
+                "nature_photography"
+            ]
+        ],
+        "Post_post": [
+            [
+                "concert_fan"
+            ],
+            [
+                "coding",
+                "escape_rooms"
+            ],
+            [
+                "puzzle_solving",
+                "action_movies",
+                "nature_photography"
+            ],
+            [
+                "concert_fan",
+                "webtoons"
+            ],
+            [
+                "webtoons",
+                "puzzle_solving"
+            ],
+            [
+                "nature_photography",
+                "action_movies"
+            ],
+            [
+                "puzzle_solving",
+                "concert_fan",
+                "action_movies"
+            ],
+            [
+                "escape_rooms"
+            ],
+            [
+                "nature_photography",
+                "webtoons"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 63,
+        "Name": "Francisco Erickson",
+        "Gender": "Male",
+        "DOB": "2000-08-08",
+        "Interests": [
+            "romance_movies",
+            "hip_hop",
+            "J_pop",
+            "MOBA_games",
+            "AI_development"
+        ],
+        "Seen_post": [
+            [
+                "AI_development",
+                "romance_movies"
+            ],
+            [
+                "MOBA_games",
+                "J_pop",
+                "hip_hop"
+            ],
+            [
+                "MOBA_games"
+            ],
+            [
+                "AI_development",
+                "J_pop"
+            ],
+            [
+                "AI_development",
+                "J_pop",
+                "romance_movies"
+            ],
+            [
+                "hip_hop"
+            ],
+            [
+                "hip_hop",
+                "J_pop",
+                "AI_development"
+            ],
+            [
+                "romance_movies",
+                "J_pop",
+                "AI_development"
+            ],
+            [
+                "AI_development",
+                "hip_hop"
+            ],
+            [
+                "J_pop",
+                "hip_hop"
+            ]
+        ],
+        "Post_post": [
+            [
+                "romance_movies",
+                "MOBA_games",
+                "J_pop"
+            ],
+            [
+                "MOBA_games",
+                "hip_hop",
+                "romance_movies"
+            ],
+            [
+                "romance_movies",
+                "hip_hop"
+            ],
+            [
+                "J_pop",
+                "AI_development",
+                "hip_hop"
+            ],
+            [
+                "hip_hop",
+                "romance_movies",
+                "AI_development"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 64,
+        "Name": "Kendra Ray",
+        "Gender": "Male",
+        "DOB": "1999-10-29",
+        "Interests": [
+            "snowboarding",
+            "nature_photography",
+            "fitness_goals",
+            "DnD",
+            "sports_events",
+            "live_streaming"
+        ],
+        "Seen_post": [
+            [
+                "snowboarding"
+            ],
+            [
+                "live_streaming",
+                "nature_photography"
+            ],
+            [
+                "live_streaming",
+                "sports_events",
+                "DnD"
+            ],
+            [
+                "snowboarding"
+            ],
+            [
+                "nature_photography",
+                "live_streaming"
+            ],
+            [
+                "fitness_goals",
+                "sports_events"
+            ],
+            [
+                "fitness_goals",
+                "snowboarding"
+            ],
+            [
+                "DnD"
+            ]
+        ],
+        "Post_post": [
+            [
+                "sports_events",
+                "live_streaming"
+            ],
+            [
+                "nature_photography",
+                "fitness_goals"
+            ],
+            [
+                "nature_photography",
+                "fitness_goals"
+            ],
+            [
+                "snowboarding"
+            ],
+            [
+                "fitness_goals",
+                "snowboarding"
+            ],
+            [
+                "live_streaming",
+                "DnD"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 65,
+        "Name": "Stacey Delacruz",
+        "Gender": "Male",
+        "DOB": "2002-07-31",
+        "Interests": [
+            "card_games",
+            "karaoke",
+            "creature_features",
+            "soundtracks",
+            "Tags",
+            "movie_marathons"
+        ],
+        "Seen_post": [
+            [
+                "Tags",
+                "movie_marathons"
+            ],
+            [
+                "movie_marathons"
+            ],
+            [
+                "karaoke",
+                "movie_marathons",
+                "soundtracks"
+            ],
+            [
+                "Tags"
+            ],
+            [
+                "karaoke",
+                "creature_features"
+            ],
+            [
+                "card_games",
+                "karaoke"
+            ],
+            [
+                "movie_marathons",
+                "karaoke"
+            ],
+            [
+                "karaoke",
+                "Tags"
+            ],
+            [
+                "karaoke",
+                "soundtracks"
+            ],
+            [
+                "movie_marathons",
+                "creature_features",
+                "card_games"
+            ]
+        ],
+        "Post_post": [
+            [
+                "creature_features",
+                "Tags",
+                "soundtracks"
+            ],
+            [
+                "creature_features",
+                "card_games",
+                "soundtracks"
+            ],
+            [
+                "creature_features"
+            ],
+            [
+                "Tags"
+            ],
+            [
+                "movie_marathons"
+            ],
+            [
+                "movie_marathons"
+            ],
+            [
+                "soundtracks"
+            ],
+            [
+                "card_games"
+            ],
+            [
+                "karaoke",
+                "card_games",
+                "soundtracks"
+            ],
+            [
+                "soundtracks"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 66,
+        "Name": "Steven Green",
+        "Gender": "Female",
+        "DOB": "2005-11-11",
+        "Interests": [
+            "concert_fan",
+            "meditation_practice",
+            "board_games",
+            "DnD",
+            "jazz_music",
+            "fantasy_books",
+            "J_pop",
+            "detective_stories",
+            "RPG_games"
+        ],
+        "Seen_post": [
+            [
+                "fantasy_books"
+            ],
+            [
+                "RPG_games",
+                "board_games"
+            ],
+            [
+                "board_games",
+                "meditation_practice"
+            ],
+            [
+                "fantasy_books",
+                "J_pop",
+                "concert_fan"
+            ],
+            [
+                "detective_stories"
+            ]
+        ],
+        "Post_post": [
+            [
+                "board_games",
+                "RPG_games"
+            ],
+            [
+                "J_pop",
+                "DnD",
+                "concert_fan"
+            ],
+            [
+                "meditation_practice",
+                "RPG_games"
+            ],
+            [
+                "meditation_practice",
+                "jazz_music"
+            ],
+            [
+                "J_pop",
+                "DnD",
+                "jazz_music"
+            ],
+            [
+                "RPG_games",
+                "concert_fan"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 67,
+        "Name": "Jennifer Woods",
+        "Gender": "Male",
+        "DOB": "2005-09-23",
+        "Interests": [
+            "resume_building",
+            "skateboarding",
+            "mystery_novels",
+            "camping_trips",
+            "comics",
+            "jazz_music",
+            "budgeting_tips",
+            "pop_music"
+        ],
+        "Seen_post": [
+            [
+                "resume_building",
+                "mystery_novels",
+                "camping_trips"
+            ],
+            [
+                "pop_music"
+            ],
+            [
+                "mystery_novels",
+                "camping_trips"
+            ],
+            [
+                "skateboarding",
+                "comics"
+            ],
+            [
+                "pop_music",
+                "comics",
+                "resume_building"
+            ],
+            [
+                "resume_building",
+                "jazz_music",
+                "skateboarding"
+            ],
+            [
+                "camping_trips"
+            ]
+        ],
+        "Post_post": [
+            [
+                "mystery_novels",
+                "pop_music",
+                "skateboarding"
+            ],
+            [
+                "jazz_music"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "budgeting_tips",
+                "pop_music",
+                "mystery_novels"
+            ],
+            [
+                "skateboarding",
+                "budgeting_tips"
+            ],
+            [
+                "skateboarding",
+                "pop_music",
+                "mystery_novels"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "budgeting_tips",
+                "mystery_novels",
+                "comics"
+            ],
+            [
+                "comics"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 68,
+        "Name": "Sean Caldwell",
+        "Gender": "Female",
+        "DOB": "2003-02-08",
+        "Interests": [
+            "costume_parties",
+            "movie_marathons",
+            "soundtracks",
+            "DnD",
+            "horror_movies",
+            "VR_experiences"
+        ],
+        "Seen_post": [
+            [
+                "DnD",
+                "soundtracks",
+                "horror_movies"
+            ],
+            [
+                "horror_movies",
+                "movie_marathons"
+            ],
+            [
+                "soundtracks",
+                "costume_parties"
+            ],
+            [
+                "soundtracks",
+                "horror_movies",
+                "costume_parties"
+            ],
+            [
+                "VR_experiences",
+                "movie_marathons"
+            ],
+            [
+                "DnD",
+                "soundtracks",
+                "movie_marathons"
+            ]
+        ],
+        "Post_post": [
+            [
+                "movie_marathons",
+                "horror_movies",
+                "VR_experiences"
+            ],
+            [
+                "soundtracks"
+            ],
+            [
+                "horror_movies",
+                "DnD"
+            ],
+            [
+                "costume_parties"
+            ],
+            [
+                "VR_experiences",
+                "movie_marathons",
+                "costume_parties"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 69,
+        "Name": "Teresa Davis",
+        "Gender": "Male",
+        "DOB": "2004-02-23",
+        "Interests": [
+            "activism",
+            "critical_thinking",
+            "academic_research",
+            "magic_shows",
+            "memes",
+            "true_crime"
+        ],
+        "Seen_post": [
+            [
+                "memes",
+                "magic_shows"
+            ],
+            [
+                "magic_shows",
+                "memes",
+                "academic_research"
+            ],
+            [
+                "magic_shows",
+                "critical_thinking",
+                "memes"
+            ],
+            [
+                "memes",
+                "magic_shows"
+            ],
+            [
+                "memes"
+            ],
+            [
+                "true_crime"
+            ],
+            [
+                "magic_shows",
+                "true_crime",
+                "academic_research"
+            ],
+            [
+                "true_crime",
+                "academic_research",
+                "memes"
+            ]
+        ],
+        "Post_post": [
+            [
+                "critical_thinking",
+                "academic_research",
+                "memes"
+            ],
+            [
+                "critical_thinking",
+                "academic_research",
+                "memes"
+            ],
+            [
+                "true_crime",
+                "academic_research",
+                "memes"
+            ],
+            [
+                "true_crime",
+                "magic_shows"
+            ],
+            [
+                "magic_shows",
+                "activism"
+            ],
+            [
+                "magic_shows",
+                "critical_thinking"
+            ],
+            [
+                "academic_research"
+            ],
+            [
+                "activism"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 70,
+        "Name": "Alexandra Harmon",
+        "Gender": "Male",
+        "DOB": "2004-12-20",
+        "Interests": [
+            "internship_hunting",
+            "celebrity_gossip",
+            "water_sports",
+            "retro_gaming",
+            "financial_literacy",
+            "scientific_innovation",
+            "data_science",
+            "UX_design",
+            "skateboarding"
+        ],
+        "Seen_post": [
+            [
+                "internship_hunting",
+                "scientific_innovation"
+            ],
+            [
+                "water_sports"
+            ],
+            [
+                "skateboarding",
+                "retro_gaming"
+            ],
+            [
+                "data_science"
+            ],
+            [
+                "celebrity_gossip",
+                "water_sports",
+                "scientific_innovation"
+            ]
+        ],
+        "Post_post": [
+            [
+                "retro_gaming",
+                "water_sports"
+            ],
+            [
+                "UX_design",
+                "water_sports"
+            ],
+            [
+                "celebrity_gossip"
+            ],
+            [
+                "retro_gaming",
+                "water_sports",
+                "scientific_innovation"
+            ],
+            [
+                "data_science",
+                "skateboarding",
+                "water_sports"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 71,
+        "Name": "Kristy Pena",
+        "Gender": "Female",
+        "DOB": "2006-02-21",
+        "Interests": [
+            "fan_fiction",
+            "classical_music",
+            "haunted_places",
+            "retro_movies",
+            "social_media",
+            "extreme_sports",
+            "mobile_games",
+            "language_exchange"
+        ],
+        "Seen_post": [
+            [
+                "extreme_sports",
+                "language_exchange",
+                "haunted_places"
+            ],
+            [
+                "classical_music"
+            ],
+            [
+                "social_media"
+            ],
+            [
+                "fan_fiction"
+            ],
+            [
+                "extreme_sports",
+                "social_media"
+            ]
+        ],
+        "Post_post": [
+            [
+                "classical_music",
+                "retro_movies"
+            ],
+            [
+                "social_media",
+                "language_exchange"
+            ],
+            [
+                "extreme_sports",
+                "fan_fiction"
+            ],
+            [
+                "mobile_games",
+                "haunted_places"
+            ],
+            [
+                "retro_movies",
+                "language_exchange",
+                "social_media"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 72,
+        "Name": "Kristen Lozano",
+        "Gender": "Male",
+        "DOB": "1999-01-03",
+        "Interests": [
+            "indie_music",
+            "cooking_shows",
+            "escape_rooms",
+            "street_food",
+            "skiing",
+            "creative_writing"
+        ],
+        "Seen_post": [
+            [
+                "creative_writing",
+                "skiing",
+                "cooking_shows"
+            ],
+            [
+                "indie_music",
+                "street_food",
+                "escape_rooms"
+            ],
+            [
+                "escape_rooms"
+            ],
+            [
+                "escape_rooms"
+            ],
+            [
+                "skiing",
+                "street_food",
+                "escape_rooms"
+            ],
+            [
+                "street_food",
+                "creative_writing",
+                "skiing"
+            ],
+            [
+                "skiing",
+                "street_food"
+            ],
+            [
+                "indie_music"
+            ]
+        ],
+        "Post_post": [
+            [
+                "skiing",
+                "indie_music",
+                "creative_writing"
+            ],
+            [
+                "street_food",
+                "creative_writing",
+                "escape_rooms"
+            ],
+            [
+                "skiing",
+                "indie_music"
+            ],
+            [
+                "cooking_shows",
+                "indie_music"
+            ],
+            [
+                "cooking_shows",
+                "creative_writing"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 73,
+        "Name": "William Horne",
+        "Gender": "Female",
+        "DOB": "2001-08-24",
+        "Interests": [
+            "cultural_exchange",
+            "comics",
+            "stand_up_comedy",
+            "card_games",
+            "series_binging",
+            "critical_thinking",
+            "theme_nights",
+            "reality_TV"
+        ],
+        "Seen_post": [
+            [
+                "comics",
+                "stand_up_comedy"
+            ],
+            [
+                "series_binging"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "theme_nights",
+                "reality_TV",
+                "series_binging"
+            ],
+            [
+                "reality_TV",
+                "stand_up_comedy"
+            ],
+            [
+                "stand_up_comedy",
+                "theme_nights",
+                "series_binging"
+            ]
+        ],
+        "Post_post": [
+            [
+                "critical_thinking",
+                "reality_TV",
+                "series_binging"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "critical_thinking",
+                "cultural_exchange"
+            ],
+            [
+                "reality_TV"
+            ],
+            [
+                "cultural_exchange"
+            ],
+            [
+                "critical_thinking"
+            ],
+            [
+                "critical_thinking",
+                "comics",
+                "reality_TV"
+            ],
+            [
+                "series_binging",
+                "critical_thinking",
+                "stand_up_comedy"
+            ],
+            [
+                "reality_TV",
+                "theme_nights",
+                "critical_thinking"
+            ],
+            [
+                "cultural_exchange",
+                "reality_TV"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 74,
+        "Name": "Michele Lawson",
+        "Gender": "Male",
+        "DOB": "2000-03-06",
+        "Interests": [
+            "webtoons",
+            "sci_fi_books",
+            "board_games",
+            "concert_fan",
+            "eco_friendly_lifestyle",
+            "puzzle_solving",
+            "classical_music",
+            "horror_stories",
+            "supernatural_thrillers"
+        ],
+        "Seen_post": [
+            [
+                "horror_stories",
+                "concert_fan"
+            ],
+            [
+                "supernatural_thrillers",
+                "eco_friendly_lifestyle"
+            ],
+            [
+                "supernatural_thrillers"
+            ],
+            [
+                "board_games",
+                "webtoons",
+                "sci_fi_books"
+            ],
+            [
+                "board_games",
+                "puzzle_solving"
+            ],
+            [
+                "sci_fi_books"
+            ],
+            [
+                "classical_music"
+            ]
+        ],
+        "Post_post": [
+            [
+                "horror_stories",
+                "webtoons"
+            ],
+            [
+                "eco_friendly_lifestyle",
+                "sci_fi_books",
+                "board_games"
+            ],
+            [
+                "board_games"
+            ],
+            [
+                "sci_fi_books",
+                "supernatural_thrillers",
+                "puzzle_solving"
+            ],
+            [
+                "webtoons",
+                "supernatural_thrillers",
+                "concert_fan"
+            ],
+            [
+                "classical_music",
+                "eco_friendly_lifestyle",
+                "webtoons"
+            ],
+            [
+                "eco_friendly_lifestyle",
+                "board_games",
+                "webtoons"
+            ],
+            [
+                "concert_fan"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 75,
+        "Name": "Christopher Walters",
+        "Gender": "Female",
+        "DOB": "2000-09-18",
+        "Interests": [
+            "celebrity_gossip",
+            "online_shopping",
+            "critical_thinking",
+            "fan_fiction",
+            "UX_design",
+            "live_streaming",
+            "festivals",
+            "self_improvement",
+            "webtoons"
+        ],
+        "Seen_post": [
+            [
+                "festivals",
+                "fan_fiction",
+                "self_improvement"
+            ],
+            [
+                "online_shopping",
+                "celebrity_gossip",
+                "webtoons"
+            ],
+            [
+                "fan_fiction",
+                "webtoons",
+                "UX_design"
+            ],
+            [
+                "self_improvement",
+                "critical_thinking",
+                "fan_fiction"
+            ],
+            [
+                "webtoons",
+                "fan_fiction"
+            ],
+            [
+                "online_shopping",
+                "self_improvement",
+                "webtoons"
+            ],
+            [
+                "critical_thinking",
+                "fan_fiction"
+            ],
+            [
+                "webtoons"
+            ],
+            [
+                "critical_thinking"
+            ]
+        ],
+        "Post_post": [
+            [
+                "critical_thinking"
+            ],
+            [
+                "UX_design",
+                "fan_fiction",
+                "live_streaming"
+            ],
+            [
+                "festivals",
+                "fan_fiction",
+                "self_improvement"
+            ],
+            [
+                "webtoons",
+                "UX_design"
+            ],
+            [
+                "self_improvement",
+                "online_shopping"
+            ],
+            [
+                "critical_thinking",
+                "self_improvement",
+                "live_streaming"
+            ],
+            [
+                "UX_design"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 76,
+        "Name": "Kelly Reid",
+        "Gender": "Male",
+        "DOB": "1999-12-03",
+        "Interests": [
+            "budgeting_tips",
+            "drama_movies",
+            "urban_exploration",
+            "indie_music",
+            "career_planning",
+            "project_management",
+            "beach_days",
+            "retro_gaming"
+        ],
+        "Seen_post": [
+            [
+                "project_management"
+            ],
+            [
+                "career_planning",
+                "drama_movies",
+                "project_management"
+            ],
+            [
+                "indie_music",
+                "urban_exploration",
+                "beach_days"
+            ],
+            [
+                "urban_exploration",
+                "project_management"
+            ],
+            [
+                "budgeting_tips",
+                "beach_days"
+            ]
+        ],
+        "Post_post": [
+            [
+                "indie_music",
+                "career_planning"
+            ],
+            [
+                "beach_days"
+            ],
+            [
+                "indie_music",
+                "beach_days",
+                "drama_movies"
+            ],
+            [
+                "beach_days"
+            ],
+            [
+                "drama_movies",
+                "indie_music"
+            ],
+            [
+                "urban_exploration"
+            ],
+            [
+                "retro_gaming",
+                "beach_days",
+                "urban_exploration"
+            ],
+            [
+                "project_management"
+            ],
+            [
+                "budgeting_tips"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 77,
+        "Name": "Jennifer Prince",
+        "Gender": "Female",
+        "DOB": "2001-11-07",
+        "Interests": [
+            "anime_fan",
+            "haunted_places",
+            "leadership_skills",
+            "international_students",
+            "budgeting_tips"
+        ],
+        "Seen_post": [
+            [
+                "international_students",
+                "anime_fan",
+                "haunted_places"
+            ],
+            [
+                "anime_fan"
+            ],
+            [
+                "budgeting_tips"
+            ],
+            [
+                "anime_fan",
+                "international_students",
+                "haunted_places"
+            ],
+            [
+                "budgeting_tips"
+            ],
+            [
+                "international_students",
+                "anime_fan",
+                "leadership_skills"
+            ],
+            [
+                "anime_fan",
+                "international_students"
+            ],
+            [
+                "budgeting_tips"
+            ],
+            [
+                "anime_fan",
+                "leadership_skills",
+                "budgeting_tips"
+            ],
+            [
+                "leadership_skills"
+            ]
+        ],
+        "Post_post": [
+            [
+                "haunted_places",
+                "anime_fan"
+            ],
+            [
+                "international_students"
+            ],
+            [
+                "budgeting_tips",
+                "leadership_skills"
+            ],
+            [
+                "international_students",
+                "leadership_skills"
+            ],
+            [
+                "haunted_places"
+            ],
+            [
+                "budgeting_tips",
+                "leadership_skills"
+            ],
+            [
+                "international_students",
+                "budgeting_tips",
+                "anime_fan"
+            ],
+            [
+                "budgeting_tips",
+                "haunted_places",
+                "international_students"
+            ],
+            [
+                "anime_fan",
+                "leadership_skills",
+                "budgeting_tips"
+            ],
+            [
+                "international_students",
+                "budgeting_tips"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 78,
+        "Name": "Laura Romero",
+        "Gender": "Female",
+        "DOB": "2000-02-26",
+        "Interests": [
+            "skiing",
+            "street_food",
+            "eco_friendly_lifestyle",
+            "data_science",
+            "fan_fiction",
+            "parkour",
+            "costume_parties",
+            "coding",
+            "academic_research",
+            "study_groups"
+        ],
+        "Seen_post": [
+            [
+                "parkour"
+            ],
+            [
+                "eco_friendly_lifestyle",
+                "data_science",
+                "study_groups"
+            ],
+            [
+                "eco_friendly_lifestyle",
+                "data_science",
+                "coding"
+            ],
+            [
+                "skiing"
+            ],
+            [
+                "parkour"
+            ],
+            [
+                "parkour",
+                "costume_parties"
+            ]
+        ],
+        "Post_post": [
+            [
+                "skiing",
+                "academic_research",
+                "coding"
+            ],
+            [
+                "study_groups",
+                "skiing"
+            ],
+            [
+                "study_groups",
+                "coding"
+            ],
+            [
+                "eco_friendly_lifestyle",
+                "street_food",
+                "academic_research"
+            ],
+            [
+                "coding",
+                "costume_parties",
+                "street_food"
+            ],
+            [
+                "costume_parties",
+                "skiing"
+            ],
+            [
+                "fan_fiction",
+                "street_food"
+            ],
+            [
+                "costume_parties"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 79,
+        "Name": "Steven Turner",
+        "Gender": "Male",
+        "DOB": "1999-02-26",
+        "Interests": [
+            "VR_experiences",
+            "pet_lover",
+            "extreme_sports",
+            "fitness_goals",
+            "memes"
+        ],
+        "Seen_post": [
+            [
+                "pet_lover",
+                "VR_experiences"
+            ],
+            [
+                "fitness_goals"
+            ],
+            [
+                "pet_lover",
+                "extreme_sports",
+                "fitness_goals"
+            ],
+            [
+                "memes",
+                "extreme_sports"
+            ],
+            [
+                "extreme_sports",
+                "memes"
+            ],
+            [
+                "memes",
+                "pet_lover",
+                "extreme_sports"
+            ],
+            [
+                "extreme_sports",
+                "VR_experiences",
+                "memes"
+            ],
+            [
+                "pet_lover",
+                "fitness_goals",
+                "VR_experiences"
+            ]
+        ],
+        "Post_post": [
+            [
+                "VR_experiences",
+                "fitness_goals"
+            ],
+            [
+                "memes"
+            ],
+            [
+                "VR_experiences"
+            ],
+            [
+                "extreme_sports"
+            ],
+            [
+                "fitness_goals",
+                "pet_lover",
+                "memes"
+            ],
+            [
+                "fitness_goals",
+                "VR_experiences",
+                "pet_lover"
+            ],
+            [
+                "VR_experiences"
+            ],
+            [
+                "fitness_goals",
+                "extreme_sports",
+                "pet_lover"
+            ],
+            [
+                "fitness_goals",
+                "pet_lover",
+                "VR_experiences"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 80,
+        "Name": "Gene Wyatt",
+        "Gender": "Female",
+        "DOB": "2004-02-23",
+        "Interests": [
+            "public_speaking",
+            "digital_art",
+            "financial_literacy",
+            "mental_health_awareness",
+            "VR_experiences"
+        ],
+        "Seen_post": [
+            [
+                "VR_experiences"
+            ],
+            [
+                "VR_experiences"
+            ],
+            [
+                "digital_art"
+            ],
+            [
+                "financial_literacy",
+                "digital_art",
+                "public_speaking"
+            ],
+            [
+                "mental_health_awareness"
+            ],
+            [
+                "mental_health_awareness"
+            ]
+        ],
+        "Post_post": [
+            [
+                "public_speaking"
+            ],
+            [
+                "financial_literacy",
+                "digital_art",
+                "mental_health_awareness"
+            ],
+            [
+                "digital_art",
+                "VR_experiences"
+            ],
+            [
+                "VR_experiences",
+                "financial_literacy",
+                "digital_art"
+            ],
+            [
+                "financial_literacy"
+            ],
+            [
+                "mental_health_awareness",
+                "financial_literacy"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 81,
+        "Name": "Seth Holland",
+        "Gender": "Female",
+        "DOB": "2005-08-23",
+        "Interests": [
+            "supernatural_thrillers",
+            "indie_games",
+            "skateboarding",
+            "stand_up_comedy",
+            "classical_music",
+            "cooking_shows",
+            "water_sports",
+            "live_streaming"
+        ],
+        "Seen_post": [
+            [
+                "live_streaming"
+            ],
+            [
+                "supernatural_thrillers",
+                "cooking_shows",
+                "live_streaming"
+            ],
+            [
+                "cooking_shows",
+                "indie_games",
+                "skateboarding"
+            ],
+            [
+                "cooking_shows"
+            ],
+            [
+                "water_sports",
+                "supernatural_thrillers"
+            ],
+            [
+                "indie_games",
+                "supernatural_thrillers"
+            ],
+            [
+                "live_streaming",
+                "indie_games"
+            ]
+        ],
+        "Post_post": [
+            [
+                "indie_games"
+            ],
+            [
+                "classical_music"
+            ],
+            [
+                "cooking_shows"
+            ],
+            [
+                "indie_games"
+            ],
+            [
+                "live_streaming",
+                "skateboarding",
+                "supernatural_thrillers"
+            ],
+            [
+                "classical_music",
+                "indie_games",
+                "skateboarding"
+            ],
+            [
+                "classical_music",
+                "stand_up_comedy"
+            ],
+            [
+                "stand_up_comedy",
+                "live_streaming",
+                "indie_games"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 82,
+        "Name": "Kyle Marquez",
+        "Gender": "Female",
+        "DOB": "2003-08-29",
+        "Interests": [
+            "healthy_eating",
+            "personal_finance",
+            "soundtracks",
+            "mindfulness",
+            "role_playing",
+            "eSports",
+            "sports_events",
+            "digital_art",
+            "drama_movies",
+            "debate_club"
+        ],
+        "Seen_post": [
+            [
+                "drama_movies"
+            ],
+            [
+                "drama_movies"
+            ],
+            [
+                "eSports",
+                "role_playing"
+            ],
+            [
+                "drama_movies"
+            ],
+            [
+                "drama_movies",
+                "digital_art",
+                "debate_club"
+            ],
+            [
+                "soundtracks",
+                "debate_club"
+            ],
+            [
+                "mindfulness",
+                "drama_movies",
+                "digital_art"
+            ],
+            [
+                "digital_art"
+            ]
+        ],
+        "Post_post": [
+            [
+                "personal_finance",
+                "eSports"
+            ],
+            [
+                "role_playing"
+            ],
+            [
+                "debate_club",
+                "mindfulness",
+                "healthy_eating"
+            ],
+            [
+                "soundtracks"
+            ],
+            [
+                "role_playing"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 83,
+        "Name": "John Lyons",
+        "Gender": "Female",
+        "DOB": "1998-12-03",
+        "Interests": [
+            "charity_events",
+            "personal_finance",
+            "leadership_skills",
+            "camping_trips",
+            "anime_fan",
+            "eSports",
+            "foreign_films"
+        ],
+        "Seen_post": [
+            [
+                "charity_events",
+                "anime_fan",
+                "foreign_films"
+            ],
+            [
+                "camping_trips"
+            ],
+            [
+                "personal_finance",
+                "charity_events"
+            ],
+            [
+                "personal_finance"
+            ],
+            [
+                "camping_trips",
+                "foreign_films"
+            ],
+            [
+                "eSports",
+                "leadership_skills",
+                "anime_fan"
+            ],
+            [
+                "personal_finance",
+                "leadership_skills"
+            ],
+            [
+                "anime_fan",
+                "foreign_films",
+                "eSports"
+            ]
+        ],
+        "Post_post": [
+            [
+                "anime_fan",
+                "foreign_films"
+            ],
+            [
+                "eSports"
+            ],
+            [
+                "leadership_skills",
+                "charity_events"
+            ],
+            [
+                "eSports",
+                "camping_trips"
+            ],
+            [
+                "foreign_films",
+                "personal_finance"
+            ],
+            [
+                "eSports",
+                "foreign_films",
+                "charity_events"
+            ],
+            [
+                "personal_finance",
+                "foreign_films"
+            ],
+            [
+                "anime_fan",
+                "leadership_skills"
+            ],
+            [
+                "foreign_films",
+                "leadership_skills"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 84,
+        "Name": "Oscar Montgomery",
+        "Gender": "Female",
+        "DOB": "2004-12-27",
+        "Interests": [
+            "fantasy_books",
+            "manga",
+            "reality_TV",
+            "costume_parties",
+            "financial_literacy",
+            "J_pop",
+            "concert_fan",
+            "extreme_sports",
+            "escape_rooms"
+        ],
+        "Seen_post": [
+            [
+                "escape_rooms",
+                "fantasy_books"
+            ],
+            [
+                "extreme_sports"
+            ],
+            [
+                "financial_literacy",
+                "manga",
+                "costume_parties"
+            ],
+            [
+                "J_pop",
+                "financial_literacy"
+            ],
+            [
+                "costume_parties",
+                "fantasy_books"
+            ],
+            [
+                "concert_fan"
+            ]
+        ],
+        "Post_post": [
+            [
+                "escape_rooms",
+                "fantasy_books"
+            ],
+            [
+                "financial_literacy"
+            ],
+            [
+                "reality_TV",
+                "financial_literacy"
+            ],
+            [
+                "manga",
+                "costume_parties",
+                "J_pop"
+            ],
+            [
+                "manga",
+                "escape_rooms"
+            ],
+            [
+                "reality_TV",
+                "manga"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 85,
+        "Name": "Rebecca Mack",
+        "Gender": "Male",
+        "DOB": "2001-05-01",
+        "Interests": [
+            "study_groups",
+            "mindfulness",
+            "photography",
+            "karaoke",
+            "true_crime",
+            "drama_movies",
+            "fitness_goals"
+        ],
+        "Seen_post": [
+            [
+                "mindfulness"
+            ],
+            [
+                "fitness_goals"
+            ],
+            [
+                "mindfulness",
+                "drama_movies"
+            ],
+            [
+                "study_groups"
+            ],
+            [
+                "fitness_goals",
+                "mindfulness",
+                "true_crime"
+            ],
+            [
+                "photography",
+                "karaoke",
+                "true_crime"
+            ],
+            [
+                "true_crime",
+                "drama_movies",
+                "fitness_goals"
+            ],
+            [
+                "photography"
+            ],
+            [
+                "true_crime",
+                "drama_movies",
+                "mindfulness"
+            ],
+            [
+                "fitness_goals",
+                "photography",
+                "study_groups"
+            ]
+        ],
+        "Post_post": [
+            [
+                "karaoke",
+                "photography",
+                "fitness_goals"
+            ],
+            [
+                "karaoke",
+                "mindfulness"
+            ],
+            [
+                "mindfulness"
+            ],
+            [
+                "drama_movies",
+                "karaoke"
+            ],
+            [
+                "drama_movies",
+                "study_groups",
+                "fitness_goals"
+            ],
+            [
+                "fitness_goals",
+                "study_groups",
+                "photography"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 86,
+        "Name": "Mary Frazier",
+        "Gender": "Female",
+        "DOB": "2002-03-22",
+        "Interests": [
+            "theme_nights",
+            "MOBA_games",
+            "financial_literacy",
+            "parkour",
+            "snowboarding",
+            "karaoke",
+            "cooking_shows",
+            "street_food",
+            "horror_movies"
+        ],
+        "Seen_post": [
+            [
+                "theme_nights",
+                "street_food",
+                "MOBA_games"
+            ],
+            [
+                "snowboarding",
+                "cooking_shows",
+                "horror_movies"
+            ],
+            [
+                "horror_movies"
+            ],
+            [
+                "karaoke"
+            ],
+            [
+                "parkour",
+                "MOBA_games"
+            ],
+            [
+                "parkour",
+                "karaoke"
+            ],
+            [
+                "street_food",
+                "karaoke"
+            ],
+            [
+                "horror_movies"
+            ],
+            [
+                "financial_literacy",
+                "cooking_shows"
+            ]
+        ],
+        "Post_post": [
+            [
+                "street_food",
+                "karaoke",
+                "parkour"
+            ],
+            [
+                "snowboarding"
+            ],
+            [
+                "theme_nights",
+                "MOBA_games",
+                "street_food"
+            ],
+            [
+                "financial_literacy",
+                "parkour",
+                "karaoke"
+            ],
+            [
+                "financial_literacy"
+            ],
+            [
+                "horror_movies"
+            ],
+            [
+                "snowboarding"
+            ],
+            [
+                "cooking_shows",
+                "karaoke",
+                "theme_nights"
+            ],
+            [
+                "financial_literacy",
+                "karaoke",
+                "horror_movies"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 87,
+        "Name": "Candace Khan",
+        "Gender": "Female",
+        "DOB": "2001-03-19",
+        "Interests": [
+            "fantasy_books",
+            "networking_events",
+            "budgeting_tips",
+            "movie_marathons",
+            "volunteer_work",
+            "board_games",
+            "photography"
+        ],
+        "Seen_post": [
+            [
+                "photography"
+            ],
+            [
+                "photography"
+            ],
+            [
+                "volunteer_work"
+            ],
+            [
+                "budgeting_tips",
+                "board_games",
+                "volunteer_work"
+            ],
+            [
+                "budgeting_tips",
+                "photography"
+            ],
+            [
+                "networking_events",
+                "photography",
+                "volunteer_work"
+            ],
+            [
+                "fantasy_books",
+                "budgeting_tips",
+                "networking_events"
+            ]
+        ],
+        "Post_post": [
+            [
+                "budgeting_tips",
+                "fantasy_books",
+                "movie_marathons"
+            ],
+            [
+                "volunteer_work",
+                "movie_marathons",
+                "networking_events"
+            ],
+            [
+                "photography",
+                "fantasy_books"
+            ],
+            [
+                "volunteer_work",
+                "photography",
+                "budgeting_tips"
+            ],
+            [
+                "movie_marathons"
+            ],
+            [
+                "movie_marathons"
+            ],
+            [
+                "budgeting_tips"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 88,
+        "Name": "Scott Baker",
+        "Gender": "Female",
+        "DOB": "2003-03-31",
+        "Interests": [
+            "creature_features",
+            "supernatural_thrillers",
+            "online_shopping",
+            "fantasy_books",
+            "graphic_design",
+            "MOBA_games"
+        ],
+        "Seen_post": [
+            [
+                "fantasy_books",
+                "online_shopping",
+                "graphic_design"
+            ],
+            [
+                "supernatural_thrillers",
+                "MOBA_games"
+            ],
+            [
+                "creature_features",
+                "supernatural_thrillers"
+            ],
+            [
+                "supernatural_thrillers",
+                "creature_features"
+            ],
+            [
+                "fantasy_books"
+            ],
+            [
+                "graphic_design",
+                "online_shopping",
+                "fantasy_books"
+            ],
+            [
+                "online_shopping"
+            ],
+            [
+                "MOBA_games"
+            ],
+            [
+                "MOBA_games",
+                "online_shopping",
+                "supernatural_thrillers"
+            ]
+        ],
+        "Post_post": [
+            [
+                "MOBA_games"
+            ],
+            [
+                "MOBA_games",
+                "fantasy_books"
+            ],
+            [
+                "fantasy_books"
+            ],
+            [
+                "graphic_design"
+            ],
+            [
+                "MOBA_games",
+                "online_shopping"
+            ],
+            [
+                "MOBA_games",
+                "online_shopping",
+                "fantasy_books"
+            ],
+            [
+                "creature_features"
+            ],
+            [
+                "creature_features",
+                "fantasy_books",
+                "supernatural_thrillers"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 89,
+        "Name": "Hailey Keller",
+        "Gender": "Male",
+        "DOB": "1999-01-03",
+        "Interests": [
+            "sci-fi_movies",
+            "travel_vlogging",
+            "healthy_eating",
+            "pet_lover",
+            "fantasy_movies",
+            "urban_exploration",
+            "horror_stories"
+        ],
+        "Seen_post": [
+            [
+                "horror_stories",
+                "sci-fi_movies"
+            ],
+            [
+                "pet_lover",
+                "sci-fi_movies",
+                "fantasy_movies"
+            ],
+            [
+                "sci-fi_movies",
+                "pet_lover"
+            ],
+            [
+                "travel_vlogging"
+            ],
+            [
+                "travel_vlogging"
+            ],
+            [
+                "healthy_eating",
+                "travel_vlogging"
+            ],
+            [
+                "urban_exploration"
+            ],
+            [
+                "sci-fi_movies",
+                "healthy_eating"
+            ]
+        ],
+        "Post_post": [
+            [
+                "fantasy_movies"
+            ],
+            [
+                "pet_lover",
+                "sci-fi_movies",
+                "fantasy_movies"
+            ],
+            [
+                "urban_exploration"
+            ],
+            [
+                "healthy_eating",
+                "horror_stories"
+            ],
+            [
+                "healthy_eating"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 90,
+        "Name": "Jake Richardson",
+        "Gender": "Male",
+        "DOB": "2002-11-26",
+        "Interests": [
+            "comics",
+            "skateboarding",
+            "J_pop",
+            "creature_features",
+            "stress_management",
+            "live_streaming",
+            "indie_games",
+            "festivals"
+        ],
+        "Seen_post": [
+            [
+                "J_pop",
+                "creature_features",
+                "indie_games"
+            ],
+            [
+                "indie_games"
+            ],
+            [
+                "indie_games"
+            ],
+            [
+                "J_pop",
+                "creature_features",
+                "live_streaming"
+            ],
+            [
+                "skateboarding",
+                "J_pop"
+            ],
+            [
+                "indie_games",
+                "comics"
+            ],
+            [
+                "live_streaming"
+            ],
+            [
+                "J_pop"
+            ],
+            [
+                "creature_features",
+                "J_pop",
+                "skateboarding"
+            ],
+            [
+                "skateboarding",
+                "comics",
+                "stress_management"
+            ]
+        ],
+        "Post_post": [
+            [
+                "comics",
+                "skateboarding",
+                "live_streaming"
+            ],
+            [
+                "comics"
+            ],
+            [
+                "festivals",
+                "indie_games"
+            ],
+            [
+                "J_pop"
+            ],
+            [
+                "comics",
+                "live_streaming",
+                "J_pop"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 91,
+        "Name": "Monica Ponce",
+        "Gender": "Female",
+        "DOB": "2006-05-14",
+        "Interests": [
+            "volunteer_work",
+            "puzzle_games",
+            "rock_music",
+            "memes",
+            "stress_management",
+            "indie_music"
+        ],
+        "Seen_post": [
+            [
+                "rock_music"
+            ],
+            [
+                "stress_management",
+                "volunteer_work",
+                "memes"
+            ],
+            [
+                "puzzle_games"
+            ],
+            [
+                "stress_management",
+                "rock_music",
+                "volunteer_work"
+            ],
+            [
+                "puzzle_games"
+            ],
+            [
+                "memes",
+                "stress_management"
+            ],
+            [
+                "memes",
+                "puzzle_games",
+                "rock_music"
+            ],
+            [
+                "indie_music",
+                "puzzle_games",
+                "rock_music"
+            ]
+        ],
+        "Post_post": [
+            [
+                "puzzle_games",
+                "memes",
+                "stress_management"
+            ],
+            [
+                "memes",
+                "volunteer_work"
+            ],
+            [
+                "memes"
+            ],
+            [
+                "memes"
+            ],
+            [
+                "indie_music"
+            ],
+            [
+                "rock_music"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 92,
+        "Name": "Julie Yates",
+        "Gender": "Male",
+        "DOB": "2000-09-25",
+        "Interests": [
+            "detective_stories",
+            "charity_events",
+            "anime_fan",
+            "mindfulness",
+            "machine_learning",
+            "skiing",
+            "sci_fi_fantasy",
+            "stress_management"
+        ],
+        "Seen_post": [
+            [
+                "stress_management",
+                "skiing",
+                "sci_fi_fantasy"
+            ],
+            [
+                "charity_events"
+            ],
+            [
+                "stress_management",
+                "skiing"
+            ],
+            [
+                "skiing",
+                "machine_learning"
+            ],
+            [
+                "sci_fi_fantasy",
+                "mindfulness",
+                "charity_events"
+            ],
+            [
+                "skiing"
+            ],
+            [
+                "machine_learning",
+                "sci_fi_fantasy"
+            ],
+            [
+                "mindfulness",
+                "sci_fi_fantasy",
+                "skiing"
+            ],
+            [
+                "charity_events",
+                "mindfulness"
+            ],
+            [
+                "sci_fi_fantasy",
+                "charity_events",
+                "anime_fan"
+            ]
+        ],
+        "Post_post": [
+            [
+                "detective_stories",
+                "charity_events",
+                "skiing"
+            ],
+            [
+                "sci_fi_fantasy",
+                "stress_management"
+            ],
+            [
+                "anime_fan",
+                "mindfulness"
+            ],
+            [
+                "anime_fan",
+                "stress_management"
+            ],
+            [
+                "skiing",
+                "machine_learning"
+            ],
+            [
+                "charity_events",
+                "detective_stories",
+                "machine_learning"
+            ],
+            [
+                "skiing",
+                "machine_learning"
+            ],
+            [
+                "anime_fan",
+                "skiing",
+                "sci_fi_fantasy"
+            ],
+            [
+                "machine_learning"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 93,
+        "Name": "Bryan Butler",
+        "Gender": "Female",
+        "DOB": "2001-01-22",
+        "Interests": [
+            "charity_events",
+            "action_movies",
+            "classical_music",
+            "romance_movies",
+            "manga"
+        ],
+        "Seen_post": [
+            [
+                "classical_music"
+            ],
+            [
+                "manga",
+                "charity_events"
+            ],
+            [
+                "charity_events"
+            ],
+            [
+                "charity_events"
+            ],
+            [
+                "charity_events",
+                "action_movies"
+            ],
+            [
+                "romance_movies",
+                "classical_music"
+            ],
+            [
+                "action_movies",
+                "charity_events"
+            ],
+            [
+                "classical_music"
+            ],
+            [
+                "charity_events",
+                "romance_movies"
+            ],
+            [
+                "charity_events",
+                "romance_movies",
+                "manga"
+            ]
+        ],
+        "Post_post": [
+            [
+                "charity_events"
+            ],
+            [
+                "charity_events",
+                "action_movies"
+            ],
+            [
+                "action_movies"
+            ],
+            [
+                "charity_events"
+            ],
+            [
+                "romance_movies",
+                "action_movies"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 94,
+        "Name": "Alexander Warren",
+        "Gender": "Male",
+        "DOB": "2001-05-13",
+        "Interests": [
+            "pet_lover",
+            "retro_movies",
+            "stand_up_comedy",
+            "role_playing",
+            "comedy_movies",
+            "true_crime",
+            "sci-fi_movies",
+            "webtoons"
+        ],
+        "Seen_post": [
+            [
+                "true_crime",
+                "stand_up_comedy",
+                "retro_movies"
+            ],
+            [
+                "stand_up_comedy",
+                "webtoons"
+            ],
+            [
+                "pet_lover",
+                "webtoons"
+            ],
+            [
+                "sci-fi_movies",
+                "pet_lover",
+                "webtoons"
+            ],
+            [
+                "stand_up_comedy"
+            ],
+            [
+                "stand_up_comedy"
+            ],
+            [
+                "pet_lover",
+                "stand_up_comedy",
+                "retro_movies"
+            ]
+        ],
+        "Post_post": [
+            [
+                "comedy_movies"
+            ],
+            [
+                "pet_lover",
+                "webtoons"
+            ],
+            [
+                "pet_lover",
+                "retro_movies",
+                "webtoons"
+            ],
+            [
+                "role_playing",
+                "stand_up_comedy",
+                "sci-fi_movies"
+            ],
+            [
+                "sci-fi_movies",
+                "role_playing"
+            ],
+            [
+                "comedy_movies",
+                "pet_lover"
+            ],
+            [
+                "retro_movies",
+                "pet_lover",
+                "stand_up_comedy"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 95,
+        "Name": "Scott Silva",
+        "Gender": "Female",
+        "DOB": "2004-09-30",
+        "Interests": [
+            "celebrity_gossip",
+            "anime_fan",
+            "street_food",
+            "theme_parks",
+            "stress_management"
+        ],
+        "Seen_post": [
+            [
+                "anime_fan",
+                "stress_management"
+            ],
+            [
+                "stress_management",
+                "theme_parks",
+                "celebrity_gossip"
+            ],
+            [
+                "celebrity_gossip",
+                "stress_management"
+            ],
+            [
+                "anime_fan",
+                "stress_management",
+                "theme_parks"
+            ],
+            [
+                "stress_management",
+                "anime_fan",
+                "theme_parks"
+            ],
+            [
+                "stress_management"
+            ]
+        ],
+        "Post_post": [
+            [
+                "stress_management"
+            ],
+            [
+                "celebrity_gossip",
+                "stress_management",
+                "street_food"
+            ],
+            [
+                "anime_fan",
+                "theme_parks"
+            ],
+            [
+                "stress_management",
+                "street_food"
+            ],
+            [
+                "anime_fan"
+            ],
+            [
+                "theme_parks",
+                "anime_fan",
+                "celebrity_gossip"
+            ],
+            [
+                "theme_parks"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 96,
+        "Name": "Richard Ortega",
+        "Gender": "Male",
+        "DOB": "2003-11-22",
+        "Interests": [
+            "board_games",
+            "activism",
+            "karaoke",
+            "UX_design",
+            "international_students"
+        ],
+        "Seen_post": [
+            [
+                "karaoke",
+                "international_students"
+            ],
+            [
+                "board_games",
+                "karaoke",
+                "international_students"
+            ],
+            [
+                "karaoke",
+                "international_students"
+            ],
+            [
+                "board_games",
+                "karaoke",
+                "international_students"
+            ],
+            [
+                "UX_design",
+                "activism",
+                "international_students"
+            ]
+        ],
+        "Post_post": [
+            [
+                "activism"
+            ],
+            [
+                "board_games",
+                "international_students"
+            ],
+            [
+                "board_games",
+                "karaoke",
+                "international_students"
+            ],
+            [
+                "activism",
+                "board_games"
+            ],
+            [
+                "karaoke"
+            ],
+            [
+                "board_games",
+                "karaoke",
+                "UX_design"
+            ],
+            [
+                "karaoke"
+            ],
+            [
+                "karaoke",
+                "international_students",
+                "activism"
+            ],
+            [
+                "international_students",
+                "karaoke",
+                "activism"
+            ],
+            [
+                "board_games"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 97,
+        "Name": "Don Hess",
+        "Gender": "Male",
+        "DOB": "2004-10-07",
+        "Interests": [
+            "community_service",
+            "sci_fi_books",
+            "concert_fan",
+            "jazz_music",
+            "festivals",
+            "card_games",
+            "sci-fi_movies",
+            "debate_club"
+        ],
+        "Seen_post": [
+            [
+                "card_games",
+                "debate_club"
+            ],
+            [
+                "sci-fi_movies"
+            ],
+            [
+                "debate_club",
+                "sci-fi_movies",
+                "concert_fan"
+            ],
+            [
+                "sci_fi_books",
+                "community_service",
+                "debate_club"
+            ],
+            [
+                "concert_fan"
+            ],
+            [
+                "sci_fi_books"
+            ],
+            [
+                "debate_club",
+                "festivals",
+                "jazz_music"
+            ],
+            [
+                "card_games",
+                "concert_fan",
+                "debate_club"
+            ],
+            [
+                "festivals",
+                "jazz_music",
+                "sci-fi_movies"
+            ],
+            [
+                "community_service",
+                "sci_fi_books"
+            ]
+        ],
+        "Post_post": [
+            [
+                "jazz_music",
+                "community_service"
+            ],
+            [
+                "card_games"
+            ],
+            [
+                "sci_fi_books",
+                "community_service",
+                "concert_fan"
+            ],
+            [
+                "community_service",
+                "sci_fi_books"
+            ],
+            [
+                "community_service",
+                "jazz_music"
+            ],
+            [
+                "sci_fi_books"
+            ],
+            [
+                "debate_club",
+                "sci_fi_books",
+                "festivals"
+            ],
+            [
+                "community_service",
+                "card_games"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 98,
+        "Name": "Jordan Delgado",
+        "Gender": "Female",
+        "DOB": "2005-07-21",
+        "Interests": [
+            "sports_events",
+            "community_service",
+            "scientific_innovation",
+            "online_shopping",
+            "costume_parties",
+            "fantasy_books"
+        ],
+        "Seen_post": [
+            [
+                "community_service",
+                "sports_events",
+                "fantasy_books"
+            ],
+            [
+                "sports_events",
+                "scientific_innovation",
+                "fantasy_books"
+            ],
+            [
+                "community_service",
+                "costume_parties"
+            ],
+            [
+                "sports_events",
+                "costume_parties",
+                "scientific_innovation"
+            ],
+            [
+                "fantasy_books",
+                "online_shopping"
+            ],
+            [
+                "online_shopping",
+                "fantasy_books",
+                "scientific_innovation"
+            ],
+            [
+                "scientific_innovation",
+                "costume_parties",
+                "sports_events"
+            ],
+            [
+                "costume_parties",
+                "community_service"
+            ],
+            [
+                "community_service",
+                "costume_parties"
+            ],
+            [
+                "online_shopping",
+                "community_service",
+                "sports_events"
+            ]
+        ],
+        "Post_post": [
+            [
+                "community_service"
+            ],
+            [
+                "fantasy_books"
+            ],
+            [
+                "online_shopping"
+            ],
+            [
+                "fantasy_books",
+                "online_shopping",
+                "community_service"
+            ],
+            [
+                "online_shopping"
+            ],
+            [
+                "fantasy_books"
+            ],
+            [
+                "scientific_innovation"
+            ],
+            [
+                "fantasy_books",
+                "online_shopping"
+            ],
+            [
+                "costume_parties",
+                "scientific_innovation",
+                "online_shopping"
+            ],
+            [
+                "fantasy_books"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 99,
+        "Name": "Mary Hall",
+        "Gender": "Female",
+        "DOB": "2006-02-04",
+        "Interests": [
+            "international_students",
+            "online_shopping",
+            "pet_lover",
+            "role_playing",
+            "coding",
+            "haunted_places",
+            "sports_events",
+            "RPG_games",
+            "stand_up_comedy",
+            "fan_fiction"
+        ],
+        "Seen_post": [
+            [
+                "pet_lover",
+                "role_playing"
+            ],
+            [
+                "coding",
+                "international_students"
+            ],
+            [
+                "role_playing",
+                "fan_fiction",
+                "coding"
+            ],
+            [
+                "stand_up_comedy",
+                "coding"
+            ],
+            [
+                "sports_events",
+                "international_students"
+            ],
+            [
+                "role_playing",
+                "fan_fiction"
+            ],
+            [
+                "online_shopping",
+                "stand_up_comedy",
+                "international_students"
+            ]
+        ],
+        "Post_post": [
+            [
+                "RPG_games"
+            ],
+            [
+                "online_shopping",
+                "sports_events"
+            ],
+            [
+                "RPG_games"
+            ],
+            [
+                "fan_fiction",
+                "RPG_games"
+            ],
+            [
+                "online_shopping",
+                "coding"
+            ],
+            [
+                "sports_events"
+            ],
+            [
+                "role_playing",
+                "fan_fiction"
+            ],
+            [
+                "fan_fiction",
+                "role_playing",
+                "haunted_places"
+            ],
+            [
+                "fan_fiction",
+                "sports_events",
+                "role_playing"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    },
+    {
+        "UserID": 100,
+        "Name": "Mr. Andrew Hodges",
+        "Gender": "Male",
+        "DOB": "2005-06-14",
+        "Interests": [
+            "festivals",
+            "VR_experiences",
+            "coding",
+            "sci_fi_fantasy",
+            "photography",
+            "skiing",
+            "role_playing",
+            "eSports",
+            "academic_research",
+            "theme_parks"
+        ],
+        "Seen_post": [
+            [
+                "role_playing",
+                "eSports",
+                "theme_parks"
+            ],
+            [
+                "role_playing",
+                "skiing"
+            ],
+            [
+                "photography",
+                "eSports"
+            ],
+            [
+                "photography",
+                "skiing"
+            ],
+            [
+                "role_playing"
+            ],
+            [
+                "skiing",
+                "photography"
+            ],
+            [
+                "VR_experiences",
+                "festivals",
+                "theme_parks"
+            ],
+            [
+                "theme_parks",
+                "coding",
+                "sci_fi_fantasy"
+            ],
+            [
+                "theme_parks",
+                "VR_experiences",
+                "role_playing"
+            ],
+            [
+                "coding"
+            ]
+        ],
+        "Post_post": [
+            [
+                "VR_experiences"
+            ],
+            [
+                "role_playing",
+                "academic_research",
+                "skiing"
+            ],
+            [
+                "VR_experiences",
+                "role_playing"
+            ],
+            [
+                "role_playing"
+            ],
+            [
+                "eSports"
+            ],
+            [
+                "eSports",
+                "sci_fi_fantasy"
+            ],
+            [
+                "festivals"
+            ]
+        ],
+        "friends": [],
+        "character": []
+    }
+]
