@@ -1,8 +1,10 @@
 from rest_framework import serializers
-from .models import DataEntry
+from .models import UserProfile
 
-class DataEntrySerializer(serializers.ModelSerializer):
+class UserProfileSerializer(serializers.ModelSerializer):
     class Meta:
-        model = DataEntry
+        model = UserProfile
         fields = '__all__'
 
+    def create(self, validated_data):
+        return UserProfile.objects.create(**validated_data)
