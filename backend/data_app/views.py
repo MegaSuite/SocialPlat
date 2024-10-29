@@ -15,7 +15,7 @@ class RegisterView(APIView):
         if serializer.is_valid():
             user = serializer.save()
             return Response({
-                "user_id": user.user_id,
+                "user_id": user.id,
                 "user_name": user.user_name,
                 "message": "Success"
             }, status=status.HTTP_201_CREATED)
@@ -52,7 +52,7 @@ class UserProfileView(APIView):
         user_id = request.data.get('user_id')
 
         try:
-            user_profile = UserProfile.objects.get(user_id=user_id)
+            user_profile = UserProfile.objects.get(id=user_id)
             serializer = UserProfileSerializer(user_profile)
             return Response(serializer.data, status=status.HTTP_200_OK)
         except UserProfile.DoesNotExist:

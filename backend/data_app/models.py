@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 
 class UserProfile(models.Model):
-    user_id = models.AutoField(primary_key=True)
     user_name = models.CharField(max_length=100)
     user_job = models.CharField(max_length=100)
     user_contact = models.CharField(max_length=100)
