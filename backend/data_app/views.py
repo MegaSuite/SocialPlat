@@ -28,7 +28,7 @@ class LoginView(APIView):
         password = request.data.get("user_password")
 
         try:
-            user = UserProfile.objects.get(contact=contact)
+            user = UserProfile.objects.get(user_contact=contact)
             if check_password(password, user.user_password):
                 refresh = RefreshToken.for_user(user)
                 return Response({
