@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -137,4 +138,14 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+}
+
+
+# JWT
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # 设置访问令牌的有效期
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),    # 设置刷新令牌的有效期
+    'ROTATE_REFRESH_TOKENS': False,                 # 是否在使用刷新令牌时更新刷新令牌
+    'BLACKLIST_AFTER_ROTATION': True,               # 是否将使用过的刷新令牌列入黑名单
+    'UPDATE_LAST_LOGIN': False,
 }
