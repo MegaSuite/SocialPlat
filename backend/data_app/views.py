@@ -13,8 +13,8 @@ class RegisterView(APIView):
         if serializer.is_valid():
             user = serializer.save()
             return Response({
-                "id": user.id,
-                "name": user.name,
+                "user_id": user.id,
+                "user_name": user.name,
                 "message": "Success"
             }, status=status.HTTP_201_CREATED)
         else:
@@ -24,16 +24,16 @@ class RegisterView(APIView):
 class LoginView(APIView):
 
     def post(self, request):
-        contact = request.data.get("contact")
-        password = request.data.get("password")
+        contact = request.data.get("user_contact")
+        password = request.data.get("user_password")
 
         try:
             user = UserProfile.objects.get(contact=contact)
             if check_password(password, user.password):
                 refresh = RefreshToken.for_user(user)
                 return Response({
-                    "token": str(refresh.access_token),
-                    "name": user.name,
+                    "user_token": str(refresh.access_token),
+                    "user_name": user.name,
                     "message": "Success"
                 }, status=status.HTTP_200_OK)
             else:
