@@ -14,7 +14,7 @@ class RegisterView(APIView):
             user = serializer.save()
             return Response({
                 "user_id": user.id,
-                "user_name": user.name,
+                "user_name": user.user_name,
                 "message": "Success"
             }, status=status.HTTP_201_CREATED)
         else:
@@ -29,11 +29,11 @@ class LoginView(APIView):
 
         try:
             user = UserProfile.objects.get(contact=contact)
-            if check_password(password, user.password):
+            if check_password(password, user.user_password):
                 refresh = RefreshToken.for_user(user)
                 return Response({
                     "user_token": str(refresh.access_token),
-                    "user_name": user.name,
+                    "user_name": user.user_name,
                     "message": "Success"
                 }, status=status.HTTP_200_OK)
             else:
