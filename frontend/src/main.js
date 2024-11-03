@@ -1,22 +1,22 @@
 import { createApp } from 'vue'
-import HomePage from './components/HomePage.vue'
-import Register from './components/UserRegister.vue'
-import Login from './components/UserLogin.vue'
-import ItemRecommend from './components/ItemRecommend.vue'
-import Luntan from './components/ForumLuntan.vue'
-import UserActivities from './components/UserActivities.vue'
-import Profile from './components/UserProfile.vue'
-import Chat from './components/UserChat.vue'
+import HomeComponent from './components/HomeComponent.vue'
+import RegisterComponent from './components/RegisterComponent.vue'
+import LoginComponent from './components/LoginComponent.vue'
+import RecommendComponent from './components/RecommendComponent.vue'
+import LuntanComponent from './components/LuntanComponent.vue'
+import ActivitiesComponent from './components/ActivitiesComponent.vue'
+import ProfileComponent from './components/ProfileComponent.vue'
+import ChatComponent from './components/ChatComponent.vue'
 
 const components = {
-    '#home': HomePage,
-    '#register': Register,
-    '#login': Login,
-    '#recommend': ItemRecommend,
-    '#luntan': Luntan,
-    '#activities': UserActivities,
-    '#profile': Profile,
-    '#chat': Chat
+    '#home': HomeComponent,
+    '#register': RegisterComponent,
+    '#login': LoginComponent,
+    '#recommend': RecommendComponent,
+    '#luntan': LuntanComponent,
+    '#activities': ActivitiesComponent,
+    '#profile': ProfileComponent,
+    '#chat': ChatComponent
 };
 
 Object.keys(components).forEach(id => {
