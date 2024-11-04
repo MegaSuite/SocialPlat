@@ -6,6 +6,9 @@ hero:
   name: "Social Plat Wiki"
   text: "SocialPlat项目的介绍文档"
   tagline: A wiki for SocialPlat Project
+  image:
+    src: /home-icon.png
+    alt: background
   actions:
     - theme: brand
       text: 进入SocialPlat平台
