@@ -1,2 +1,5 @@
-./backend/.venv/
-./frontend/node-modules/
+backend/.venv/
+frontend/node-modules/
+doc/.vitepress/dist/
+doc/.vitepress/cache/
+node_modules/
