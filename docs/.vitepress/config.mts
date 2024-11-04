@@ -9,7 +9,7 @@ export default defineConfig({
       'link', 
       { 
         rel: 'icon', 
-        href: '/favicon.ico' 
+        href: 'https://img.icons8.com/matisse/32/unicorn.png' 
       }
     ]
   ],
@@ -19,7 +19,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Wiki', link: '/TEAM/team' }
     ],
-    logo: '/favicon.ico',
+    logo: 'https://img.icons8.com/matisse/32/unicorn.png',
     sidebar: [
       {
         text: '团队成员',
