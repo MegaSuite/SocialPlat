@@ -12,7 +12,7 @@ hero:
       link: https://social.caay.ru/
     - theme: alt
       text: 项目wiki
-      link: /NABCD
+      link: /TEAM/team
 
 features:
   - title: 特色之一
