@@ -391,26 +391,28 @@
 
 响应体：
 
-    {
-    	"friends": 
-        [
-            {
-                "id": "好友的用户ID",
-                "name": "好友的姓名",
-                "job": "好友的专业",
-                "hobbies": ["好友的兴趣1", "好友的兴趣2", "..."]
-            }
-        ],
-        "friendRequests": 
-        [
-            {
-                "id": "好友请求用户ID",
-                "name": "好友请求用户姓名"
-            }
-        ],
-        "avatar": "用户头像的URL",
-        "message": "Success"/"Failed"
-    }
+```json
+{
+	"friends": 
+    [
+        {
+            "id": "好友的用户ID",
+            "name": "好友的姓名",
+            "job": "好友的专业",
+            "hobbies": ["好友的兴趣1", "好友的兴趣2", "..."]
+        }
+    ],
+    "friendRequests": 
+    [
+        {
+            "id": "好友请求用户ID",
+            "name": "好友请求用户姓名"
+        }
+    ],
+    "avatar": "用户头像的URL",
+    "message": "Success"/"Failed"
+}
+```
 
 ### 响应好友请求
 
