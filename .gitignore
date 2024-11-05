@@ -3,3 +3,4 @@ frontend/node-modules/
 docs/.vitepress/dist/
 docs/.vitepress/cache/
 node_modules/
+**/__pycache__
