@@ -44,12 +44,13 @@ class LoginView(APIView):
         except UserProfile.DoesNotExist:
             return Response({"message": "Failed"}, status=status.HTTP_404_NOT_FOUND)
 
-logger = logging.getLogger(__name__)
+
 class UserProfileView(APIView):
-    permission_classes = [AllowAny]
-    # authentication_classes = [JWTAuthentication]
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JWTAuthentication]
 
     def post(self, request):
+        logger = logging.getLogger(__name__)
         logger.info(f"Received request with token: {request.auth}")
         logger.info(f"User from request: {request.user}")
         user_id = request.data.get('user_id')
