@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from django.contrib.auth.hashers import check_password
+from django.contrib.auth.hashers import check_password, make_password
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
@@ -50,10 +50,33 @@ class UserProfileView(APIView):
 
     def post(self, request):
         user_id = request.data.get('user_id')
+        method = request.data.get('method')
 
         try:
             user_profile = UserProfile.objects.get(id=user_id)
-            serializer = UserProfileSerializer(user_profile)
-            return Response(serializer.data, status=status.HTTP_200_OK)
+
+            if method == 'request':
+                serializer = UserProfileSerializer(user_profile)
+                return Response(serializer.data, status=status.HTTP_200_OK)
+
+            elif method == 'renew':
+                serializer = UserProfileSerializer(user_profile, data=request.data, partial=True)
+                if serializer.is_valid():
+                    # 如果密码被更新，确保它被正确地哈希
+                    if 'user_password' in serializer.validated_data:
+                        serializer.validated_data['user_password'] = make_password(serializer.validated_data['user_password'])
+
+                    serializer.save()
+                    return Response({
+                        "user_id": user_profile.id,
+                        "user_name": serializer.validated_data.get('user_name', user_profile.user_name),
+                        "message": "Success"
+                    }, status=status.HTTP_200_OK)
+                else:
+                    return Response({"message": "Failed", "errors": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
+            else:
+                return Response({"message": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
+
         except UserProfile.DoesNotExist:
             return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
