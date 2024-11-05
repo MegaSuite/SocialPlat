@@ -46,13 +46,10 @@ class LoginView(APIView):
 
 
 class UserProfileView(APIView):
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [JWTAuthentication]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [JWTAuthentication]
 
     def post(self, request):
-        logger = logging.getLogger(__name__)
-        logger.info(f"Received request with token: {request.auth}")
-        logger.info(f"User from request: {request.user}")
         user_id = request.data.get('user_id')
         method = request.data.get('method')
 
