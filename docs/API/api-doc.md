@@ -1,4 +1,8 @@
-## 注册页面
+## TODO
+
+- 用户jwt认证
+
+## ✔️注册页面
 
 > API 端点：http://social.caay.ru/api/register/
 
@@ -35,7 +39,7 @@
 
 
 
-## 登录页面
+## ✔️登录页面
 
 > API 端点：http://social.caay.ru/api/login/
 
@@ -134,7 +138,7 @@
 }
 ```
 
-## 发送帖子
+### 发送帖子
 
 请求头：
 
@@ -198,7 +202,7 @@
 
 >  API 端点：http://social.caay.ru/api/users/
 
-### 获取用户资料
+### ✔️获取用户资料
 
 请求头：
 
@@ -231,7 +235,7 @@
 }
 ```
 
-### 更新用户资料
+### ✔️更新用户资料
 
 请求头：
 
@@ -267,7 +271,11 @@
 }
 ```
 
-### 上传用户头像
+## 用户头像
+
+> API 端点：http://social.caay.ru/api/avatar/
+
+### 上传头像
 
 请求头：
 
@@ -280,7 +288,7 @@
 {
     "user_id": "用户的唯一标识符",
     "avatar": "body",
-    "method": "avatar"
+    "method": "add"
 }
 ```
 
@@ -293,7 +301,30 @@
 }
 ```
 
+### 请求头像
 
+请求头：
+
+- **Authorization**: `Bearer <your-authentication-token>`
+- **Content-Type**: `application/json`
+
+请求体：
+
+```json
+{
+    "user_id": "用户的唯一标识符",
+    "method": "request"
+}
+```
+
+响应体：
+
+```json
+{
+    "avatar": "用户头像的URL",
+    "message": "Success"/"Failed"
+}
+```
 
 ## 相似推荐
 
