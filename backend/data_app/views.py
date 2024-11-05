@@ -49,6 +49,8 @@ class UserProfileView(APIView):
     permission_classes = [IsAuthenticated]
 
     def post(self, request):
+        logger.info(f"Received request with token: {request.auth}")
+        logger.info(f"User from request: {request.user}")
         user_id = request.data.get('user_id')
         method = request.data.get('method')
 
