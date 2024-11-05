@@ -43,7 +43,7 @@ class LoginView(APIView):
         except UserProfile.DoesNotExist:
             return Response({"message": "Failed"}, status=status.HTTP_404_NOT_FOUND)
 
-
+logger = logging.getLogger(__name__)
 class UserProfileView(APIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsAuthenticated]
