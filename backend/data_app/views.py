@@ -1,16 +1,18 @@
-import logging
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from django.contrib.auth.hashers import check_password, make_password
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
+from rest_framework.parsers import MultiPartParser, FormParser
+from django.contrib.auth.hashers import check_password, make_password
+from django.core.files.base import ContentFile
+import base64
+
 from .models import UserProfile, Post, Comment
 from .serializers import UserProfileSerializer, PostSerializer, CommentSerializer
 
 class RegisterView(APIView):
-
     def post(self, request):
         serializer = UserProfileSerializer(data=request.data)
         if serializer.is_valid():
@@ -25,7 +27,6 @@ class RegisterView(APIView):
 
 
 class LoginView(APIView):
-
     def post(self, request):
         contact = request.data.get("user_contact")
         password = request.data.get("user_password")
@@ -48,7 +49,6 @@ class LoginView(APIView):
 class UserProfileView(APIView):
     # permission_classes = [IsAuthenticated]
     # authentication_classes = [JWTAuthentication]
-
     def post(self, request):
         user_id = request.data.get('user_id')
         method = request.data.get('method')
@@ -86,7 +86,6 @@ class UserProfileView(APIView):
 class PostView(APIView):
     # permission_classes = [IsAuthenticated]
     # authentication_classes = [JWTAuthentication]
-
     def post(self, request):
         user_id = request.data.get('user_id')
         method = request.data.get('method')
@@ -142,6 +141,52 @@ class PostView(APIView):
                 "comment_author": user.user_name,
                 "message": "Success"
             }, status=status.HTTP_201_CREATED)
+
+        else:
+            return Response({"message": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class AvatarView(APIView):
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [JWTAuthentication]
+    parser_classes = (MultiPartParser, FormParser)
+
+    def post(self, request):
+        user_id = request.data.get('user_id')
+        method = request.data.get('method')
+
+        try:
+            user_profile = UserProfile.objects.get(id=user_id)
+        except UserProfile.DoesNotExist:
+            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        if method == 'add':
+            avatar_data = request.data.get('avatar')
+            if avatar_data:
+                # 解码Base64编码的图像数据
+                format, imgstr = avatar_data.split(';base64,')
+                ext = format.split('/')[-1]
+                data = ContentFile(base64.b64decode(imgstr), name=f'avatar_{user_id}.{ext}')
+
+                # 保存头像
+                user_profile.avatar = data
+                user_profile.save()
+
+                return Response({
+                    "avatar": request.build_absolute_uri(user_profile.avatar.url),
+                    "message": "Success"
+                }, status=status.HTTP_200_OK)
+            else:
+                return Response({"message": "Failed", "error": "No avatar data provided"}, status=status.HTTP_400_BAD_REQUEST)
+
+        elif method == 'request':
+            if user_profile.avatar:
+                return Response({
+                    "avatar": request.build_absolute_uri(user_profile.avatar.url),
+                    "message": "Success"
+                }, status=status.HTTP_200_OK)
+            else:
+                return Response({"message": "Failed", "error": "No avatar found"}, status=status.HTTP_404_NOT_FOUND)
 
         else:
             return Response({"message": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
