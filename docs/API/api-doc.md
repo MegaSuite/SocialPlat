@@ -280,17 +280,14 @@
 请求头：
 
 - **Authorization**: `Bearer <your-authentication-token>`
-- **Content-Type**: `application/json`
+- **Content-Type**: `multipart/form-data`
 
 请求体：
 
-```json
-{
-    "user_id": "用户的唯一标识符",
-    "avatar": "body",
-    "method": "add"
-}
-```
+| user_id | 用户的唯一标识 |
+| ------- | -------------- |
+| avatar  | 图片文件       |
+| method  | add            |
 
 响应体：
 
