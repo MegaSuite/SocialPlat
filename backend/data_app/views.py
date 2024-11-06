@@ -6,8 +6,6 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.parsers import MultiPartParser, FormParser
 from django.contrib.auth.hashers import check_password, make_password
-from django.core.files.base import ContentFile
-import base64
 
 from .models import UserProfile, Post, Comment
 from .serializers import UserProfileSerializer, PostSerializer, CommentSerializer
@@ -158,26 +156,19 @@ class AvatarView(APIView):
         try:
             user_profile = UserProfile.objects.get(id=user_id)
         except UserProfile.DoesNotExist:
-            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+            return Response({'message': 'Failed', 'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
 
         if method == 'add':
-            avatar_data = request.data.get('avatar')
-            if avatar_data:
-                # 解码Base64编码的图像数据
-                format, imgstr = avatar_data.split(';base64,')
-                ext = format.split('/')[-1]
-                data = ContentFile(base64.b64decode(imgstr), name=f'avatar_{user_id}.{ext}')
-
-                # 保存头像
-                user_profile.avatar = data
+            avatar = request.FILES.get('avatar')
+            if avatar:
+                user_profile.avatar = avatar
                 user_profile.save()
-
                 return Response({
                     "avatar": request.build_absolute_uri(user_profile.avatar.url),
                     "message": "Success"
                 }, status=status.HTTP_200_OK)
             else:
-                return Response({"message": "Failed", "error": "No avatar data provided"}, status=status.HTTP_400_BAD_REQUEST)
+                return Response({"message": "Failed", "error": "No avatar file provided"}, status=status.HTTP_400_BAD_REQUEST)
 
         elif method == 'request':
             if user_profile.avatar:
@@ -189,4 +180,4 @@ class AvatarView(APIView):
                 return Response({"message": "Failed", "error": "No avatar found"}, status=status.HTTP_404_NOT_FOUND)
 
         else:
-            return Response({"message": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({"message": "Failed", "error": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
