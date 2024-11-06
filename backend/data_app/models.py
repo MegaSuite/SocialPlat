@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser
 
 class UserProfile(models.Model):
-    avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
+    # avatar = models.ImageField(upload_to='avatars/', null=True, blank=True)
     user_name = models.CharField(max_length=100)
     user_job = models.CharField(max_length=100)
     user_contact = models.CharField(max_length=100)
