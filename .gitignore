@@ -5,3 +5,5 @@ docs/.vitepress/cache/
 node_modules/
 **/__pycache__
 **/.venv
+**/migrations
+**/db.sqlite3
