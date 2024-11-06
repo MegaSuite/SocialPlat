@@ -4,10 +4,10 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.contrib.auth.hashers import check_password, make_password
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework.permissions import IsAuthenticated, AllowAny
+from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
-from .models import UserProfile
-from .serializers import UserProfileSerializer
+from .models import UserProfile, Post, Comment
+from .serializers import UserProfileSerializer, PostSerializer, CommentSerializer
 
 class RegisterView(APIView):
 
@@ -81,3 +81,67 @@ class UserProfileView(APIView):
 
         except UserProfile.DoesNotExist:
             return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+
+
+class PostView(APIView):
+    permission_classes = [IsAuthenticated]
+    authentication_classes = [JWTAuthentication]
+
+    def post(self, request):
+        user_id = request.data.get('user_id')
+        method = request.data.get('method')
+
+        try:
+            user = UserProfile.objects.get(id=user_id)
+        except UserProfile.DoesNotExist:
+            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        if method == 'all':
+            posts = Post.objects.all().order_by('-created_at')[:20]
+            serializer = PostSerializer(posts, many=True)
+            return Response({
+                "message": "Success",
+                "posts": serializer.data
+            }, status=status.HTTP_200_OK)
+
+        elif method == 'add':
+            post_title = request.data.get('post_title')
+            post_content = request.data.get('post_content')
+
+            post = Post.objects.create(
+                post_author=user,
+                post_title=post_title,
+                post_content=post_content
+            )
+
+            return Response({
+                "post_id": post.post_id,
+                "post_author": user.user_name,
+                "message": "Success"
+            }, status=status.HTTP_201_CREATED)
+
+        elif method == 'comment':
+            post_id = request.data.get('post_id')
+            comment_content = request.data.get('comment_content')
+
+            try:
+                post = Post.objects.get(post_id=post_id)
+            except Post.DoesNotExist:
+                return Response({'error': 'Post not found'}, status=status.HTTP_404_NOT_FOUND)
+
+            comment = Comment.objects.create(
+                post=post,
+                comment_author=user,
+                comment_content=comment_content
+            )
+
+            return Response({
+                "post_id": post.post_id,
+                "post_author": post.post_author.user_name,
+                "comment_id": comment.comment_id,
+                "comment_author": user.user_name,
+                "message": "Success"
+            }, status=status.HTTP_201_CREATED)
+
+        else:
+            return Response({"message": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
