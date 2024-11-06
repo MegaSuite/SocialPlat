@@ -84,8 +84,8 @@ class UserProfileView(APIView):
 
 
 class PostView(APIView):
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [JWTAuthentication]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [JWTAuthentication]
 
     def post(self, request):
         user_id = request.data.get('user_id')
