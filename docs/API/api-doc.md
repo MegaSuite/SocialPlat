@@ -271,11 +271,11 @@
 }
 ```
 
-## 用户头像
+## ✔️用户头像
 
 > API 端点：http://social.caay.ru/api/avatar/
 
-### 上传头像
+### ✔️上传头像
 
 请求头：
 
@@ -298,21 +298,18 @@
 }
 ```
 
-### 请求头像
+### ✔️请求头像
 
 请求头：
 
 - **Authorization**: `Bearer <your-authentication-token>`
-- **Content-Type**: `application/json`
+- **Content-Type**: `multipart/form-data`
 
 请求体：
 
-```json
-{
-    "user_id": "用户的唯一标识符",
-    "method": "request"
-}
-```
+| user_id | 用户的唯一标识 |
+| :------ | :------------- |
+| method  | request        |
 
 响应体：
 
