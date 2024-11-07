@@ -250,6 +250,26 @@ class RelationView(APIView):
                 'message': 'Success'
             }, status=status.HTTP_200_OK)
 
+        elif method == 'remove':
+            friend_id = request.data.get('friend_remove')
+            try:
+                friend = UserProfile.objects.get(id=friend_id)
+            except UserProfile.DoesNotExist:
+                return Response({'error': 'Friend not found'}, status=status.HTTP_404_NOT_FOUND)
+
+            # 删除双向的好友关系
+            Friendship.objects.filter(user=user, friend=friend).delete()
+            Friendship.objects.filter(user=friend, friend=user).delete()
+
+            # 获取更新后的好友列表
+            friendships = Friendship.objects.filter(user=user)
+            serializer = FriendSerializer(friendships, many=True)
+
+            return Response({
+                'friends': serializer.data,
+                'message': 'Success'
+            }, status=status.HTTP_200_OK)
+
         else:
             return Response({"message": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
 

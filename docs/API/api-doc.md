@@ -4,7 +4,7 @@
 
 ## ✔️注册页面
 
-> API 端点：http://social.caay.ru/api/register/
+> API 端点：http://api.caay.ru/register/
 
 请求头：
 
@@ -41,7 +41,7 @@
 
 ## ✔️登录页面
 
-> API 端点：http://social.caay.ru/api/login/
+> API 端点：http://api.caay.ru/login/
 
 请求头：
 
@@ -71,7 +71,7 @@
 
 ## ✔️论坛内容
 
-> API端点：http://social.caay.ru/api/posts/
+> API端点：http://api.caay.ru/posts/
 
 ### ✔️获取所有帖子
 
@@ -200,7 +200,7 @@
 
 ## ✔️个人资料
 
->  API 端点：http://social.caay.ru/api/users/
+>  API 端点：http://api.caay.ru/users/
 
 ### ✔️获取用户资料
 
@@ -273,7 +273,7 @@
 
 ## ✔️用户头像
 
-> API 端点：http://social.caay.ru/api/avatar/
+> API 端点：http://api.caay.ru/avatar/
 
 ### ✔️上传头像
 
@@ -324,7 +324,7 @@
 
 ### 获取推荐好友列表 
 
-> API 端点： http://social.caay.ru/api/recommend/
+> API 端点： http://api.caay.ru/recommend/
 
 请求头：
 
@@ -361,7 +361,7 @@
 
 ## 好友关系
 
-> API 端点： http://social.caay.ru/api/relation/
+> API 端点： http://api.caay.ru/relation/
 
 ### 添加好友关系
 
@@ -375,7 +375,7 @@
 ```json
 {
     "user_id": "当前登录用户的唯一标识符",
-    "friend_add": "要添加的好友的用户ID"
+    "friend_add": "要添加的好友的用户ID",
     "method": "add"
 }
 ```
@@ -451,7 +451,7 @@
 ```json
 {
     "user_id": "用户的唯一标识符",
-    "friend_request_id": "好友请求ID"
+    "friend_request_id": "好友请求ID",
     "method": "Accept"/"Refuse"
 }
 ```
@@ -472,3 +472,38 @@
     "message": "Success"/"Failed"
 }
 ```
+
+### 删除好友
+
+请求头：
+
+- **Authorization**: `Bearer <your-authentication-token>`
+- **Content-Type**: `application/json`
+
+请求体：
+
+```json
+{
+    "user_id": "当前登录用户的唯一标识符",
+    "friend_remove": "要删除的好友的用户ID",
+    "method": "remove"
+}
+```
+
+响应体：
+
+```json
+{
+    "friends": 
+    [
+        {
+            "id": "好友的用户ID",
+            "name": "好友的姓名",
+            "job": "好友的专业",
+            "hobbies": ["好友的兴趣1", "好友的兴趣2", "..."]
+        }
+    ],
+    "message": "Success"/"Failed"
+}
+```
+
