@@ -1,106 +1,104 @@
 <template>
-  <div class="container">
-    <div id="logo">
-      <h1 class="logo">森林友约</h1>
-      <a class="CTA" href="index.html">
-        <h1>返回主页</h1>
-      </a>
+    <div class="container">
+        <div id="logo">
+            <h1 class="logo">森林友约</h1>
+            <a class="CTA" href="index.html">
+                <h1>返回主页</h1>
+            </a>
+        </div>
+        <div class="leftbox">
+            <nav>
+                <a id="profiles" class="active"><span class="iconfont">&#xe636;</span></a>
+                <a id="editing"><span class="iconfont">&#xe63b;</span></a>
+                <a id="myImage"><span class="iconfont">&#xe623;</span></a>
+                <a id="friends"><span class="iconfont">&#xe644;</span></a>
+                <a id="message"><span class="iconfont">&#xe61f;</span></a>
+            </nav>
+        </div>
+        <div class="rightbox" id="app">
+            <div class="profiles">
+                <h1>个人资料</h1>
+                <h2>姓名</h2>
+                <p>{{ user.name }}</p>
+                <h2>生日</h2>
+                <p>{{ user.dobYear }}-{{ user.dobMonth }}-{{ user.dobDay }}</p>
+                <h2>性别</h2>
+                <p>{{ user.gender }} {{ user.customGender }}</p>
+                <h2>专业</h2>
+                <p>{{ user.job }}</p>
+                <h2>联系方式</h2>
+                <p>{{ user.contact }}</p>
+                <h2>兴趣</h2>
+                <p>
+                    <span v-for="(hobby, index) in user.hobbies" :key="hobby">
+                        {{ hobby }}<span v-if="index < user.hobbies.length - 1">， </span>
+                    </span>
+                </p>
+            </div>
+            <div class="editing noshow">
+                <h1>编辑资料</h1>
+                <form @submit.prevent="updateProfile" class="a11">
+                    <label for="name" class="a1">姓名:</label>
+                    <input type="text" v-model="formData.name" id="name" required />
+                    <label for="contact" class="a1">联系方式:</label>
+                    <input type="text" v-model="formData.contact" id="contact" required />
+                    <label for="job" class="a1">专业:</label>
+                    <input type="text" v-model="formData.job" id="job" required />
+                    <label for="hobbies" class="a1">兴趣:</label>
+                    <div id="tags">
+                        <label v-for="tag in allHobbyTags" :key="tag">
+                            <input type="checkbox" v-model="formData.hobbies" :value="tag"> {{ tag }}
+                        </label>
+                    </div>
+                    <input type="submit" value="保存" class="btn">
+                </form>
+            </div>
+            <div class="myImage noshow">
+                <h1>上传头像</h1>
+                <form @submit.prevent="uploadImage">
+                    <label for="file-upload">选择文件</label>
+                    <input type="file" id="file-upload" @change="onFileChange">
+                    <input type="submit" value="上传" class="btn">
+                </form>
+                <div v-if="imageUrl">
+                    <h2>预览头像</h2>
+                    <img :src="imageUrl" alt="用户头像" style="width: 200px; height: 200px; border-radius: 50%;">
+                </div>
+            </div>
+            <div class="friends noshow" v-if="friends.length">
+                <h1>我的朋友</h1>
+                <div v-for="friend in filteredFriends" :key="friend.id" class="friend-card">
+                    <h2>{{ friend.name }}</h2>
+                    <h2>专业</h2>
+                    <p class="fjob">{{ friend.job }}</p>
+                    <h2>兴趣</h2>
+                    <p class="fhobby">
+                        <span v-for="(hobby, index) in friend.hobbies" :key="index">
+                            {{ hobby }}<span v-if="index < friend.hobbies.length - 1">， </span>
+                        </span>
+                    </p>
+                    <button class="chat-btn" @click="openChat(friend.id)">聊天</button>
+                </div>
+                <div class="pagination">
+                    <button @click="prevFriendsPage" :disabled="friendsCurrentPage === 1">上一页</button>
+                    <button @click="nextFriendsPage" :disabled="friendsCurrentPage === totalFriendsPages">下一页</button>
+                </div>
+            </div>
+            <div class="message noshow" v-if="friendRequests && friendRequests.length">
+                <h1>好友请求</h1>
+                <div v-for="request in filteredRequests" :key="request.id" class="friend-card">
+                    <p><strong>{{ request.name }}</strong> 发来了好友请求</p>
+                    <button class="accept-btn" @click="acceptFriendRequest(request)">接受</button>
+                    <button class="decline-btn" @click="declineFriendRequest(request)">拒绝</button>
+                </div>
+                <div class="pagination">
+                    <button @click="prevRequestsPage" :disabled="requestsCurrentPage === 1">上一页</button>
+                    <button @click="nextRequestsPage"
+                        :disabled="requestsCurrentPage === totalRequestsPages">下一页</button>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="leftbox">
-      <nav>
-        <a id="profiles" class="active"><span class="iconfont">&#xe636;</span></a>
-        <a id="editing"><span class="iconfont">&#xe63b;</span></a>
-        <a id="myImage"><span class="iconfont">&#xe623;</span></a>
-        <a id="friends"><span class="iconfont">&#xe644;</span></a>
-        <a id="message"><span class="iconfont">&#xe61f;</span></a>
-      </nav>
-    </div>
-    <div class="rightbox" id="app">
-      <div class="profiles">
-        <h1>个人资料</h1>
-        <h2>姓名</h2>
-        <p>{{ user.name }}</p>
-        <h2>生日</h2>
-        <p>{{ user.dobYear }}-{{ user.dobMonth }}-{{ user.dobDay }}</p>
-        <h2>性别</h2>
-        <p>{{ user.gender }} {{ user.customGender }}</p>
-        <h2>专业</h2>
-        <p>{{ user.job }}</p>
-        <h2>联系方式</h2>
-        <p>{{ user.contact }}</p>
-        <h2>兴趣</h2>
-        <p>
-          <span v-for="(hobby, index) in user.hobbies" :key="hobby">
-            {{ hobby }}<span v-if="index < user.hobbies.length - 1">， </span>
-          </span>
-        </p>
-      </div>
-      <div class="editing noshow">
-        <h1>编辑资料</h1>
-        <form @submit.prevent="updateProfile" class="a11">
-          <label for="name" class="a1">姓名:</label>
-          <input type="text" v-model="formData.name" id="name" required />
-          <label for="contact" class="a1">联系方式:</label>
-          <input type="text" v-model="formData.contact" id="contact" required />
-          <label for="job" class="a1">专业:</label>
-          <input type="text" v-model="formData.job" id="job" required />
-          <label for="hobbies" class="a1">兴趣:</label>
-          <div id="tags">
-            <label v-for="tag in allHobbyTags" :key="tag">
-              <input type="checkbox" v-model="formData.hobbies" :value="tag"> {{ tag }}
-            </label>
-          </div>
-          <input type="submit" value="保存" class="btn">
-        </form>
-      </div>
-      <div class="myImage noshow">
-        <h1>上传头像</h1>
-        <form @submit.prevent="uploadImage">
-          <label for="file-upload">选择文件</label>
-          <input type="file" id="file-upload" @change="onFileChange">
-          <input type="submit" value="上传" class="btn">
-        </form>
-        <div v-if="imageUrl">
-          <h2>预览头像</h2>
-          <img :src="imageUrl" alt="用户头像" style="width: 200px; height: 200px; border-radius: 50%;">
-        </div>
-      </div>
-      <div class="friends noshow" v-if="user.friends.length">
-        <h1>我的朋友</h1>
-        <div v-for="(friend, index) in user.friends" :key="friend.id" class="friend-card"
-          v-if="index >= (friendsCurrentPage - 1) * itemsPerPage && index < friendsCurrentPage * itemsPerPage">
-          <h2>{{ friend.name }}</h2>
-          <h2>专业</h2>
-          <p class="fjob">{{ friend.job }}</p>
-          <h2>兴趣</h2>
-          <p class="fhobby">
-            <span v-for="(hobby, index) in friend.hobbies" :key="index">
-              {{ hobby }}<span v-if="index < friend.hobbies.length - 1">， </span>
-            </span>
-          </p>
-          <button class="chat-btn" @click="openChat(friend.id)">聊天</button>
-        </div>
-        <div class="pagination">
-          <button @click="prevFriendsPage" :disabled="friendsCurrentPage === 1">上一页</button>
-          <button @click="nextFriendsPage" :disabled="friendsCurrentPage === totalFriendsPages">下一页</button>
-        </div>
-      </div>
-      <div class="message noshow" v-if="user.friendRequests && user.friendRequests.length">
-        <h1>好友请求</h1>
-        <div v-for="(request, index) in user.friendRequests" :key="request.id" class="friend-card"
-          v-if="index >= (requestsCurrentPage - 1) * itemsPerPage && index < requestsCurrentPage * itemsPerPage">
-          <p><strong>{{ request.name }}</strong> 发来了好友请求</p>
-          <button class="accept-btn" @click="acceptFriendRequest(request)">接受</button>
-          <button class="decline-btn" @click="declineFriendRequest(request)">拒绝</button>
-        </div>
-        <div class="pagination">
-          <button @click="prevRequestsPage" :disabled="requestsCurrentPage === 1">上一页</button>
-          <button @click="nextRequestsPage"
-            :disabled="requestsCurrentPage === totalRequestsPages">下一页</button>
-        </div>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
@@ -119,10 +117,10 @@ export default {
         gender: '',
         customGender: '',
         hobbies: [],
-        friends: [],
-        friendRequests: [],
         avatar: ''
       },
+      friends: [],
+      friendRequests: [],
       formData: { hobbies: [] },
       allHobbyTags: [
         '编程', '阅读', '旅行', '摄影', '音乐',
@@ -143,56 +141,143 @@ export default {
   },
   computed: {
     totalFriendsPages() {
-      return Math.ceil(this.user.friends.length / this.itemsPerPage);
+      return Math.ceil(this.friends.length / this.itemsPerPage);
     },
     totalRequestsPages() {
-      return Math.ceil(this.user.friendRequests.length / this.itemsPerPage);
+      return Math.ceil(this.friendRequests.length / this.itemsPerPage);
+    },
+    filteredFriends() {
+      const start = (this.friendsCurrentPage - 1) * this.itemsPerPage;
+      const end = this.friendsCurrentPage * this.itemsPerPage;
+      return this.friends.slice(start, end);
+    },
+    filteredRequests() {
+      const start = (this.requestsCurrentPage - 1) * this.itemsPerPage;
+      const end = this.requestsCurrentPage * this.itemsPerPage;
+      return this.friendRequests.slice(start, end);
     }
   },
   methods: {
     async fetchUserProfile() {
       try {
-        const response = await fetch('http://23.184.88.52:8000/api/users/me', {
-          method: 'GET',
+        const response = await fetch('http://social.caay.ru/api/users/', {
+          method: 'POST',
           headers: {
-            'Authorization': `Bearer ${this.userToken}`
-          }
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            user_id: this.userId,
+            method: 'request'
+          })
         });
         const data = await response.json();
-        if (data.message === 'Success') {
-          this.user = data;
-          this.formData.name = data.user_name;
-          this.formData.contact = data.user_contact;
-          this.formData.job = data.user_job;
-          this.formData.hobbies = data.user_hobbies;
-        } else {
-          alert('获取用户资料失败');
-        }
+        this.user = {
+          id: data.user_id,
+          name: data.user_name,
+          job: data.user_job,
+          contact: data.user_contact,
+          password: data.user_password,
+          dobYear: data.user_dob_year,
+          dobMonth: data.user_dob_month,
+          dobDay: data.user_dob_day,
+          gender: data.user_gender,
+          customGender: data.user_custom_gender,
+          hobbies: data.user_hobbies,
+          avatar: data.avatar
+        };
+        this.formData = {
+          name: data.user_name,
+          job: data.user_job,
+          contact: data.user_contact,
+          password: data.user_password,
+          dobYear: data.user_dob_year,
+          dobMonth: data.user_dob_month,
+          dobDay: data.user_dob_day,
+          gender: data.user_gender,
+          customGender: data.user_custom_gender,
+          hobbies: data.user_hobbies
+        };
       } catch (error) {
         alert(`获取用户资料失败: ${error.message}`);
       }
     },
-    async updateProfile() {
+    async fetchFriends() {
       try {
-        const response = await fetch('http://23.184.88.52:8000/api/users/me', {
+        const response = await fetch('http://social.caay.ru/api/relation/', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${this.userToken}`
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            user_id: this.userId,
+            method: 'request'
+          })
+        });
+        const data = await response.json();
+        if (data.message === 'Success') {
+          this.friends = data.friends;
+          this.friendRequests = data.friendRequests;
+          this.user.avatar = data.avatar;
+        } else {
+          alert('获取好友关系失败');
+        }
+      } catch (error) {
+        alert(`获取好友关系失败: ${error.message}`);
+      }
+    },
+    async updateProfile() {
+      if (!/^.{1,4}$/.test(this.formData.name)) {
+        alert('姓名不能为空，且最多 4 个字符');
+        return;
+      }
+      if (!/^\d{11}$|^\w+@\w+\.com$/.test(this.formData.contact)) {
+        alert('联系方式应为 11 位手机号或有效邮箱地址');
+        return;
+      }
+      if (!/^.{1,10}$/.test(this.formData.job)) {
+        alert('专业不能为空，且最多 10 个字符');
+        return;
+      }
+      if (this.formData.hobbies.length < 3 || this.formData.hobbies.length > 10) {
+        alert('请至少选择三个兴趣标签，最多选择十个');
+        return;
+      }
+
+      try {
+        const response = await fetch('http://social.caay.ru/api/users/', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             user_id: this.user.id,
             user_name: this.formData.name,
             user_job: this.formData.job,
             user_contact: this.formData.contact,
-            user_hobbies: this.formData.hobbies
+            user_password: this.formData.password,
+            user_dob_year: this.formData.dobYear,
+            user_dob_month: this.formData.dobMonth,
+            user_dob_day: this.formData.dobDay,
+            user_gender: this.formData.gender,
+            user_custom_gender: this.formData.customGender,
+            user_hobbies: this.formData.hobbies,
+            method: 'renew'
           })
         });
         const data = await response.json();
         if (data.message === 'Success') {
           this.user.name = this.formData.name;
-          this.user.contact = this.formData.contact;
           this.user.job = this.formData.job;
+          this.user.contact = this.formData.contact;
+          this.user.password = this.formData.password;
+          this.user.dobYear = this.formData.dobYear;
+          this.user.dobMonth = this.formData.dobMonth;
+          this.user.dobDay = this.formData.dobDay;
+          this.user.gender = this.formData.gender;
+          this.user.customGender = this.formData.customGender;
           this.user.hobbies = this.formData.hobbies;
           alert('资料更新成功');
         } else {
@@ -209,11 +294,13 @@ export default {
       }
       const formData = new FormData();
       formData.append('avatar', this.imageFile);
+      formData.append('user_id', this.user.id);
+      formData.append('method', 'avatar');
       try {
-        const response = await fetch('http://23.184.88.52:8000/api/users/me/avatar', {
+        const response = await fetch('http://social.caay.ru/api/users/', {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${this.userToken}`
+            'Authorization': `Bearer ${this.userToken}`,
           },
           body: formData
         });
@@ -230,21 +317,22 @@ export default {
     },
     async acceptFriendRequest(request) {
       try {
-        const response = await fetch('http://23.184.88.52:8000/api/friends/accept', {
+        const response = await fetch('http://social.caay.ru/api/relation/', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${this.userToken}`
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             user_id: this.user.id,
-            friend_request_id: request.id
+            friend_request_id: request.id,
+            method: 'Accept'
           })
         });
         const data = await response.json();
         if (data.message === 'Success') {
-          this.user.friends.push(request);
-          this.user.friendRequests = this.user.friendRequests.filter(req => req.id !== request.id);
+          this.friends = data.friends;
+          this.friendRequests = this.friendRequests.filter(req => req.id !== request.id);
           alert('好友请求已接受');
         } else {
           alert('接受好友请求失败');
@@ -255,20 +343,21 @@ export default {
     },
     async declineFriendRequest(request) {
       try {
-        const response = await fetch('http://23.184.88.52:8000/api/friends/decline', {
+        const response = await fetch('http://social.caay.ru/api/relation/', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${this.userToken}`
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
           },
           body: JSON.stringify({
             user_id: this.user.id,
-            friend_request_id: request.id
+            friend_request_id: request.id,
+            method: 'Refuse'
           })
         });
         const data = await response.json();
         if (data.message === 'Success') {
-          this.user.friendRequests = this.user.friendRequests.filter(req => req.id !== request.id);
+          this.friendRequests = this.friendRequests.filter(req => req.id !== request.id);
           alert('好友请求已拒绝');
         } else {
           alert('拒绝好友请求失败');
@@ -316,16 +405,33 @@ export default {
         window.location.href = 'login.html';
       } else {
         this.fetchUserProfile();
+        this.fetchFriends();
       }
     }
   },
-  created() {
+  mounted() {
     this.checkLogin();
+
+    // 重写导航事件
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelectorAll('nav a').forEach(navLink => {
+          navLink.classList.remove('active');
+        });
+        e.currentTarget.classList.add('active');
+        document.querySelectorAll('.rightbox > div').forEach(box => {
+          box.classList.add('noshow');
+        });
+        document.querySelector(`.${e.currentTarget.id}`).classList.remove('noshow');
+      });
+    });
   }
 };
 </script>
 
-<style scoped>
+<style>
+        @import url('iconfont.css');
         @import url('https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto');
 
         body {

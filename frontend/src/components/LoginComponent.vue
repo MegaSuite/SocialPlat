@@ -1,59 +1,61 @@
 <template>
-  <div class="container">
-    <h1>用户登录</h1>
-    <p class="subtitle">快速又简便。</p>
-    <hr>
-    <div class="login">
-      没有账号？<a href="register.html">去注册</a>
+    <div class="container">
+        <h1>用户登录</h1>
+        <p class="subtitle">快速又简便。</p>
+        <hr>
+        <div class="login">
+            没有账号？<a href="register.html">去注册</a>
+        </div>
+        <form id="login" @submit.prevent="handleLogin">
+            <div>
+                <input type="text" v-model="formData.contact" id="contact" placeholder="手机号或邮箱" required />
+            </div>
+            <div>
+                <input type="password" v-model="formData.password" id="password" placeholder="密码" required />
+            </div>
+            <button type="submit">登录</button>
+        </form>
     </div>
-    <form id="login" @submit.prevent="handleLogin">
-      <div>
-        <input type="text" v-model="formData.user_contact" id="contact" placeholder="手机号或邮箱" required />
-      </div>
-      <div>
-        <input type="password" v-model="formData.user_password" id="password" placeholder="密码" required />
-      </div>
-      <button type="submit">登录</button>
-    </form>
-  </div>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      formData: {
-        user_contact: '',
-        user_password: ''
-      }
-    };
-  },
-  methods: {
-    async handleLogin() {
-      console.log(this.formData)
-      try {
-        const response = await fetch('http://23.184.88.52:8000/api/login/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(this.formData)
-        });
-        const data = await response.json();
-        if (response.ok) {
-          localStorage.setItem('token', data.user_token);
-          localStorage.setItem('name', data.user_name);
-          localStorage.setItem('id', data.user_id);
-          alert('登录成功');
-          window.location.href = 'profile.html'; // 跳转到个人资料页面
-        } else {
-          alert(`登录失败: ${data.message || '未知错误'}`);
+        data() {
+            return {
+                formData: {
+                    contact: '',
+                    password: ''
+                }
+            };
+        },
+        methods: {
+            async handleLogin() {
+                try {
+                    const response = await fetch('http://social.caay.ru/api/login/', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            user_contact: this.formData.contact,
+                            user_password: this.formData.password
+                        })
+                    });
+                    const data = await response.json();
+                    if (data.message === 'Success') {
+                        localStorage.setItem('token', data.user_token);
+                        localStorage.setItem('name', data.user_name);
+                        localStorage.setItem('id', data.user_id);
+                        alert('登录成功');
+                        window.location.href = 'index.html'; // 跳转到个人资料页面
+                    } else {
+                        alert(`登录失败: ${data.message}`);
+                    }
+                } catch (error) {
+                    alert(`登录失败: ${error.message}`);
+                }
+            }
         }
-      } catch (error) {
-        alert(`登录失败: ${error.message}`);
-      }
-    }
-  }
 };
 </script>
 

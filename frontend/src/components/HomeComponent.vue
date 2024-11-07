@@ -3,23 +3,23 @@
     <header class="header">
       <div class="logo">森林友约</div>
       <div class="auth-buttons">
-        <router-link to="/register" class="auth-btn">注册</router-link>
-        <router-link to="/login" class="auth-btn">登录</router-link>
-        <router-link to="/profile" class="auth-btn">个人中心</router-link>
+        <a href="register.html" class="auth-btn">注册</a>
+        <a href="login.html" class="auth-btn">登录</a>
+        <a href="profile.html" class="auth-btn">个人中心</a>
       </div>
     </header>
     <div class="sections-container">
       <section class="section">
         <h2>推友</h2>
-        <router-link to="/recommend" class="more-btn">助您交友</router-link>
+        <a href="recommend.html" class="more-btn">助您交友</a>
       </section>
       <section class="section">
         <h2>活动</h2>
-        <router-link to="/activities" class="more-btn">查看活动</router-link>
+        <a href="activities.html" class="more-btn">查看活动</a>
       </section>
       <section class="section">
         <h2>论坛</h2>
-        <router-link to="/luntan" class="more-btn" target="_blank">进入论坛</router-link>
+        <a href="luntan.html" class="more-btn" target="_blank">进入论坛</a>
       </section>
     </div>
   </div>
@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: "HomePage"
+  name: "HomeComponent"
 };
 </script>
 

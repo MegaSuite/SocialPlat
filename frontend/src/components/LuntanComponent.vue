@@ -42,122 +42,158 @@
 
 <script>
 export default {
-  data() {
-    return {
-      newPost: {
-        post_title: '',
-        post_content: '',
-        user_id: localStorage.getItem('id')
-      },
-      posts: [],
-      newComment: {}, // 用于存储每个帖子的新增评论
-      userToken: localStorage.getItem('token'),
-      userId: localStorage.getItem('id')
-    };
-  },
-  methods: {
-    async fetchPosts() {
-      try {
-        const response = await fetch('http://23.184.88.52:8000/api/posts/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${this.userToken}`
-          },
-          body: JSON.stringify({
-            user_id: this.userId,
-            method: 'all'
-          })
-        });
-        const data = await response.json();
-        if (data.message === 'Success') {
-          this.posts = data.posts;
-        } else {
-          alert('获取帖子失败');
-        }
-      } catch (error) {
-        alert(`获取帖子失败: ${error.message}`);
-      }
-    },
-    async createPost() {
-      if (!this.userToken) {
-        alert('请先登录');
-        window.location.href = 'login.html';
-        return;
-      }
-      try {
-        const response = await fetch('http://23.184.88.52:8000/api/posts/', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${this.userToken}`
-          },
-          body: JSON.stringify({
-            user_id: this.userId,
-            method: 'add',
-            post_title: this.newPost.post_title,
-            post_content: this.newPost.post_content
-          })
-        });
-        const data = await response.json();
-        if (data.message === 'Success') {
-          this.posts.push({
-            post_id: data.post_id,
-            post_author: data.post_author,
-            post_title: this.newPost.post_title,
-            post_content: this.newPost.post_content,
-            post_comments: []
-          });
-          this.newPost.post_title = '';
-          this.newPost.post_content = '';
-        } else {
-          alert('发帖失败');
-        }
-      } catch (error) {
-        alert(`发帖失败: ${error.message}`);
-      }
-    },
-    async addComment(postId) {
-      if (!this.userToken) {
-        alert('请先登录');
-        window.location.href = 'login.html';
-        return;
-      }
-      try {
-        const newComment = {
-          user_id: this.userId,
-          method: 'comment',
-          post_id: postId,
-          comment_content: this.newComment[postId]
-        };
-        const response = await fetch(`http://23.184.88.52:8000/api/posts/${postId}/comments`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${this.userToken}`
-          },
-          body: JSON.stringify(newComment)
-        });
-        const data = await response.json();
-        if (data.message === 'Success') {
-          const post = this.posts.find(post => post.post_id === postId);
-          post.post_comments.push({
-            comment_id: data.comment_id,
-            comment_content: this.newComment[postId],
-            comment_author: data.comment_author
-          });
-          this.newComment[postId] = ''; // 清空输入框
-        } else {
-          alert('评论失败');
-        }
-      } catch (error) {
-        alert(`评论失败: ${error.message}`);
-      }
-    }
-  },
-  mounted() {
-    this.fetchPosts();
-  }
+            data() {
+                return {
+                    newPost: {
+                        title: '',
+                        content: '',
+                        author: ''
+                    },
+                    posts: [],
+                    newComment: {} // 用于存储每个帖子的新增评论
+                };
+            },
+            methods: {
+                async fetchPosts() {
+                    const token = localStorage.getItem('token');
+                    const userId = localStorage.getItem('id');
+                    try {
+                        const response = await fetch('http://social.caay.ru/api/posts/', {
+                            method: 'POST',
+                            headers: {
+                                'Authorization': `Bearer ${token}`,
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                user_id: userId,
+                                method: 'all'
+                            })
+                        });
+                        const data = await response.json();
+                        if (data.message === 'Success') {
+                            // 为每个帖子和评论获取头像
+                            for (const post of data.posts) {
+                                post.avatar_url = await this.fetchAvatar(post.post_author_id);
+                                for (const comment of post.post_comments) {
+                                    comment.avatar_url = await this.fetchAvatar(comment.comment_author_id);
+                                }
+                            }
+                            this.posts = data.posts;
+                        } else {
+                            alert('获取帖子失败');
+                        }
+                    } catch (error) {
+                        console.error('获取帖子失败:', error);
+                    }
+                },
+                async fetchAvatar(userId) {
+                    try {
+                        const response = await fetch('http://social.caay.ru/api/avatar/', {
+                            method: 'POST',
+                            headers: {
+                                'Authorization': `Bearer ${this.userToken}`,
+                                'Content-Type': 'multipart/form-data'
+                            },
+                            body: JSON.stringify({
+                                user_id: userId,
+                                method: 'request'
+                            })
+                        });
+                        const data = await response.json();
+                        if (data.message === 'Success') {
+                            return data.avatar; // 返回头像URL
+                        } else {
+                            throw new Error('获取头像失败');
+                        }
+                    } catch (error) {
+                        console.error('获取头像失败:', error);
+                    }
+                },
+
+                async createPost() {
+                    const token = localStorage.getItem('token');
+                    const userId = localStorage.getItem('id');
+                    if (!token) {
+                        alert('请先登录');
+                        window.location.href = 'login.html';
+                        return;
+                    }
+                    this.newPost.author = userId; // 设置当前用户为作者
+                    try {
+                        const response = await fetch('http://social.caay.ru/api/posts/', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': `Bearer ${token}`
+                            },
+                            body: JSON.stringify({
+                                user_id: userId,
+                                post_title: this.newPost.title,
+                                post_content: this.newPost.content,
+                                method: 'add'
+                            })
+                        });
+                        const data = await response.json();
+                        if (data.message === 'Success') {
+                            this.posts.push({
+                                post_id: data.post_id,
+                                post_author: data.post_author,
+                                post_title: this.newPost.title,
+                                post_content: this.newPost.content,
+                                post_comments: []
+                            });
+                            this.newPost.title = '';
+                            this.newPost.content = '';
+                        } else {
+                            alert('发帖失败');
+                        }
+                    } catch (error) {
+                        console.error('发帖失败:', error);
+                    }
+                },
+                async addComment(postId) {
+                    const token = localStorage.getItem('token');
+                    const userId = localStorage.getItem('id');
+                    if (!token) {
+                        alert('请先登录');
+                        window.location.href = 'login.html';
+                        return;
+                    }
+                    try {
+                        const newComment = {
+                            comment_content: this.newComment[postId],
+                            user_id: userId,
+                            post_id: postId,
+                            method: 'comment'
+                        };
+                        const response = await fetch(`http://social.caay.ru/api/posts/`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Authorization': `Bearer ${token}`
+                            },
+                            body: JSON.stringify(newComment)
+                        });
+                        const data = await response.json();
+                        if (data.message === 'Success') {
+                            const post = this.posts.find(post => post.post_id === postId);
+                            post.post_comments.push({
+                                comment_id: data.comment_id,
+                                comment_content: newComment.comment_content,
+                                comment_author: data.comment_author
+                            });
+                            this.newComment[postId] = ''; // 清空输入框
+                        } else {
+                            alert('评论失败');
+                        }
+                    } catch (error) {
+                        console.error('评论失败:', error);
+                    }
+                }
+            },
+            mounted() {
+                this.fetchPosts();
+            }
 };
 </script>
 
@@ -300,5 +336,27 @@ export default {
         .comment .comment-btn {
             margin-top: 10px;
             width: 100px;
+        }
+
+        /* 用户头像样式 */
+        .avatar {
+            width: 40px;
+            /* 设定头像的宽度 */
+            height: 40px;
+            /* 设定头像的高度 */
+            border-radius: 50%;
+            /* 将头像设置为圆形 */
+            margin-right: 10px;
+            /* 添加右边距，防止文字与头像紧贴 */
+            vertical-align: middle;
+            /* 使头像与文字垂直对齐 */
+        }
+
+        /* 让头像图片在相应位置显示 */
+        .post h4 .avatar,
+        .post .author .avatar,
+        .comment p .avatar,
+        .comment .author .avatar {
+            display: inline-block;
         }
 </style>

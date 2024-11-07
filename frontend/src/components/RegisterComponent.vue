@@ -1,88 +1,89 @@
 <template>
-  <div class="container">
-    <h1>创建新用户</h1>
-    <p class="subtitle">快速又简便。</p>
-    <hr>
-    <form id="register" @submit.prevent="handleSubmit">
-      <div class="name-fields">
-        <div class="input-wrapper">
-          <input type="text" id="name" v-model="formData.user_name" placeholder="姓名">
-          <span class="input-mark"><img src="image.png" alt=""></span>
+    <div class="container">
+        <h1>创建新用户</h1>
+        <p class="subtitle">快速又简便。</p>
+        <hr>
+        <form id="register" @submit.prevent="handleSubmit">
+            <div class="name-fields">
+                <div class="input-wrapper">
+                    <input type="text" id="name" v-model="formData.user_name" placeholder="姓名">
+                    <span class="input-mark"><img src="image.png" alt=""></span>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="job" v-model="formData.user_job" placeholder="专业">
+                    <span class="input-mark"><img src="image.png" alt=""></span>
+                </div>
+            </div>
+            <div class="input-wrapper">
+                <input type="text" id="contact" v-model="formData.user_contact" placeholder="手机号或邮箱">
+                <span class="input-mark"><img src="image.png" alt=""></span>
+            </div>
+            <div class="input-wrapper">
+                <input type="password" id="password" v-model="formData.user_password" placeholder="创建密码">
+                <span class="input-mark"><img src="image.png" alt=""></span>
+            </div>
+            <label class="icon">出生日期
+                <div class="icon-box">
+                    <img src="image.png" alt="图标">
+                </div>
+                <div class="tooltip" v-show="showTooltip0">点击查看更多信息</div>
+                <div class="messages" v-show="showMessages0"><strong>提供你的出生日期</strong>将确保我们提供与你年龄相符的使用体验。详细信息，请参阅我们的<a href="#"
+                        class="messagesLink">隐私权政策</a>。</div>
+            </label>
+            <div class="dob-fields">
+                <select id="dobYear" v-model="formData.user_dob_year" ref="dobYear">
+                    <option value="" disabled selected>年</option>
+                    <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
+                </select>
+                <select id="dobMonth" v-model="formData.user_dob_month" ref="dobMonth">
+                    <option value="" disabled selected>月</option>
+                    <option v-for="month in 12" :key="month" :value="month">{{ month }}</option>
+                </select>
+                <select id="dobDay" v-model="formData.user_dob_day" ref="dobDay">
+                    <option value="" disabled selected>日</option>
+                    <option v-for="day in daysInMonth" :key="day" :value="day">{{ day }}</option>
+                </select>
+            </div>
+            <label class="icon">性别
+                <div class="icon-box">
+                    <img src="image.png" alt="图标">
+                </div>
+                <div class="tooltip" v-show="showTooltip1">点击查看更多信息</div>
+                <div class="messages" v-show="showMessages1">如果你希望选择其他信息，或不想透露性别信息，请选择"自定义"。</div>
+            </label>
+            <div class="gender-fields">
+                <label for="female">
+                    女
+                    <input type="radio" id="female" v-model="formData.user_gender" value="female">
+                </label>
+                <label for="male">
+                    男
+                    <input type="radio" id="male" v-model="formData.user_gender" value="male">
+                </label>
+                <label for="custom">
+                    自定义
+                    <input type="radio" id="custom" v-model="formData.user_gender" value="custom">
+                </label>
+            </div>
+            <div class="input-wrapper custom-gender" v-show="formData.user_gender === 'custom'">
+                <input type="text" id="customGender" v-model="formData.user_custom_gender" placeholder="请输入您的性别">
+                <span class="input-mark"><img src="image.png" alt=""></span>
+            </div>
+            <label class="icon" for="hobby">兴趣:</label>
+            <div id="tags">
+                <label v-for="tag in allHobbyTags" :key="tag">
+                    <input type="checkbox" v-model="formData.user_hobbies" :value="tag"> {{ tag }}
+                </label>
+            </div>
+            <p class="terms">
+                点击注册，即表示你同意接受我们的<a href="#">条款</a>、<a href="#">隐私权政策</a>和<a href="#">Cookie政策</a>。你可能会收到我们的短信通知，并可以随时退订。
+            </p>
+            <button type="submit" :disabled="isSubmitting">注册</button>
+        </form>
+        <div class="login-link">
+            <a href="login.html">有账户了？</a>
         </div>
-        <div class="input-wrapper">
-          <input type="text" id="job" v-model="formData.user_job" placeholder="专业">
-          <span class="input-mark"><img src="image.png" alt=""></span>
-        </div>
-      </div>
-      <div class="input-wrapper">
-        <input type="text" id="contact" v-model="formData.user_contact" placeholder="手机号或邮箱">
-        <span class="input-mark"><img src="image.png" alt=""></span>
-      </div>
-      <div class="input-wrapper">
-        <input type="password" id="password" v-model="formData.user_password" placeholder="创建密码">
-        <span class="input-mark"><img src="image.png" alt=""></span>
-      </div>
-      <label class="icon">出生日期
-        <div class="icon-box" @mouseover="showTooltip(0)" @mouseout="hideTooltip(0)" @click="toggleMessages(0)">
-          <img src="image.png" alt="图标">
-        </div>
-        <div class="tooltip" v-show="showTooltip0">点击查看更多信息</div>
-        <div class="messages" v-show="showMessages0"><strong>提供你的出生日期</strong>将确保我们提供与你年龄相符的使用体验。详细信息，请参阅我们的<a href="#" class="messagesLink">隐私权政策</a>。</div>
-      </label>
-      <div class="dob-fields">
-        <select id="dobYear" v-model="formData.user_dob_year" @change="updateDays">
-          <option value="" disabled selected>年</option>
-          <option v-for="year in years" :key="year" :value="year">{{ year }}</option>
-        </select>
-        <select id="dobMonth" v-model="formData.user_dob_month" @change="updateDays">
-          <option value="" disabled selected>月</option>
-          <option v-for="month in 12" :key="month" :value="month">{{ month }}</option>
-        </select>
-        <select id="dobDay" v-model="formData.user_dob_day">
-          <option value="" disabled selected>日</option>
-          <option v-for="day in daysInMonth" :key="day" :value="day">{{ day }}</option>
-        </select>
-      </div>
-      <label class="icon">性别
-        <div class="icon-box" @mouseover="showTooltip(1)" @mouseout="hideTooltip(1)" @click="toggleMessages(1)">
-          <img src="image.png" alt="图标">
-        </div>
-        <div class="tooltip" v-show="showTooltip1">点击查看更多信息</div>
-        <div class="messages" v-show="showMessages1">如果你希望选择其他信息，或不想透露性别信息，请选择"自定义"。</div>
-      </label>
-      <div class="gender-fields">
-        <label for="female">
-          女
-          <input type="radio" id="female" v-model="formData.user_gender" value="female">
-        </label>
-        <label for="male">
-          男
-          <input type="radio" id="male" v-model="formData.user_gender" value="male">
-        </label>
-        <label for="custom">
-          自定义
-          <input type="radio" id="custom" v-model="formData.user_gender" value="custom">
-        </label>
-      </div>
-      <div class="input-wrapper" v-if="formData.user_gender === 'custom'">
-        <input type="text" id="customGender" v-model="formData.user_custom_gender" placeholder="请输入您的性别" class="custom-gender">
-        <span class="input-mark"><img src="image.png" alt=""></span>
-      </div>
-      <label class="icon" for="hobby">兴趣:</label>
-      <div id="tags">
-        <label v-for="tag in allHobbyTags" :key="tag">
-          <input type="checkbox" v-model="formData.user_hobbies" :value="tag"> {{ tag }}
-        </label>
-      </div>
-      <p class="terms">
-        点击注册，即表示你同意接受我们的<a href="#">条款</a>、<a href="#">隐私权政策</a>和<a href="#">Cookie政策</a>。你可能会收到我们的短信通知，并可以随时退订。
-      </p>
-      <button type="submit" :disabled="isSubmitting">注册</button>
-    </form>
-    <div class="login-link">
-      <a href="login.html">有账户了？</a>
     </div>
-  </div>
 </template>
 
 <script>
@@ -177,19 +178,22 @@ export default {
       this.isSubmitting = true; // 防止重复提交
 
       try {
-        const response = await fetch('http://23.184.88.52:8000/api/register/', {
+        const response = await fetch('http://social.caay.ru/api/register/', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify(this.formData)
         });
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
+        const data = await response.json();
+        if (data.message === 'Success') {
+          alert('注册成功');
+          this.$router.push('/login'); // 跳转到登录页面
+        } else {
+          alert(`注册失败: ${data.message}`);
         }
-        alert('Data submitted successfully');
       } catch (error) {
-        alert(`Form submission failed: ${error.message}`);
+        alert(`注册失败: ${error.message}`);
       } finally {
         this.isSubmitting = false; // 重置提交状态
       }
@@ -207,8 +211,8 @@ export default {
       monthSelect.appendChild(new Option(i, i));
     }
 
-    yearSelect.addEventListener('change', this.updateDays);
-    monthSelect.addEventListener('change', this.updateDays);
+    this.$refs.dobYear.addEventListener('change', this.updateDays);
+    this.$refs.dobMonth.addEventListener('change', this.updateDays);
   }
 };
 </script>
