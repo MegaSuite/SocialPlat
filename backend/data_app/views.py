@@ -227,14 +227,14 @@ class RelationView(APIView):
                 'message': 'Success'
             }, status=status.HTTP_200_OK)
 
-        elif method in ['Accept', 'Refuse']:
+        elif method in ['accept', 'refuse']:
             request_id = request.data.get('friend_request_id')
             try:
                 friend_request = FriendRequest.objects.get(id=request_id, to_user=user)
             except FriendRequest.DoesNotExist:
                 return Response({'error': 'Friend request not found'}, status=status.HTTP_404_NOT_FOUND)
 
-            if method == 'Accept':
+            if method == 'accept':
                 friend_request.status = 'accepted'
                 friend_request.save()
                 Friendship.objects.create(user=user, friend=friend_request.from_user)
