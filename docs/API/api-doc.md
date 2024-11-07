@@ -221,7 +221,7 @@
 响应体：
 ```json
 {
-    "user_id": "用户的唯一标识符",
+    "id": "用户的唯一标识符",
     "user_name": "用户姓名",
     "user_job": "用户专业",
     "user_contact": "用户联系方式",
@@ -232,6 +232,7 @@
     "user_gender": "性别",
     "user_custom_gender": "自定义性别",
     "user_hobbies": ["兴趣1", "兴趣2", "..."],
+    "avatar":"头像链接"
 }
 ```
 
@@ -422,16 +423,18 @@
     [
         {
             "id": "好友的用户ID",
-            "name": "好友的姓名",
-            "job": "好友的专业",
-            "hobbies": ["好友的兴趣1", "好友的兴趣2", "..."]
+            "user_name": "好友的姓名",
+            "user_job": "好友的专业",
+            "user_hobbies": ["好友的兴趣1", "好友的兴趣2", "..."]
         }
     ],
     "friendRequests": 
     [
         {
             "id": "好友请求用户ID",
-            "name": "好友请求用户姓名"
+            "name": "好友请求用户姓名",
+            "friend_request_id": "好友请求ID",
+            "status": "accepted/refused/pending"
         }
     ],
     "avatar": "用户头像的URL",
@@ -464,9 +467,9 @@
     [
         {
             "id": "好友的用户ID",
-            "name": "好友的姓名",
-            "job": "好友的专业",
-            "hobbies": ["好友的兴趣1", "好友的兴趣2", "..."]
+            "user_name": "好友的姓名",
+            "user_job": "好友的专业",
+            "user_hobbies": ["好友的兴趣1", "好友的兴趣2", "..."]
         }
     ],
     "message": "Success"/"Failed"
@@ -498,9 +501,9 @@
     [
         {
             "id": "好友的用户ID",
-            "name": "好友的姓名",
-            "job": "好友的专业",
-            "hobbies": ["好友的兴趣1", "好友的兴趣2", "..."]
+            "user_name": "好友的姓名",
+            "user_job": "好友的专业",
+            "user_hobbies": ["好友的兴趣1", "好友的兴趣2", "..."]
         }
     ],
     "message": "Success"/"Failed"
