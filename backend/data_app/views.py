@@ -205,8 +205,8 @@ class RelationView(APIView):
 
             FriendRequest.objects.create(from_user=user, to_user=friend, status='pending')
 
-            friends = Friendship.objects.filter(user=user)
-            serializer = FriendSerializer(friends, many=True)
+            friendships = Friendship.objects.filter(user=user)
+            serializer = FriendSerializer(friendships, many=True)
             return Response({
                 'user_id': user.id,
                 'friends': serializer.data,
@@ -214,10 +214,10 @@ class RelationView(APIView):
             }, status=status.HTTP_200_OK)
 
         elif method == 'request':
-            friends = Friendship.objects.filter(user=user)
+            friendships = Friendship.objects.filter(user=user)
             friend_requests = FriendRequest.objects.filter(to_user=user, status='pending')
 
-            friend_serializer = FriendSerializer(friends, many=True)
+            friend_serializer = FriendSerializer(friendships, many=True)
             request_serializer = FriendRequestSerializer(friend_requests, many=True)
 
             return Response({
@@ -243,8 +243,8 @@ class RelationView(APIView):
                 friend_request.status = 'refused'
                 friend_request.save()
 
-            friends = Friendship.objects.filter(user=user)
-            serializer = FriendSerializer(friends, many=True)
+            friendships = Friendship.objects.filter(user=user)
+            serializer = FriendSerializer(friendships, many=True)
             return Response({
                 'friends': serializer.data,
                 'message': 'Success'
@@ -252,3 +252,4 @@ class RelationView(APIView):
 
         else:
             return Response({"message": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
+

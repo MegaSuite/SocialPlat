@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import UserProfile, Comment, Post, FriendRequest
+from .models import UserProfile, Comment, Post, FriendRequest, Friendship
 from django.contrib.auth.hashers import make_password
 
 class UserProfileSerializer(serializers.ModelSerializer):
@@ -32,11 +32,20 @@ class PostSerializer(serializers.ModelSerializer):
 
 
 class FriendSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(source='friend.id')
+    user_name = serializers.CharField(source='friend.user_name')
+    user_job = serializers.CharField(source='friend.user_job')
+    user_hobbies = serializers.JSONField(source='friend.user_hobbies')
+
     class Meta:
-        model = UserProfile
+        model = Friendship
         fields = ['id', 'user_name', 'user_job', 'user_hobbies']
 
 class FriendRequestSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(source='from_user.id')
+    name = serializers.CharField(source='from_user.user_name')
+
     class Meta:
         model = FriendRequest
-        fields = ['id', 'from_user', 'to_user', 'status']
+        fields = ['id', 'name']
+
