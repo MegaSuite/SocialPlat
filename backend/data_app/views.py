@@ -215,7 +215,7 @@ class RelationView(APIView):
 
         elif method == 'request':
             friendships = Friendship.objects.filter(user=user)
-            friend_requests = FriendRequest.objects.filter(to_user=user, status='pending')
+            friend_requests = FriendRequest.objects.filter(to_user=user)
 
             friend_serializer = FriendSerializer(friendships, many=True)
             request_serializer = FriendRequestSerializer(friend_requests, many=True)

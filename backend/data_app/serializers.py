@@ -44,8 +44,11 @@ class FriendSerializer(serializers.ModelSerializer):
 class FriendRequestSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(source='from_user.id')
     name = serializers.CharField(source='from_user.user_name')
+    friend_request_id = serializers.IntegerField(source='id')
+    status = serializers.CharField()
 
     class Meta:
         model = FriendRequest
-        fields = ['id', 'name']
+        fields = ['id', 'name', 'friend_request_id', 'status']
+
 
