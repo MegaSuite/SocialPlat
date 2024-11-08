@@ -2,17 +2,11 @@ import json
 from typing import List
 from dataclasses import asdict
 from dataclasses import dataclass, field
-from celery import shared_task
 from collections import Counter
 from InterestsProbe import ProbeSystem
 from scipy.sparse import csr_matrix
-# from implicit.als import AlternatingLeastSquares
 from ALSrcm import AlternatingLeastSquares
-from torch_geometric.nn import GCNConv
-import torch
-import torch.nn.functional as F
 from GCNrcm import GCNRecommender
-import warnings
 
 @dataclass
 class User:

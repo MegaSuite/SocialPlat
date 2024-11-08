@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.sparse import csr_matrix
 
 class AlternatingLeastSquares:
     def __init__(self, factors=10, iterations=15, regularization=0.1):

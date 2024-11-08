@@ -2,7 +2,6 @@ import numpy as np
 import json
 from dataclasses import dataclass
 from typing import List
-from celery import shared_task
 from ..alg.PersonalityClassification import PersonalityAnalyzer
 from ..alg.kmeans import KMeans
 from ..alg.InterestsCal import FriendRecommender

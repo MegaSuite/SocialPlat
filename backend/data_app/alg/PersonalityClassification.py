@@ -1,4 +1,5 @@
 import nltk
+import os
 import pandas as pd
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from nltk import word_tokenize, pos_tag, sent_tokenize
@@ -12,13 +13,16 @@ nltk.download('punkt_tab')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('averaged_perceptron_tagger_eng')
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+vocab_data_path = os.path.join(current_dir, 'vocab_data.csv')
+
 class PersonalityAnalyzer:
     def __init__(self):
         self.analyzer = SentimentIntensityAnalyzer()
         self.stop_words = set(stopwords.words('english'))
 
         # 读取CSV文件
-        data = pd.read_csv('./vocab_data.csv')
+        data = pd.read_csv(vocab_data_path)
 
         # 将每一列的数据存储到相应的列表中
         self.emotional_words = data['Emotional Words'].dropna().tolist()

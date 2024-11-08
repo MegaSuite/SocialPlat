@@ -1,9 +1,6 @@
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
-import random
-import csv
+
 
 # 定义KMeans类
 class KMeans:
