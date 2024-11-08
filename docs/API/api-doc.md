@@ -259,7 +259,7 @@
     "user_dob_day": "出生日",
     "user_gender": "性别",
     "user_custom_gender": "自定义性别",
-    "user_hobbies": [1, 2,],
+    "user_hobbies": [1, 2, 4, ...],
     "method": "renew"
 }
 ```
