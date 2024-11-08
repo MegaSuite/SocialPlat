@@ -3,9 +3,9 @@ import json
 from dataclasses import dataclass
 from typing import List
 from celery import shared_task
-from PersonalityClassification import PersonalityAnalyzer
+from ..alg.PersonalityClassification import PersonalityAnalyzer
 from kmeans import KMeans
-from InterestsCal import FriendRecommender
+from ..alg.InterestsCal import FriendRecommender
 
 @dataclass
 class User:

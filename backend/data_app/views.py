@@ -10,7 +10,6 @@ from django.contrib.auth.hashers import check_password, make_password
 from .alg.rcmFriends import rcm_friends
 from .models import UserProfile, Post, Comment, FriendRequest, Friendship
 from .serializers import UserProfileSerializer, PostSerializer, CommentSerializer, FriendSerializer, FriendRequestSerializer
-from alg import rcmFriends
 
 class RegisterView(APIView):
     def post(self, request):
