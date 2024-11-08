@@ -4,7 +4,7 @@ from dataclasses import dataclass
 from typing import List
 from celery import shared_task
 from ..alg.PersonalityClassification import PersonalityAnalyzer
-from kmeans import KMeans
+from ..alg.kmeans import KMeans
 from ..alg.InterestsCal import FriendRecommender
 
 @dataclass
