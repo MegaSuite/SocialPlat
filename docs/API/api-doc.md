@@ -325,7 +325,7 @@
 
 ## 相似推荐
 
-### 获取推荐好友列表 
+### 获取推荐好友列表
 
 > API 端点： http://api.caay.ru/recommend/
 
@@ -352,11 +352,87 @@
             "user_id": "用户的唯一标识符",
             "user_name": "用户姓名",
             "user_job": "用户专业",
-            "user_hobbies": ["兴趣1", "兴趣2", "..."],
+            "user_hobbies": [1, 2, 4],
             "avatar_url": "用户头像的URL"
         },
     ],
     "message": "Success" / "Failed"
+}
+```
+#### 推荐函数
+
+- `rcm_friends(user_data_list,user_post_content)`
+
+输入：
+
+`user_data_list`
+
+```json
+[
+    {
+        "id": 1,
+        "user_name": "Alice Chen",
+        "user_job": "Software Engineer",
+        "user_dob_year": "1990",
+        "user_gender": "female",
+        "user_hobbies": ["coding", "reading", "hiking"],
+        "user_friends": [58, 8, 77, 15, 80, 51, 21, 86, 24, 26],
+        "user_character": [2, 470, 0, 179, 208, 4]
+    },
+    {
+        "id": 2,
+        "user_name": "Bob Smith",
+        "user_job": "Data Scientist",
+        "user_dob_year": "1985",
+        "user_gender": "male",
+        "user_hobbies": ["cooking", "chess", "biking"],
+        "user_friends": [3, 45, 32, 80, 55, 72, 91, 12, 28, 63],
+        "user_character": [3, 220, 1, 189, 210, 5]
+    }
+]
+```
+
+`user_post_content`
+
+```json
+[
+    {
+        "user_id": 1,
+        "post_content": "I absolutely love visiting theme parks"
+    },
+    {
+        "user_id": 1,
+        "post_content": "The financial literacy journey"
+    }
+]
+```
+
+输出：
+
+```json
+{
+    "1": [
+        4,
+        9,
+        8,
+        2,
+        3,
+        7,
+        5,
+        6,
+        10
+    ],
+    "2": [
+        9,
+        8,
+        1,
+        3,
+        4,
+        5,
+        7,
+        6,
+        10
+    ]
 }
 ```
 

@@ -86,9 +86,10 @@ def rcm_friends(user_data_list,user_post_content):
         # print(f"Recommended friends for user {user_id}: {[value for key, value in recommended_friends]}")
 
     # 输出结果为 JSON 文件
-    output_filename = 'recommended_friends.json'
-    with open(output_filename, 'w') as json_file:
-        json.dump(results, json_file, indent=4)
+    # output_filename = 'recommended_friends.json'
+    # with open(output_filename, 'w') as json_file:
+    #     json.dump(results, json_file, indent=4)
+    return results
 
     # # 输出到新的 updated_users.json 文件
     # output_data = [{
@@ -202,6 +203,7 @@ if __name__ == "__main__":
         user_data_list = json.load(f)
     with open("./user_post.json", mode='r', encoding='utf-8') as file:
         user_post_content = json.load(file)
-    rcm_friends(user_data_list,user_post_content)
+    res = rcm_friends(user_data_list,user_post_content)
+    print(res)
     # rcm_friends.delay(user_data_list,user_post_content)
 
