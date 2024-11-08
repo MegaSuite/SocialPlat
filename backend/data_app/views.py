@@ -7,8 +7,10 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework.parsers import MultiPartParser, FormParser
 from django.contrib.auth.hashers import check_password, make_password
 
+from .alg.rcmFriends import rcm_friends
 from .models import UserProfile, Post, Comment, FriendRequest, Friendship
 from .serializers import UserProfileSerializer, PostSerializer, CommentSerializer, FriendSerializer, FriendRequestSerializer
+from alg import rcmFriends
 
 class RegisterView(APIView):
     def post(self, request):
@@ -274,3 +276,62 @@ class RelationView(APIView):
         else:
             return Response({"message": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
 
+
+class RecommendView(APIView):
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [JWTAuthentication]
+
+    def post(self, request):
+        user_id = request.data.get('user_id')
+        try:
+            user = UserProfile.objects.get(id=user_id)
+        except UserProfile.DoesNotExist:
+            return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
+
+        # 获取所有用户数据
+        all_users = UserProfile.objects.exclude(id=user_id)
+        user_data_list = []
+        for u in all_users:
+            user_data = {
+                "id": u.id,
+                "user_name": u.user_name,
+                "user_job": u.user_job,
+                "user_dob_year": u.user_dob_year,
+                "user_gender": u.user_gender,
+                "user_hobbies": u.user_hobbies,
+                "user_friends": list(u.friendships.values_list('friend_id', flat=True)),
+                "user_character": u.user_characters
+            }
+            user_data_list.append(user_data)
+
+        # 获取用户的帖子内容
+        user_posts = Post.objects.filter(post_author=user)
+        user_post_content = [
+            {
+                "user_id": user_id,
+                "post_content": post.post_content
+            } for post in user_posts
+        ]
+
+        # 调用推荐函数
+        recommendations = rcm_friends(user_data_list, user_post_content)
+
+        # 获取推荐的用户详情
+        recommended_users = []
+        for rec_user_id in recommendations.get(str(user_id), []):
+            try:
+                rec_user = UserProfile.objects.get(id=rec_user_id)
+                recommended_users.append({
+                    "user_id": rec_user.id,
+                    "user_name": rec_user.user_name,
+                    "user_job": rec_user.user_job,
+                    "user_hobbies": rec_user.user_hobbies,
+                    "avatar_url": request.build_absolute_uri(rec_user.avatar.url) if rec_user.avatar else None
+                })
+            except UserProfile.DoesNotExist:
+                continue
+
+        return Response({
+            "recommendations": recommended_users,
+            "message": "Success"
+        }, status=status.HTTP_200_OK)
