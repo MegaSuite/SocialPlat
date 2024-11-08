@@ -13,36 +13,28 @@ class User:
     Name: str
     Gender: str
     DOB: str  # Date of Birth
-    City: str  # City
-    Country: str  # Country
     Interests: List[str]
-    Seen_post: List[List[str]]
-    Post_post: List[List[str]]
     friends: List[int]
     character: List[float]
 
 # @shared_task
-def process_user_data(user_data_list,user_post_content):
+def rcm_friends(user_data_list,user_post_content):
     # 假设 user_data_list 是 User 对象的 JSON 表示形式
     users = []
     user_ids = []
     for user_data in user_data_list:
         user = User(
-            UserID=user_data.get('UserID'),
-            Name=user_data.get('Name'),
-            Gender=user_data.get('Gender'),
-            DOB=user_data.get('DOB'),
-            City=user_data.get('City'),
-            Country=user_data.get('Country'),
-            Interests=user_data.get('Interests', []),
-            Seen_post=user_data.get('Seen_post', []),
-            Post_post=user_data.get('Post_post', []),
-            friends=user_data.get('friends', []),
-            character=user_data.get('character', [])
+            UserID=user_data.get('id'),
+            Name=user_data.get('user_name'),
+            Gender=user_data.get('user_gender'),
+            DOB=user_data.get('user_dob_year'),
+            Interests=user_data.get('user_hobbies', []),
+            friends=user_data.get('user_friends', []),
+            character=user_data.get('user_character', [])
         )
         users.append(user)
         user_ids.append(user.UserID)
-    user_post = [(post['UserID'], post['Content']) for post in user_post_content]
+    user_post = [(post['user_id'], post['post_content']) for post in user_post_content]
 
     analyze_users_personality(users,user_post)
     # # 输出结果
@@ -206,10 +198,10 @@ def store_recommendations(user_id, recommendations):
     return
 
 if __name__ == "__main__":
-    with open("users.json", 'r') as f:
+    with open("./users.json", 'r') as f:
         user_data_list = json.load(f)
-    with open("user_post.json", mode='r', encoding='utf-8') as file:
+    with open("./user_post.json", mode='r', encoding='utf-8') as file:
         user_post_content = json.load(file)
-    process_user_data(user_data_list,user_post_content)
-    # process_user_data.delay(user_data_list,user_post_content)
+    rcm_friends(user_data_list,user_post_content)
+    # rcm_friends.delay(user_data_list,user_post_content)
 

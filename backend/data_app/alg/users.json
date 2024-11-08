@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "user_name": "Alice Chen",
+        "user_job": "Software Engineer",
+        "user_dob_year": "1990",
+        "user_gender": "female",
+        "user_hobbies": ["coding", "reading", "hiking"],
+        "user_friends": [58, 8, 77, 15, 80, 51, 21, 86, 24, 26],
+        "user_character": [2, 470, 0, 179, 208, 4]
+    },
+    {
+        "id": 2,
+        "user_name": "Bob Smith",
+        "user_job": "Data Scientist",
+        "user_dob_year": "1985",
+        "user_gender": "male",
+        "user_hobbies": ["cooking", "chess", "biking"],
+        "user_friends": [3, 45, 32, 80, 55, 72, 91, 12, 28, 63],
+        "user_character": [3, 220, 1, 189, 210, 5]
+    },
+    {
+        "id": 3,
+        "user_name": "Cathy Li",
+        "user_job": "Product Manager",
+        "user_dob_year": "1988",
+        "user_gender": "female",
+        "user_hobbies": ["traveling", "painting", "yoga"],
+        "user_friends": [13, 79, 56, 92, 38, 99, 47, 62, 11, 30],
+        "user_character": [4, 330, 2, 160, 180, 3]
+    },
+    {
+        "id": 4,
+        "user_name": "David Brown",
+        "user_job": "UX Designer",
+        "user_dob_year": "1992",
+        "user_gender": "male",
+        "user_hobbies": ["drawing", "gaming", "swimming"],
+        "user_friends": [8, 27, 41, 69, 37, 53, 94, 23, 50, 71],
+        "user_character": [5, 250, 3, 170, 220, 2]
+    },
+    {
+        "id": 5,
+        "user_name": "Emily Johnson",
+        "user_job": "Marketing Specialist",
+        "user_dob_year": "1993",
+        "user_gender": "female",
+        "user_hobbies": ["blogging", "photography", "dancing"],
+        "user_friends": [17, 64, 88, 26, 35, 81, 34, 10, 78, 6],
+        "user_character": [1, 410, 4, 139, 190, 3]
+    },
+    {
+        "id": 6,
+        "user_name": "Frank Wilson",
+        "user_job": "Sales Manager",
+        "user_dob_year": "1983",
+        "user_gender": "male",
+        "user_hobbies": ["golf", "puzzles", "jogging"],
+        "user_friends": [22, 58, 67, 44, 96, 5, 15, 1, 46, 9],
+        "user_character": [2, 530, 0, 200, 198, 4]
+    },
+    {
+        "id": 7,
+        "user_name": "Grace Kim",
+        "user_job": "Graphic Designer",
+        "user_dob_year": "1995",
+        "user_gender": "female",
+        "user_hobbies": ["illustration", "cycling", "cooking"],
+        "user_friends": [31, 18, 76, 40, 100, 60, 74, 12, 29, 87],
+        "user_character": [4, 340, 2, 180, 230, 1]
+    },
+    {
+        "id": 8,
+        "user_name": "Henry Thomas",
+        "user_job": "Network Engineer",
+        "user_dob_year": "1991",
+        "user_gender": "male",
+        "user_hobbies": ["fishing", "technology", "reading"],
+        "user_friends": [2, 99, 61, 36, 70, 3, 57, 42, 48, 91],
+        "user_character": [5, 290, 0, 210, 205, 2]
+    },
+    {
+        "id": 9,
+        "user_name": "Ivy Green",
+        "user_job": "Content Writer",
+        "user_dob_year": "1987",
+        "user_gender": "female",
+        "user_hobbies": ["writing", "hiking", "knitting"],
+        "user_friends": [6, 49, 68, 32, 85, 28, 52, 38, 75, 95],
+        "user_character": [1, 380, 4, 155, 170, 3]
+    },
+    {
+        "id": 10,
+        "user_name": "Jack Lee",
+        "user_job": "Project Coordinator",
+        "user_dob_year": "1989",
+        "user_gender": "male",
+        "user_hobbies": ["running", "cinema", "board games"],
+        "user_friends": [4, 14, 82, 55, 19, 83, 65, 43, 33, 47],
+        "user_character": [2, 460, 3, 190, 250, 5]
+    }
+]

@@ -23,7 +23,8 @@
     "user_dob_day": "出生日",
     "user_gender": "性别",
     "user_custom_gender": "自定义性别",
-    "user_hobbies": ["兴趣1", "兴趣2", ...]
+    "user_hobbies": [1, 2, 4, ...],
+	"user_characters": [2, 4, 6, ...]
 }
 ```
 
@@ -231,7 +232,8 @@
     "user_dob_day": "出生日",
     "user_gender": "性别",
     "user_custom_gender": "自定义性别",
-    "user_hobbies": ["兴趣1", "兴趣2", "..."],
+    "user_hobbies": [2, 4, 6, ... ],
+    "user_characters": [1, 2, 4, ...]
     "avatar":"头像链接"
 }
 ```
@@ -257,7 +259,7 @@
     "user_dob_day": "出生日",
     "user_gender": "性别",
     "user_custom_gender": "自定义性别",
-    "user_hobbies": ["兴趣1", "兴趣2", "..."],
+    "user_hobbies": [1, 2,],
     "method": "renew"
 }
 ```
