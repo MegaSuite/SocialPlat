@@ -24,7 +24,7 @@
     "user_gender": "性别",
     "user_custom_gender": "自定义性别",
     "user_hobbies": [1, 2, 4, ...],
-	"user_characters": [2, 4, 6, ...]
+	"user_characters": []
 }
 ```
 
