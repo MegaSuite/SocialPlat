@@ -32,7 +32,7 @@ export default {
       const userId = localStorage.getItem('id');
       if (token && userId) {
         try {
-          const response = await fetch('http://api.caay.ru/recommend/', { // 更新API端点URL
+          const response = await fetch('https://api.caay.ru/recommend/', { // 更新API端点URL
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${token}`,
@@ -66,7 +66,7 @@ export default {
       const userId = localStorage.getItem('id');
       if (token && userId) {
         try {
-          const response = await fetch('http://api.caay.ru/relation/', { // 更新API端点URL
+          const response = await fetch('https://api.caay.ru/relation/', { // 更新API端点URL
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${token}`,

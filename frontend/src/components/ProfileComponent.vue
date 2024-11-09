@@ -161,7 +161,7 @@ export default {
   methods: {
     async fetchUserProfile() {
   try {
-    const response = await fetch('http://api.caay.ru/users/', {
+    const response = await fetch('https://api.caay.ru/users/', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${this.userToken}`,
@@ -212,7 +212,7 @@ export default {
 },
     async fetchFriends() {
   try {
-    const response = await fetch('http://api.caay.ru/relation/', {
+    const response = await fetch('https://api.caay.ru/relation/', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${this.userToken}`,
@@ -263,7 +263,7 @@ export default {
   // 将兴趣标签转换为数字
   const hobbyNumbers = this.formData.user_hobbies.map(hobby => this.allHobbyTags.indexOf(hobby) + 1);
 
-  const response = await fetch('http://api.caay.ru/users/', {
+  const response = await fetch('https://api.caay.ru/users/', {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${this.userToken}`,
@@ -319,7 +319,7 @@ export default {
       formData.append('user_id', this.user.id);
       formData.append('method', 'avatar');
       try {
-        const response = await fetch('http://api.caay.ru/users/', {
+        const response = await fetch('https://api.caay.ru/users/', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${this.userToken}`,
@@ -339,7 +339,7 @@ export default {
     },
    async acceptFriendRequest(request) {
   try {
-    const response = await fetch('http://api.caay.ru/relation/', {
+    const response = await fetch('https://api.caay.ru/relation/', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${this.userToken}`,
@@ -370,7 +370,7 @@ export default {
 }
 ,async declineFriendRequest(request) {
   try {
-    const response = await fetch('http://api.caay.ru/relation/', {
+    const response = await fetch('https://api.caay.ru/relation/', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${this.userToken}`,

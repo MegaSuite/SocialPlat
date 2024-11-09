@@ -182,7 +182,7 @@ export default {
   this.isSubmitting = true; // 防止重复提交
 
   try {
-    const response = await fetch('http://api.caay.ru/register/', {
+    const response = await fetch('https://api.caay.ru/register/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

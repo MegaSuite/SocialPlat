@@ -4,7 +4,7 @@
 
 ## ✔️注册页面
 
-> API 端点：http://api.caay.ru/register/
+> API 端点：https://api.caay.ru/register/
 
 请求头：
 
@@ -42,7 +42,7 @@
 
 ## ✔️登录页面
 
-> API 端点：http://api.caay.ru/login/
+> API 端点：https://api.caay.ru/login/
 
 请求头：
 
@@ -72,7 +72,7 @@
 
 ## ✔️论坛内容
 
-> API端点：http://api.caay.ru/posts/
+> API端点：https://api.caay.ru/posts/
 
 ### ✔️获取所有帖子
 
@@ -201,7 +201,7 @@
 
 ## ✔️个人资料
 
->  API 端点：http://api.caay.ru/users/
+>  API 端点：https://api.caay.ru/users/
 
 ### ✔️获取用户资料
 
@@ -277,7 +277,7 @@
 
 ## ✔️用户头像
 
-> API 端点：http://api.caay.ru/avatar/
+> API 端点：https://api.caay.ru/avatar/
 
 ### ✔️上传头像
 
@@ -328,7 +328,7 @@
 
 ### ✔️获取推荐好友列表
 
-> API 端点： http://api.caay.ru/recommend/
+> API 端点： https://api.caay.ru/recommend/
 
 请求头：
 
@@ -441,7 +441,7 @@
 
 ## ✔️好友关系
 
-> API 端点： http://api.caay.ru/relation/
+> API 端点： https://api.caay.ru/relation/
 
 ### ✔️添加好友关系
 
