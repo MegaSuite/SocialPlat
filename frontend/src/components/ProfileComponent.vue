@@ -325,7 +325,7 @@ export default {
     const response = await fetch('https://api.caay.ru/users/', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.userToken}`
+        'Content-Type': 'multipart/form-data'
       },
       body: formData
     });
@@ -473,7 +473,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
         @import url('iconfont.css');
         @import url('https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto');
 

@@ -61,7 +61,6 @@ export default {
                         const response = await fetch('https://api.caay.ru/posts/', {
                             method: 'POST',
                             headers: {
-                                'Authorization': `Bearer ${token}`,
                                 'Content-Type': 'application/json'
                             },
                             body: JSON.stringify({
@@ -122,8 +121,7 @@ export default {
                         const response = await fetch('https://api.caay.ru/posts/', {
                             method: 'POST',
                             headers: {
-                                'Content-Type': 'application/json',
-                                'Authorization': `Bearer ${token}`
+                                'Content-Type': 'application/json'
                             },
                             body: JSON.stringify({
                                 user_id: userId,
@@ -168,8 +166,7 @@ export default {
                         const response = await fetch(`https://api.caay.ru/posts/`, {
                             method: 'POST',
                             headers: {
-                                'Content-Type': 'application/json',
-                                'Authorization': `Bearer ${token}`
+                                'Content-Type': 'application/json'
                             },
                             body: JSON.stringify(newComment)
                         });

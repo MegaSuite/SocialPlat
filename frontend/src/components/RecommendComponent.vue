@@ -68,7 +68,6 @@ export default {
           const response = await fetch('https://api.caay.ru/relation/', { // 更新API端点URL
             method: 'POST',
             headers: {
-              'Authorization': `Bearer ${token}`,
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
