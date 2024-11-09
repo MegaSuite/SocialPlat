@@ -267,7 +267,7 @@ export default {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-      user_id: this.user.id,
+      user_id: this.userId,
       user_name: this.formData.name,
       user_job: this.formData.job,
       user_contact: this.formData.contact,
@@ -313,7 +313,7 @@ export default {
   }
   const formData = new FormData();
   formData.append('avatar', this.imageFile);
-  formData.append('user_id', this.user.id);
+  formData.append('user_id', this.userId);
   formData.append('method', 'avatar');
 
   // 打印 FormData 的内容到控制台
