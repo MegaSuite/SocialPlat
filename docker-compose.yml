@@ -1,15 +1,13 @@
 services:
   frontend:
-    build:
-      context: ./frontend
+    image: megasuite/social-plat-frontend
     ports:
       - "3000:80"
     depends_on:
       - backend
 
   backend:
-    build:
-      context: ./backend
+    image: megasuite/social-plat-backend
     volumes:
       - ./backend:/app
     ports:

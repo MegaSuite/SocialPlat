@@ -55,7 +55,6 @@ export default {
             },
             methods: {
                 async fetchPosts() {
-                    const token = localStorage.getItem('token');
                     const userId = localStorage.getItem('id');
                     try {
                         const response = await fetch('https://api.caay.ru/posts/', {
