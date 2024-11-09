@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('data_app.urls')),
+    path('/', include('data_app.urls')),
 ]
 
 # 添加这行来服务媒体文件
