@@ -240,8 +240,8 @@ export default {
 }
 ,
     async updateProfile() {
-      if (!/^.{1,4}$/.test(this.formData.name)) {
-        alert('姓名不能为空，且最多 4 个字符');
+      if (!/^.{1,10}$/.test(this.formData.name)) {
+        alert('姓名不能为空，且最多 10 个字符');
         return;
       }
       if (!/^\d{11}$|^\w+@\w+\.com$/.test(this.formData.contact)) {
@@ -259,7 +259,7 @@ export default {
 
       try {
   // 将兴趣标签转换为数字
-  const hobbyNumbers = this.formData.user_hobbies.map(hobby => this.allHobbyTags.indexOf(hobby) + 1);
+  const hobbyNumbers = this.formData.hobbies.map(hobby => this.allHobbyTags.indexOf(hobby) + 1);
 
   const response = await fetch('https://api.caay.ru/users/', {
     method: 'POST',
@@ -307,32 +307,53 @@ export default {
 
     },
     async uploadImage() {
-      if (!this.imageFile) {
-        alert('请先选择一张图片');
-        return;
+  if (!this.imageFile) {
+    alert('请先选择一张图片');
+    return;
+  }
+  const formData = new FormData();
+  formData.append('avatar', this.imageFile);
+  formData.append('user_id', this.user.id);
+  formData.append('method', 'avatar');
+
+  // 打印 FormData 的内容到控制台
+  for (const [key, value] of formData.entries()) {
+    console.log(`${key}: ${value}`);
+  }
+
+  try {
+    const response = await fetch('https://api.caay.ru/users/', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${this.userToken}`
+      },
+      body: formData
+    });
+    
+    // 检查响应状态
+    if (!response.ok) {
+      throw new Error(`服务器错误: ${response.status}`);
+    }
+
+    const text = await response.text(); // 获取文本响应
+    try {
+      const data = JSON.parse(text); // 尝试解析JSON
+      if (data.message === 'Success') {
+        this.user.avatar = data.avatar;
+        alert('头像上传成功');
+      } else {
+        alert('头像上传失败');
       }
-      const formData = new FormData();
-      formData.append('avatar', this.imageFile);
-      formData.append('user_id', this.user.id);
-      formData.append('method', 'avatar');
-      try {
-        const response = await fetch('https://api.caay.ru/users/', {
-          method: 'POST',
-          headers: {
-          },
-          body: formData
-        });
-        const data = await response.json();
-        if (data.message === 'Success') {
-          this.user.avatar = data.avatar;
-          alert('头像上传成功');
-        } else {
-          alert('头像上传失败');
-        }
-      } catch (error) {
-        alert(`头像上传失败: ${error.message}`);
-      }
-    },
+    } catch (e) {
+      console.error('解析响应时出错:', e);
+      console.error('响应内容:', text); // 打印出响应内容
+      alert('头像上传失败: 服务器返回了无效的响应');
+    }
+  } catch (error) {
+    alert(`头像上传失败: ${error.message}`);
+  }
+}
+,
    async acceptFriendRequest(request) {
   try {
     const response = await fetch('https://api.caay.ru/relation/', {

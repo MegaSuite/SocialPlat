@@ -35,7 +35,6 @@ export default {
           const response = await fetch('https://api.caay.ru/recommend/', { // 更新API端点URL
             method: 'POST',
             headers: {
-              'Authorization': `Bearer ${token}`,
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -50,11 +49,11 @@ export default {
             });
             this.recommendations = data.recommendations;
           } else {
-            alert('获取推荐好友失败');
+            alert('获取推荐好友失败1');
           }
         } catch (error) {
           console.error('Error:', error);
-          alert('获取推荐好友失败');
+          alert('获取推荐好友失败2');
         }
       } else {
         alert('请先登录');

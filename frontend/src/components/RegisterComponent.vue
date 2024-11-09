@@ -141,7 +141,7 @@ export default {
     },
     validateFields() {
       const fields = [
-        { field: this.formData.user_name, regex: /^.{1,4}$/, message: "姓名不能为空，且最多 4 个字符" },
+        { field: this.formData.user_name, regex: /^.{1,10}$/, message: "姓名不能为空，且最多 10 个字符" },
         { field: this.formData.user_job, regex: /^.{1,10}$/, message: "专业不能为空，且最多 10 个字符" },
         { field: this.formData.user_contact, regex: /^\d{11}$|^\w+@\w+\.com$/, message: "手机号应为 11 位数字或有效邮箱地址" },
         { field: this.formData.user_password, regex: /^[\w]{6,16}$/, message: "密码应为 6 ~ 16 位数字、字母或下划线" }
