@@ -163,7 +163,6 @@ export default {
         const response = await fetch('http://social.caay.ru/api/users/', {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${this.userToken}`,
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
@@ -207,7 +206,6 @@ export default {
         const response = await fetch('http://social.caay.ru/api/relation/', {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${this.userToken}`,
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({

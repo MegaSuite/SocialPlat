@@ -164,7 +164,6 @@ export default {
     const response = await fetch('https://api.caay.ru/users/', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.userToken}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -215,7 +214,6 @@ export default {
     const response = await fetch('https://api.caay.ru/relation/', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.userToken}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -266,7 +264,6 @@ export default {
   const response = await fetch('https://api.caay.ru/users/', {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${this.userToken}`,
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({
@@ -322,7 +319,6 @@ export default {
         const response = await fetch('https://api.caay.ru/users/', {
           method: 'POST',
           headers: {
-            'Authorization': `Bearer ${this.userToken}`,
           },
           body: formData
         });
@@ -342,7 +338,6 @@ export default {
     const response = await fetch('https://api.caay.ru/relation/', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.userToken}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
@@ -373,7 +368,6 @@ export default {
     const response = await fetch('https://api.caay.ru/relation/', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${this.userToken}`,
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({

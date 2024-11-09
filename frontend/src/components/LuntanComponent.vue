@@ -91,7 +91,6 @@ export default {
                         const response = await fetch('https://api.caay.ru/avatar/', {
                             method: 'POST',
                             headers: {
-                                'Authorization': `Bearer ${this.userToken}`,
                                 'Content-Type': 'multipart/form-data'
                             },
                             body: JSON.stringify({
