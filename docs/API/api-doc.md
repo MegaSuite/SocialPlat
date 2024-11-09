@@ -233,7 +233,7 @@
     "user_gender": "性别",
     "user_custom_gender": "自定义性别",
     "user_hobbies": [2, 4, 6, ... ],
-    "user_characters": [1, 2, 4, ...]
+    "user_characters": [],
     "avatar":"头像链接"
 }
 ```
@@ -260,6 +260,7 @@
     "user_gender": "性别",
     "user_custom_gender": "自定义性别",
     "user_hobbies": [1, 2, 4, ...],
+    "user_characters": [],
     "method": "renew"
 }
 ```
