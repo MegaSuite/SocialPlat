@@ -117,8 +117,7 @@ export default {
         gender: '',
         customGender: '',
         hobbies: [],
-        avatar: '',
-        characters:[],
+        avatar: ''
       },
       friends: [],
       friendRequests: [],
@@ -160,87 +159,74 @@ export default {
   },
   methods: {
     async fetchUserProfile() {
-  try {
-    const response = await fetch('http://api.caay.ru/users/', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${this.userToken}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        user_id: this.userId,
-        method: 'request'
-      })
-    });
-    const data = await response.json();
-    
-    // 将数字转换回兴趣标签
-    const hobbies = data.user_hobbies.map(hobbyNum => this.allHobbyTags[hobbyNum - 1]);
-
-    this.user = {
-      id: data.user_id,
-      name: data.user_name,
-      job: data.user_job,
-      contact: data.user_contact,
-      password: data.user_password,
-      dobYear: data.user_dob_year,
-      dobMonth: data.user_dob_month,
-      dobDay: data.user_dob_day,
-      gender: data.user_gender,
-      customGender: data.user_custom_gender,
-      hobbies: hobbies, // 转换后的兴趣标签
-      avatar: data.avatar,
-      characters: data.user_characters
-    };
-    
-    this.formData = {
-      name: data.user_name,
-      job: data.user_job,
-      contact: data.user_contact,
-      password: data.user_password,
-      dobYear: data.user_dob_year,
-      dobMonth: data.user_dob_month,
-      dobDay: data.user_dob_day,
-      gender: data.user_gender,
-      customGender: data.user_custom_gender,
-      hobbies: hobbies, // 转换后的兴趣标签
-      characters: data.user_characters
-    };
-  } catch (error) {
-    alert(`获取用户资料失败: ${error.message}`);
-  }
-},
+      try {
+        const response = await fetch('http://social.caay.ru/api/users/', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            user_id: this.userId,
+            method: 'request'
+          })
+        });
+        const data = await response.json();
+        this.user = {
+          id: data.user_id,
+          name: data.user_name,
+          job: data.user_job,
+          contact: data.user_contact,
+          password: data.user_password,
+          dobYear: data.user_dob_year,
+          dobMonth: data.user_dob_month,
+          dobDay: data.user_dob_day,
+          gender: data.user_gender,
+          customGender: data.user_custom_gender,
+          hobbies: data.user_hobbies,
+          avatar: data.avatar
+        };
+        this.formData = {
+          name: data.user_name,
+          job: data.user_job,
+          contact: data.user_contact,
+          password: data.user_password,
+          dobYear: data.user_dob_year,
+          dobMonth: data.user_dob_month,
+          dobDay: data.user_dob_day,
+          gender: data.user_gender,
+          customGender: data.user_custom_gender,
+          hobbies: data.user_hobbies
+        };
+      } catch (error) {
+        alert(`获取用户资料失败: ${error.message}`);
+      }
+    },
     async fetchFriends() {
-  try {
-    const response = await fetch('http://api.caay.ru/relation/', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${this.userToken}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        user_id: this.userId,
-        method: 'request'
-      })
-    });
-    const data = await response.json();
-    if (data.message === 'Success') {
-      // 将好友的兴趣数字转换为标签
-      data.friends.forEach(friend => {
-        friend.user_hobbies = friend.user_hobbies.map(hobbyNum => this.allHobbyTags[hobbyNum - 1]);
-      });
-
-      this.friends = data.friends;
-      this.friendRequests = data.friendRequests;
-      this.user.avatar = data.avatar;
-    } else {
-      alert('获取好友关系失败');
-    }
-  } catch (error) {
-    alert(`获取好友关系失败: ${error.message}`);
-  }
-}
-,
+      try {
+        const response = await fetch('http://social.caay.ru/api/relation/', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            user_id: this.userId,
+            method: 'request'
+          })
+        });
+        const data = await response.json();
+        if (data.message === 'Success') {
+          this.friends = data.friends;
+          this.friendRequests = data.friendRequests;
+          this.user.avatar = data.avatar;
+        } else {
+          alert('获取好友关系失败');
+        }
+      } catch (error) {
+        alert(`获取好友关系失败: ${error.message}`);
+      }
+    },
     async updateProfile() {
       if (!/^.{1,4}$/.test(this.formData.name)) {
         alert('姓名不能为空，且最多 4 个字符');
@@ -260,54 +246,46 @@ export default {
       }
 
       try {
-  // 将兴趣标签转换为数字
-  const hobbyNumbers = this.formData.user_hobbies.map(hobby => this.allHobbyTags.indexOf(hobby) + 1);
-
-  const response = await fetch('http://api.caay.ru/users/', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${this.userToken}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      user_id: this.user.id,
-      user_name: this.formData.name,
-      user_job: this.formData.job,
-      user_contact: this.formData.contact,
-      user_password: this.formData.password,
-      user_dob_year: this.formData.dobYear,
-      user_dob_month: this.formData.dobMonth,
-      user_dob_day: this.formData.dobDay,
-      user_gender: this.formData.gender,
-      user_custom_gender: this.formData.customGender,
-      user_hobbies: hobbyNumbers, // 传输兴趣数字
-      user_characters: this.formData.characters,
-      method: 'renew'
-    })
-  });
-  const data = await response.json();
-  if (data.message === 'Success') {
-    // 将数字转换回兴趣标签
-    this.user.hobbies = data.user_hobbies.map(hobbyNum => this.allHobbyTags[hobbyNum - 1]);
-
-    this.user.name = this.formData.name;
-    this.user.job = this.formData.job;
-    this.user.contact = this.formData.contact;
-    this.user.password = this.formData.password;
-    this.user.dobYear = this.formData.dobYear;
-    this.user.dobMonth = this.formData.dobMonth;
-    this.user.dobDay = this.formData.dobDay;
-    this.user.gender = this.formData.gender;
-    this.user.customGender = this.formData.customGender;
-    this.user.characters = this.formData.characters;
-    alert('资料更新成功');
-  } else {
-    alert('更新资料失败');
-  }
-} catch (error) {
-  alert(`更新资料失败: ${error.message}`);
-}
-
+        const response = await fetch('http://social.caay.ru/api/users/', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            user_id: this.user.id,
+            user_name: this.formData.name,
+            user_job: this.formData.job,
+            user_contact: this.formData.contact,
+            user_password: this.formData.password,
+            user_dob_year: this.formData.dobYear,
+            user_dob_month: this.formData.dobMonth,
+            user_dob_day: this.formData.dobDay,
+            user_gender: this.formData.gender,
+            user_custom_gender: this.formData.customGender,
+            user_hobbies: this.formData.hobbies,
+            method: 'renew'
+          })
+        });
+        const data = await response.json();
+        if (data.message === 'Success') {
+          this.user.name = this.formData.name;
+          this.user.job = this.formData.job;
+          this.user.contact = this.formData.contact;
+          this.user.password = this.formData.password;
+          this.user.dobYear = this.formData.dobYear;
+          this.user.dobMonth = this.formData.dobMonth;
+          this.user.dobDay = this.formData.dobDay;
+          this.user.gender = this.formData.gender;
+          this.user.customGender = this.formData.customGender;
+          this.user.hobbies = this.formData.hobbies;
+          alert('资料更新成功');
+        } else {
+          alert('更新资料失败');
+        }
+      } catch (error) {
+        alert(`更新资料失败: ${error.message}`);
+      }
     },
     async uploadImage() {
       if (!this.imageFile) {
@@ -319,7 +297,7 @@ export default {
       formData.append('user_id', this.user.id);
       formData.append('method', 'avatar');
       try {
-        const response = await fetch('http://api.caay.ru/users/', {
+        const response = await fetch('http://social.caay.ru/api/users/', {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${this.userToken}`,
@@ -337,63 +315,57 @@ export default {
         alert(`头像上传失败: ${error.message}`);
       }
     },
-   async acceptFriendRequest(request) {
-  try {
-    const response = await fetch('http://api.caay.ru/relation/', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${this.userToken}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        user_id: this.user.id,
-        friend_request_id: request.id,
-        method: 'accept' // 更正为小写
-      })
-    });
-    const data = await response.json();
-    if (data.message === 'Success') {
-      // 将好友的兴趣数字转换为标签
-      data.friends.forEach(friend => {
-        friend.user_hobbies = friend.user_hobbies.map(hobbyNum => this.allHobbyTags[hobbyNum - 1]);
-      });
-
-      this.friends = data.friends;
-      this.friendRequests = this.friendRequests.filter(req => req.id !== request.id);
-      alert('好友请求已接受');
-    } else {
-      alert('接受好友请求失败');
-    }
-  } catch (error) {
-    alert(`接受好友请求失败: ${error.message}`);
-  }
-}
-,async declineFriendRequest(request) {
-  try {
-    const response = await fetch('http://api.caay.ru/relation/', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${this.userToken}`,
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        user_id: this.user.id,
-        friend_request_id: request.id,
-        method: 'refuse' // 更正为小写
-      })
-    });
-    const data = await response.json();
-    if (data.message === 'Success') {
-      this.friendRequests = this.friendRequests.filter(req => req.id !== request.id);
-      alert('好友请求已拒绝');
-    } else {
-      alert('拒绝好友请求失败');
-    }
-  } catch (error) {
-    alert(`拒绝好友请求失败: ${error.message}`);
-  }
-}
-,
+    async acceptFriendRequest(request) {
+      try {
+        const response = await fetch('http://social.caay.ru/api/relation/', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            user_id: this.user.id,
+            friend_request_id: request.id,
+            method: 'Accept'
+          })
+        });
+        const data = await response.json();
+        if (data.message === 'Success') {
+          this.friends = data.friends;
+          this.friendRequests = this.friendRequests.filter(req => req.id !== request.id);
+          alert('好友请求已接受');
+        } else {
+          alert('接受好友请求失败');
+        }
+      } catch (error) {
+        alert(`接受好友请求失败: ${error.message}`);
+      }
+    },
+    async declineFriendRequest(request) {
+      try {
+        const response = await fetch('http://social.caay.ru/api/relation/', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${this.userToken}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            user_id: this.user.id,
+            friend_request_id: request.id,
+            method: 'Refuse'
+          })
+        });
+        const data = await response.json();
+        if (data.message === 'Success') {
+          this.friendRequests = this.friendRequests.filter(req => req.id !== request.id);
+          alert('好友请求已拒绝');
+        } else {
+          alert('拒绝好友请求失败');
+        }
+      } catch (error) {
+        alert(`拒绝好友请求失败: ${error.message}`);
+      }
+    },
     onFileChange(e) {
       const file = e.target.files[0];
       if (file && file.type.startsWith('image/')) {

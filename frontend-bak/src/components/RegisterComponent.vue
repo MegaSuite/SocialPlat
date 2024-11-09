@@ -100,8 +100,7 @@ export default {
         user_dob_day: '',
         user_gender: 'female',
         user_custom_gender: '',
-        user_hobbies: [],
-        user_character: []
+        user_hobbies: []
       },
       allHobbyTags: [
         '编程', '阅读', '旅行', '摄影', '音乐',
@@ -164,48 +163,41 @@ export default {
       return allFilled;
     },
     async handleSubmit() {
-  if (!this.validateFields()) return;
+      if (!this.validateFields()) return;
 
-  if (this.formData.user_hobbies.length < 3 || this.formData.user_hobbies.length > 10) {
-    alert('请至少选择三个兴趣标签，最多选择十个');
-    return;
-  }
+      if (this.formData.user_hobbies.length < 3 || this.formData.user_hobbies.length > 10) {
+        alert('请至少选择三个兴趣标签，最多选择十个');
+        return;
+      }
 
-  if (this.formData.user_gender === 'custom' && !this.formData.user_custom_gender) {
-    alert('请输入您的自定义性别');
-    return;
-  }
+      if (this.formData.user_gender === 'custom' && !this.formData.user_custom_gender) {
+        alert('请输入您的自定义性别');
+        return;
+      }
 
-  // 将兴趣标签转换为数字
-  const hobbyNumbers = this.formData.user_hobbies.map(hobby => this.allHobbyTags.indexOf(hobby) + 1);
+      this.isSubmitting = true; // 防止重复提交
 
-  this.isSubmitting = true; // 防止重复提交
-
-  try {
-    const response = await fetch('http://api.caay.ru/register/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        ...this.formData,
-        user_hobbies: hobbyNumbers
-      })
-    });
-    const data = await response.json();
-    if (data.message === 'Success') {
-      alert('注册成功');
-      window.location.href = 'login.html'; // 跳转到登录页面
-    } else {
-      alert(`注册失败: ${data.message}`);
+      try {
+        const response = await fetch('http://social.caay.ru/api/register/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(this.formData)
+        });
+        const data = await response.json();
+        if (data.message === 'Success') {
+          alert('注册成功');
+          this.$router.push('/login'); // 跳转到登录页面
+        } else {
+          alert(`注册失败: ${data.message}`);
+        }
+      } catch (error) {
+        alert(`注册失败: ${error.message}`);
+      } finally {
+        this.isSubmitting = false; // 重置提交状态
+      }
     }
-  } catch (error) {
-    alert(`注册失败: ${error.message}`);
-  } finally {
-    this.isSubmitting = false; // 重置提交状态
-  }
-}
-
   },
   mounted() {
     const yearSelect = this.$refs.dobYear;

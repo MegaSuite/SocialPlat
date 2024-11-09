@@ -25,14 +25,14 @@ export default {
   },
   methods: {
     goHome() {
-      window.location.href = 'index.html'; // 跳转到主页
+      this.$router.push('/'); // 跳转到主页
     },
     async fetchRecommendations() {
       const token = localStorage.getItem('token');
       const userId = localStorage.getItem('id');
       if (token && userId) {
         try {
-          const response = await fetch('http://api.caay.ru/recommend/', { // 更新API端点URL
+          const response = await fetch('http://social.caay.ru/api/recommend/', {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${token}`,
@@ -44,10 +44,6 @@ export default {
           });
           const data = await response.json();
           if (data.message === 'Success') {
-            // 将推荐好友的 user_hobbies 数字转换为标签
-            data.recommendations.forEach(recommendation => {
-              recommendation.user_hobbies = recommendation.user_hobbies.map(hobbyNum => this.allHobbyTags[hobbyNum - 1]);
-            });
             this.recommendations = data.recommendations;
           } else {
             alert('获取推荐好友失败');
@@ -58,7 +54,7 @@ export default {
         }
       } else {
         alert('请先登录');
-        window.location.href = 'login.html'; // 跳转到登录页面
+        this.$router.push('/login'); // 跳转到登录页面
       }
     },
     async addFriend(friendId) {
@@ -66,7 +62,7 @@ export default {
       const userId = localStorage.getItem('id');
       if (token && userId) {
         try {
-          const response = await fetch('http://api.caay.ru/relation/', { // 更新API端点URL
+          const response = await fetch('http://social.caay.ru/api/relation/', {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${token}`,
@@ -90,7 +86,7 @@ export default {
         }
       } else {
         alert('请先登录');
-        window.location.href = 'login.html'; // 跳转到登录页面
+        this.$router.push('/login'); // 跳转到登录页面
       }
     }
   },

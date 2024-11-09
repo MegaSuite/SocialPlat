@@ -58,7 +58,7 @@ export default {
                     const token = localStorage.getItem('token');
                     const userId = localStorage.getItem('id');
                     try {
-                        const response = await fetch('http://api.caay.ru/posts/', {
+                        const response = await fetch('http://social.caay.ru/api/posts/', {
                             method: 'POST',
                             headers: {
                                 'Authorization': `Bearer ${token}`,
@@ -88,7 +88,7 @@ export default {
                 },
                 async fetchAvatar(userId) {
                     try {
-                        const response = await fetch('http://api.caay.ru/avatar/', {
+                        const response = await fetch('http://social.caay.ru/api/avatar/', {
                             method: 'POST',
                             headers: {
                                 'Authorization': `Bearer ${this.userToken}`,
@@ -120,7 +120,7 @@ export default {
                     }
                     this.newPost.author = userId; // 设置当前用户为作者
                     try {
-                        const response = await fetch('http://api.caay.ru/posts/', {
+                        const response = await fetch('http://social.caay.ru/api/posts/', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
@@ -166,7 +166,7 @@ export default {
                             post_id: postId,
                             method: 'comment'
                         };
-                        const response = await fetch(`http://api.caay.ru/posts/`, {
+                        const response = await fetch(`http://social.caay.ru/api/posts/`, {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json',
