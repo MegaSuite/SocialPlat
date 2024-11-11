@@ -24,11 +24,12 @@ class CommentSerializer(serializers.ModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     post_author = serializers.CharField(source='post_author.user_name', read_only=True)
+    post_author_id = serializers.IntegerField(source='post_author.id', read_only=True)
     post_comments = CommentSerializer(many=True, read_only=True, source='comments')
 
     class Meta:
         model = Post
-        fields = ['post_id', 'post_author', 'post_title', 'post_content', 'post_comments']
+        fields = ['post_id', 'post_author_id', 'post_author', 'post_title', 'post_content', 'post_comments']
 
 
 class FriendSerializer(serializers.ModelSerializer):
