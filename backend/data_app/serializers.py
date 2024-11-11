@@ -17,10 +17,11 @@ class UserProfileSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     comment_author = serializers.CharField(source='comment_author.user_name', read_only=True)
+    comment_author_id = serializers.IntegerField(source='comment_author.id', read_only=True)
 
     class Meta:
         model = Comment
-        fields = ['comment_id', 'comment_content', 'comment_author']
+        fields = ['comment_id', 'comment_content', 'comment_author_id', 'comment_author']
 
 class PostSerializer(serializers.ModelSerializer):
     post_author = serializers.CharField(source='post_author.user_name', read_only=True)
