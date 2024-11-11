@@ -99,6 +99,7 @@
     	[
         	{
                 "post_id": "帖子的编号", 
+                "post_author_id": "用户的唯一编号",
                 "post_author": "帖子的作者", 
                 "post_title": "帖子的标题", 
                 "post_content": "帖子的内容", 
