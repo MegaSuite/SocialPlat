@@ -108,11 +108,13 @@
                     	{
                         	"comment_id": "评论的编号",
                             "comment_content": "评论的内容",
+                            "comment_author_id": "用户的唯一标识",
                             "comment_author": "评论的作者",
                         },
                     	{
                         	"comment_id": "评论的编号",
                             "comment_content": "评论的内容",
+                            "comment_author_id": "用户的唯一标识",
                             "comment_author": "评论的作者",
                         },
                     ]
@@ -122,16 +124,17 @@
                 "post_author": "帖子的作者", 
                 "post_title": "帖子的标题", 
                 "post_content": "帖子的内容", 
-                "post_comments": 
             		[
                     	{
                         	"comment_id": "评论的编号",
                             "comment_content": "评论的内容",
+                            "comment_author_id": "用户的唯一标识",
                             "comment_author": "评论的作者",
                         },
                     	{
                         	"comment_id": "评论的编号",
                             "comment_content": "评论的内容",
+                            "comment_author_id": "用户的唯一标识",
                             "comment_author": "评论的作者",
                         },
                     ]
