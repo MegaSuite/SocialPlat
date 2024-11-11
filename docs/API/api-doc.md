@@ -31,11 +31,11 @@
 响应体：
 
  ```json
- {
-     "user_id": "用户的唯一标识符",
-     "user_name": "用户姓名",
-     "message": "Success"/"Failed"
- }
+{
+    "user_id": "用户的唯一标识符",
+    "user_name": "用户姓名",
+    "message": "Success"/"Failed"
+}
  ```
 
 
@@ -201,7 +201,7 @@
 }
 ```
 
-### 点赞帖子
+### ✔️点赞帖子
 
 请求头：
 
@@ -249,6 +249,7 @@
 ```
 
 响应体：
+
 ```json
 {
     "id": "用户的唯一标识符",
@@ -263,7 +264,7 @@
     "user_custom_gender": "自定义性别",
     "user_hobbies": [2, 4, 6, ... ],
     "user_characters": [],
-    "user_like": [1, 2, 4, ...],
+    "user_like": [1, 2, 4, ...]
     "avatar":"头像链接"
 }
 ```
@@ -391,6 +392,7 @@
     "message": "Success" / "Failed"
 }
 ```
+
 #### 推荐函数
 
 - `rcm_friends(user_data_list,user_post_content)`
