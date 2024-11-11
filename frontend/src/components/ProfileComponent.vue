@@ -42,14 +42,12 @@
                     <input type="text" v-model="formData.name" id="name" required />
                     <label for="contact" class="a1">联系方式:</label>
                     <input type="text" v-model="formData.contact" id="contact" required />
+                    <label for="password" class="a1">密码:</label>
+                    <input type="text" v-model="formData.password" id="password" required />
                     <label for="job" class="a1">专业:</label>
                     <input type="text" v-model="formData.job" id="job" required />
-                    <label for="hobbies" class="a1">兴趣:</label>
-                    <div id="tags">
-                        <label v-for="tag in allHobbyTags" :key="tag">
-                            <input type="checkbox" v-model="formData.hobbies" :value="tag"> {{ tag }}
-                        </label>
-                    </div>
+                    <label for="gender" class="a1">性别:</label>
+                    <input type="text" v-model="formData.gender" id="gender" required />
                     <input type="submit" value="保存" class="btn">
                 </form>
             </div>
@@ -65,7 +63,7 @@
                     <img :src="imageUrl" alt="用户头像" style="width: 200px; height: 200px; border-radius: 50%;">
                 </div>
             </div>
-            <div class="friends noshow" v-if="friends.length">
+            <div class="friends noshow">
                 <h1>我的朋友</h1>
                 <div v-for="friend in filteredFriends" :key="friend.id" class="friend-card">
                     <h2>{{ friend.name }}</h2>
@@ -84,7 +82,7 @@
                     <button @click="nextFriendsPage" :disabled="friendsCurrentPage === totalFriendsPages">下一页</button>
                 </div>
             </div>
-            <div class="message noshow" v-if="friendRequests && friendRequests.length">
+            <div class="message noshow">
                 <h1>好友请求</h1>
                 <div v-for="request in filteredRequests" :key="request.id" class="friend-card">
                     <p><strong>{{ request.name }}</strong> 发来了好友请求</p>
@@ -124,13 +122,33 @@ export default {
       friendRequests: [],
       formData: { hobbies: [] },
       allHobbyTags: [
-        '编程', '阅读', '旅行', '摄影', '音乐',
-        '运动', '电影', '美食', '手工艺', '游戏',
-        '瑜伽', '健身', '园艺', '宠物', '绘画',
-        '写作', '舞蹈', '戏剧', '志愿服务', '烹饪',
-        '钓鱼', '露营', '滑雪', '冲浪', '攀岩',
-        '桌游', '卡牌游戏', '模型制作', '收藏', '天文'
-      ],
+                    '环保生活方式', '漫画', '网络漫画', '编程', '演唱会粉丝',
+                    '金融素养', '辩论俱乐部', '爵士音乐', '化装舞会', '科幻电影',
+                    '跑酷', '虚拟现实体验', '龙与地下城', '主题公园', '奇幻书籍',
+                    '网购', '日本流行音乐', '真实犯罪', '古典音乐', '宠物爱好者',
+                    '摄影', '角色扮演', '怪物电影', '真人秀', '迷因',
+                    '单口喜剧', '国际学生', '动漫粉丝', '鬼屋', '侦探故事',
+                    '滑雪', '浪漫电影', '预算管理', '学术研究', '社交媒体',
+                    '主题夜', '社会活动', '直播', '卡牌游戏', '创意写作',
+                    '烹饪节目', '街头食品', '魔术表演', '心理健康意识', '水上运动',
+                    '用户体验设计', '单板滑雪', '漫画', '嘻哈', '体育赛事',
+                    '卡拉OK', '手机游戏', '志愿工作', '暑假', '科幻奇幻',
+                    '海滩日', '正念', '健身目标', '滑板', '文化交流',
+                    '超自然惊悚片', '节日', '独立游戏', '名人八卦', '社会正义',
+                    '极限运动', '剧集狂看', '摇滚音乐', '恐怖故事', '人工智能开发',
+                    '多人在线战术竞技游戏', '电影原声', '领导技能', '悬疑小说', '个人理财',
+                    '美食博客', '社区服务', '实习搜索', '露营旅行', '旅行视频博客',
+                    '独立音乐', '同人小说', '科幻书籍', '冥想练习', '电影马拉松',
+                    '压力管理', '时间管理', '自然摄影', '平面设计', '职业规划',
+                    '第一人称射击游戏', '角色扮演游戏', '机器学习', '公众演讲', '角色扮演',
+                    '犯罪惊悚片', '喜剧电影', '生产力技巧', '简历制作', '电子竞技',
+                    '数据科学', '奇幻电影', '批判性思维', '数字艺术', '恐怖电影',
+                    '健康饮食', '项目管理', '城市探索', '自我提升', '戏剧电影',
+                    '慈善活动', '密室逃脱', '桌游', '语言交换', '科学创新',
+                    '学习小组', '流行音乐', '外国电影', '解谜游戏', '动作电影',
+                    '韩国流行音乐', '解谜', '复古游戏', '哲学讨论', '网络活动',
+                    '可持续发展', '复古电影', 'YouTube狂看'
+                ],
       imageFile: null,
       imageUrl: '',
       friendsCurrentPage: 1,
@@ -239,119 +257,111 @@ export default {
   }
 }
 ,
-    async updateProfile() {
-      if (!/^.{1,10}$/.test(this.formData.name)) {
-        alert('姓名不能为空，且最多 10 个字符');
-        return;
-      }
-      if (!/^\d{11}$|^\w+@\w+\.com$/.test(this.formData.contact)) {
-        alert('联系方式应为 11 位手机号或有效邮箱地址');
-        return;
-      }
-      if (!/^.{1,10}$/.test(this.formData.job)) {
-        alert('专业不能为空，且最多 10 个字符');
-        return;
-      }
-      if (this.formData.hobbies.length < 3 || this.formData.hobbies.length > 10) {
-        alert('请至少选择三个兴趣标签，最多选择十个');
-        return;
-      }
-
-      try {
-  // 将兴趣标签转换为数字
-  const hobbyNumbers = this.formData.hobbies.map(hobby => this.allHobbyTags.indexOf(hobby) + 1);
-
-  const response = await fetch('https://api.caay.ru/users/', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      user_id: this.userId,
-      user_name: this.formData.name,
-      user_job: this.formData.job,
-      user_contact: this.formData.contact,
-      user_password: this.formData.password,
-      user_dob_year: this.formData.dobYear,
-      user_dob_month: this.formData.dobMonth,
-      user_dob_day: this.formData.dobDay,
-      user_gender: this.formData.gender,
-      user_custom_gender: this.formData.customGender,
-      user_hobbies: hobbyNumbers, // 传输兴趣数字
-      user_characters: this.formData.characters,
-      method: 'renew'
-    })
-  });
-  const data = await response.json();
-  if (data.message === 'Success') {
-    // 将数字转换回兴趣标签
-    this.user.hobbies = data.user_hobbies.map(hobbyNum => this.allHobbyTags[hobbyNum - 1]);
-
-    this.user.name = this.formData.name;
-    this.user.job = this.formData.job;
-    this.user.contact = this.formData.contact;
-    this.user.password = this.formData.password;
-    this.user.dobYear = this.formData.dobYear;
-    this.user.dobMonth = this.formData.dobMonth;
-    this.user.dobDay = this.formData.dobDay;
-    this.user.gender = this.formData.gender;
-    this.user.customGender = this.formData.customGender;
-    this.user.characters = this.formData.characters;
-    alert('资料更新成功');
-  } else {
-    alert('更新资料失败');
+async updateProfile() {
+  if (!/^.{1,10}$/.test(this.formData.name)) {
+    alert('姓名不能为空，且最多 10 个字符');
+    return;
   }
-} catch (error) {
-  alert(`更新资料失败: ${error.message}`);
-}
+  if (!/^\d{11}$|^\w+@\w+\.com$/.test(this.formData.contact)) {
+    alert('联系方式应为 11 位手机号或有效邮箱地址');
+    return;
+  }
+  if (!/^.{1,10}$/.test(this.formData.job)) {
+    alert('专业不能为空，且最多 10 个字符');
+    return;
+  }
+  if (!/^[\w]{6,16}$/.test(this.formData.password)) {
+    alert('密码应为 6 ~ 16 位数字、字母或下划线');
+    return;
+  }
 
-    },
-    async uploadImage() {
+  try {
+    // 将兴趣标签转换为数字
+    const hobbyNumbers = this.formData.hobbies.map(hobby => this.allHobbyTags.indexOf(hobby) + 1);
+
+    const response = await fetch('https://api.caay.ru/users/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        user_id: this.userId,
+        user_name: this.formData.name,
+        user_job: this.formData.job,
+        user_contact: this.formData.contact,
+        user_password: this.formData.password,
+        user_dob_year: this.formData.dobYear,
+        user_dob_month: this.formData.dobMonth,
+        user_dob_day: this.formData.dobDay,
+        user_gender: this.formData.gender,
+        user_custom_gender: this.formData.customGender,
+        user_hobbies: hobbyNumbers, // 传输兴趣数字
+        user_characters: this.formData.characters,
+        method: 'renew'
+      })
+    });
+    const data = await response.json();
+
+    if (data.message === 'Success') {
+      this.user.name = this.formData.name;
+      this.user.job = this.formData.job;
+      this.user.contact = this.formData.contact;
+      this.user.password = this.formData.password;
+      this.user.dobYear = this.formData.dobYear;
+      this.user.dobMonth = this.formData.dobMonth;
+      this.user.dobDay = this.formData.dobDay;
+      this.user.gender = this.formData.gender;
+      this.user.customGender = this.formData.customGender;
+      this.user.hobbies = this.formData.hobbies; // 直接使用表单数据中的兴趣标签
+      this.user.characters = this.formData.characters;
+      alert('资料更新成功');
+    } else {
+      alert('更新资料失败');
+    }
+  } catch (error) {
+    alert(`更新资料失败: ${error.message}`);
+  }
+},
+async uploadImage() {
   if (!this.imageFile) {
     alert('请先选择一张图片');
     return;
   }
-  const formData = new FormData();
-  formData.append('avatar', this.imageFile);
-  formData.append('user_id', this.userId);
-  formData.append('method', 'avatar');
+const formData = new FormData();
+formData.append('avatar', this.imageFile);
+formData.append('user_id', this.userId);
+formData.append('method', 'add');
 
-  // 打印 FormData 的内容到控制台
-  for (const [key, value] of formData.entries()) {
-    console.log(`${key}: ${value}`);
+try {
+  const response = await fetch('https://api.caay.ru/avatar/', {
+    method: 'POST',
+    headers: {
+    },
+    body: formData
+  });
+
+  // 检查响应状态
+  if (!response.ok) {
+    throw new Error(`服务器错误: ${response.status}`);
   }
 
+  const text = await response.text(); // 获取文本响应
   try {
-    const response = await fetch('https://api.caay.ru/users/', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'multipart/form-data'
-      },
-      body: formData
-    });
-    
-    // 检查响应状态
-    if (!response.ok) {
-      throw new Error(`服务器错误: ${response.status}`);
+    const data = JSON.parse(text); // 尝试解析JSON
+    if (data.message === 'Success') {
+      this.user.avatar = data.avatar;
+      alert('头像上传成功');
+    } else {
+      alert('头像上传失败');
     }
-
-    const text = await response.text(); // 获取文本响应
-    try {
-      const data = JSON.parse(text); // 尝试解析JSON
-      if (data.message === 'Success') {
-        this.user.avatar = data.avatar;
-        alert('头像上传成功');
-      } else {
-        alert('头像上传失败');
-      }
-    } catch (e) {
-      console.error('解析响应时出错:', e);
-      console.error('响应内容:', text); // 打印出响应内容
-      alert('头像上传失败: 服务器返回了无效的响应');
-    }
-  } catch (error) {
-    alert(`头像上传失败: ${error.message}`);
+  } catch (e) {
+    console.error('解析响应时出错:', e);
+    console.error('响应内容:', text); // 打印出响应内容
+    alert('头像上传失败: 服务器返回了无效的响应');
   }
+} catch (error) {
+  alert(`头像上传失败: ${error.message}`);
+}
 }
 ,
    async acceptFriendRequest(request) {
@@ -587,7 +597,7 @@ export default {
             width: 80px;
             height: 40px;
             right: 50px;
-            bottom: -140px;
+            bottom: -160px;
             text-decoration: none;
             margin-bottom: 90px;
             position: absolute;
@@ -698,7 +708,7 @@ export default {
             margin-right: 5px;
         }
 
-        .editing input[type=text] {
+        .editing input[type=text], .editing input[type=password] {
             outline: none;
             border-width: 1px;
             border-style: solid;
@@ -959,4 +969,24 @@ export default {
             background: #3FB6A8;
             transform: scale(1.05);
         }
+        
+        @keyframes handRotate {
+  0% {
+    --hand-rotate: 8deg;
+  }
+  33% {
+    --hand-rotate: -45deg;
+  }
+  66% {
+    --hand-rotate: 15deg;
+  }
+  100% {
+    --hand-rotate: 0;
+  }
+}
+
+.button.liked {
+  animation: handRotate 0.5s ease forwards;
+}
+
 </style>
