@@ -142,6 +142,27 @@ class PostView(APIView):
                 "message": "Success"
             }, status=status.HTTP_201_CREATED)
 
+        elif method == 'like':
+            post_id = request.data.get('post_id')
+
+            try:
+                post = Post.objects.get(post_id=post_id)
+            except Post.DoesNotExist:
+                return Response({'error': 'Post not found'}, status=status.HTTP_404_NOT_FOUND)
+
+            # 检查帖子是否已经在用户的点赞列表中
+            if post_id in user.user_like:
+                # 如果已经点赞，则取消点赞
+                user.user_like.remove(post_id)
+            else:
+                # 如果未点赞，则添加点赞
+                user.user_like.append(post_id)
+
+            user.save()
+
+            return Response({
+                "message": "Success"
+            }, status=status.HTTP_200_OK)
         else:
             return Response({"message": "Invalid method"}, status=status.HTTP_400_BAD_REQUEST)
 

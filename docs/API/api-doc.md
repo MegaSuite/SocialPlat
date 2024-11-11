@@ -201,6 +201,31 @@
 }
 ```
 
+### 点赞帖子
+
+请求头：
+
+- **Authorization**: `Bearer <your-authentication-token>`
+- **Content-Type**: `application/json`
+
+请求体：
+
+```json
+{
+    "user_id": "用户的唯一标识符",
+    "post_id": "每篇帖子的唯一编号",
+    "method": "like"
+}
+```
+
+响应体：
+
+```json
+{
+    "message": "Success"/"Failed"
+}
+```
+
 
 
 ## ✔️个人资料
@@ -238,6 +263,7 @@
     "user_custom_gender": "自定义性别",
     "user_hobbies": [2, 4, 6, ... ],
     "user_characters": [],
+    "user_like": [1, 2, 4, ...],
     "avatar":"头像链接"
 }
 ```
@@ -330,7 +356,7 @@
 
 ## ✔️相似推荐
 
-### ✔️获取推荐好友列表
+### 获取推荐好友列表
 
 > API 端点： https://api.caay.ru/recommend/
 
@@ -343,7 +369,8 @@
 
 ```json
 {
-	"user_id": "当前登录用户的唯一标识符"
+	"user_id": "当前登录用户的唯一标识符",
+    "method": "friends"
 }
 ```
 
@@ -440,6 +467,77 @@
     ]
 }
 ```
+
+### 获取推荐帖子
+
+请求头：
+
+- **Authorization**: `Bearer <your-authentication-token>`
+- **Content-Type**: `application/json`
+
+请求体：
+
+```json
+{
+	"user_id": "当前登录用户的唯一标识符",
+    "method": "posts"
+}
+```
+
+响应体：
+
+```json
+{
+    "posts":
+    	[
+        	{
+                "post_id": "帖子的编号", 
+                "post_author_id": "用户的唯一编号",
+                "post_author": "帖子的作者", 
+                "post_title": "帖子的标题", 
+                "post_content": "帖子的内容", 
+                "post_comments": 
+            		[
+                    	{
+                        	"comment_id": "评论的编号",
+                            "comment_content": "评论的内容",
+                            "comment_author_id": "用户的唯一标识",
+                            "comment_author": "评论的作者",
+                        },
+                    	{
+                        	"comment_id": "评论的编号",
+                            "comment_content": "评论的内容",
+                            "comment_author_id": "用户的唯一标识",
+                            "comment_author": "评论的作者",
+                        },
+                    ]
+            },
+        	{
+                "post_id": "帖子的编号", 
+                "post_author": "帖子的作者", 
+                "post_title": "帖子的标题", 
+                "post_content": "帖子的内容", 
+            		[
+                    	{
+                        	"comment_id": "评论的编号",
+                            "comment_content": "评论的内容",
+                            "comment_author_id": "用户的唯一标识",
+                            "comment_author": "评论的作者",
+                        },
+                    	{
+                        	"comment_id": "评论的编号",
+                            "comment_content": "评论的内容",
+                            "comment_author_id": "用户的唯一标识",
+                            "comment_author": "评论的作者",
+                        },
+                    ]
+            },
+        ],
+    "message": "Success"/"Failed"
+}
+```
+
+#### 推荐函数
 
 
 

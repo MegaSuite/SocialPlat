@@ -14,6 +14,7 @@ class UserProfile(models.Model):
     user_custom_gender = models.CharField(max_length=100, blank=True, null=True)
     user_hobbies = models.JSONField(default=list)
     user_characters = models.JSONField(default=list)
+    user_like = models.JSONField(default=list)
 
     USERNAME_FIELD = 'user_contact'
 
