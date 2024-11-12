@@ -372,12 +372,15 @@ try {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        user_id: this.user.id,
-        friend_request_id: request.id,
+        user_id: this.userId,
+        friend_request_id: request.friend_request_id,
         method: 'accept' // 更正为小写
       })
     });
+    console.log(this.userId);
+    console.log(request.id);
     const data = await response.json();
+    console.log(data);
     if (data.message === 'Success') {
       // 将好友的兴趣数字转换为标签
       data.friends.forEach(friend => {
@@ -402,8 +405,8 @@ try {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        user_id: this.user.id,
-        friend_request_id: request.id,
+        user_id: this.userId,
+        friend_request_id: request.friend_request_id,
         method: 'refuse' // 更正为小写
       })
     });
