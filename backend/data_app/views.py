@@ -187,7 +187,7 @@ class AvatarView(APIView):
                 user_profile.avatar = avatar
                 user_profile.save()
                 return Response({
-                    "avatar": request.build_absolute_uri(user_profile.avatar.url),
+                    "avatar": request.build_absolute_uri(user_profile.avatar.url).replace('http://', 'https://'),
                     "message": "Success"
                 }, status=status.HTTP_200_OK)
             else:
@@ -196,7 +196,7 @@ class AvatarView(APIView):
         elif method == 'request':
             if user_profile.avatar:
                 return Response({
-                    "avatar": request.build_absolute_uri(user_profile.avatar.url),
+                    "avatar": request.build_absolute_uri(user_profile.avatar.url).replace('http://', 'https://'),
                     "message": "Success"
                 }, status=status.HTTP_200_OK)
             else:
@@ -246,7 +246,7 @@ class RelationView(APIView):
             return Response({
                 'friends': friend_serializer.data,
                 'friendRequests': request_serializer.data,
-                'avatar': request.build_absolute_uri(user.avatar.url) if user.avatar else None,
+                'avatar': request.build_absolute_uri(user.avatar.url).replace('http://', 'https://') if user.avatar else None,
                 'message': 'Success'
             }, status=status.HTTP_200_OK)
 
@@ -345,7 +345,7 @@ class RecommendView(APIView):
                     "user_name": rec_user.user_name,
                     "user_job": rec_user.user_job,
                     "user_hobbies": rec_user.user_hobbies,
-                    "avatar_url": request.build_absolute_uri(rec_user.avatar.url) if rec_user.avatar else None
+                    "avatar_url": request.build_absolute_uri(rec_user.avatar.url).replace('http://', 'https://') if rec_user.avatar else None
                 })
             except UserProfile.DoesNotExist:
                 continue
