@@ -22,12 +22,13 @@
             <img :src="post.avatar_url" alt="用户头像" class="avatar">
             {{ post.post_title }}
         </h4>
-        <button class="button">
-        <div class="hand">
-            <div class="thumb"></div>
-        </div>
-        <span>Like<span>d</span></span>
-    </button>
+<button class="button" @click="likePost(post.post_id, $event)">
+  <div class="hand">
+    <div class="thumb"></div>
+  </div>
+  <span>Like<span>d</span></span>
+</button>
+
         <p>{{ post.post_content }}</p>
         <p class="author">作者: {{ post.post_author }}</p>
         <div class="comments">
@@ -68,31 +69,36 @@ export default {
             },
             methods: {
 
-  async likePost(postId) {
+  async likePost(postId, event) {
+    const button = event.currentTarget;
     const userId = localStorage.getItem('id');
 
-    try {
-      const response = await fetch('https://api.caay.ru/posts/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          user_id: userId,
-          post_id: postId,
-          method: 'like'
-        })
-      });
-      const data = await response.json();
-      if (data.message === 'Success') {
-        ;
-      } else {
-        alert('点赞失败');
+    if (!button.classList.contains('liked')) {
+      button.classList.add('liked');
+      try {
+        const response = await fetch('https://api.caay.ru/posts/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            user_id: userId,
+            post_id: postId,
+            method: 'like'
+          })
+        });
+        const data = await response.json();
+        if (data.message === 'Success') {
+          console.log(postId,userId);
+        } else {
+          alert('点赞失败');
+        }
+      } catch (error) {
+        console.error('点赞失败:', error);
       }
-    } catch (error) {
-      console.error('点赞失败:', error);
     }
-  },
+  }
+,
 
                 async fetchPosts() {
                     // const token = localStorage.getItem('token');
@@ -234,15 +240,6 @@ async fetchAvatar(userId) {
 mounted() {
   this.fetchPosts();
 
-  document.querySelectorAll('.button').forEach((button, index) => {
-    button.addEventListener('click', () => {
-      const postId = this.posts[index].post_id;
-      if (!button.classList.contains('liked')) { // 如果按钮没有 'liked' 类，则执行
-        button.classList.add('liked'); // 添加 'liked' 类
-        this.likePost(postId); // 调用 likePost 方法
-      }
-    });
-  });
 }           
 };
 </script>
