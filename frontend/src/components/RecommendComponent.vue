@@ -74,6 +74,9 @@ export default {
             // 将推荐好友的 user_hobbies 数字转换为标签
             data.recommendations.forEach(recommendation => {
               recommendation.user_hobbies = recommendation.user_hobbies.map(hobbyNum => this.allHobbyTags[hobbyNum - 1]);
+              if (!recommendation.avatar_url) {
+  recommendation.avatar_url = 'https://th.bing.com/th/id/R.0c6a30ee64cf42d788eca10a354486b4?rik=GO2BPZRVXLZLjA&riu=http%3a%2f%2fpic.616pic.com%2fys_img%2f00%2f06%2f27%2f5m1AgeRLf3.jpg&ehk=RRvYVrwY6LF9Uu6PfdgDeoHVfYjf2tVywa5xUOJzWaU%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1';
+}
             });
             this.recommendations = data.recommendations;
           } else {
@@ -121,8 +124,17 @@ export default {
     }
   },
   mounted() {
-    this.fetchRecommendations(); // 获取推荐好友
-  }
+  this.fetchRecommendations();
+  
+  const carousel = document.querySelector('.carousel-inner');
+  carousel.addEventListener('mouseenter', () => {
+    carousel.classList.add('paused');
+  });
+  carousel.addEventListener('mouseleave', () => {
+    carousel.classList.remove('paused');
+  });
+}
+
 };
 </script>
 
@@ -142,12 +154,6 @@ export default {
             overflow: hidden;
             flex-direction: column;
             align-items: center;
-        }
-
-        .carousel-inner {
-            display: flex;
-            width: 100%;
-            animation: slide linear infinite;
         }
 
         .friend-card {
@@ -179,6 +185,7 @@ export default {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            padding: 0 30px;
         }
 
         .friend-info p {
@@ -217,21 +224,25 @@ export default {
             background-color: #319e86;
         }
 
-        /* 定义平移动画 */
-        @keyframes slide {
-            0% {
-                transform: translateX(100%);
-            }
+       /* 定义平移动画 */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-110%);
+  }
+}
 
-            100% {
-                transform: translateX(-110%);
-            }
+.carousel-inner {
+            display: flex;
+            width: 5000px;
+            animation: slide 30s linear infinite;
         }
+.carousel-inner.paused {
+  animation-play-state: paused;
+}
 
-        /* 暂停动画的类 */
-        .paused {
-            animation-play-state: paused;
-        }
 
         h1 {
             color: #fff;
