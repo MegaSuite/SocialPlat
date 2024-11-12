@@ -323,7 +323,7 @@ class RecommendView(APIView):
                 "user_character": u.user_characters
             }
             user_data_list.append(user_data)
-
+        print(user_data_list)
         # 获取用户的帖子内容
         user_posts = Post.objects.filter(post_author=user)
         user_post_content = [
@@ -332,10 +332,10 @@ class RecommendView(APIView):
                 "post_content": post.post_content
             } for post in user_posts
         ]
-
+        print(user_post_content)
         # 调用推荐函数
         recommendations = rcm_friends(user_data_list, user_post_content)
-
+        print(recommendations)
         # 获取推荐的用户详情
         recommended_users = []
         for rec_user_id in recommendations.get(int(user_id), []):
@@ -351,6 +351,7 @@ class RecommendView(APIView):
             except UserProfile.DoesNotExist:
                 continue
 
+        print(recommended_users)
         return Response({
             "recommendations": recommended_users,
             "message": "Success"
