@@ -309,7 +309,7 @@ class RecommendView(APIView):
             return Response({'error': 'User not found'}, status=status.HTTP_404_NOT_FOUND)
 
         # 获取所有用户数据
-        all_users = UserProfile.objects
+        all_users = UserProfile.objects.all()
         user_data_list = []
         for u in all_users:
             user_data = {
