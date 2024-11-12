@@ -338,7 +338,7 @@ class RecommendView(APIView):
 
         # 获取推荐的用户详情
         recommended_users = []
-        for rec_user_id in recommendations.get(str(user_id), []):
+        for rec_user_id in recommendations.get(int(user_id), []):
             try:
                 rec_user = UserProfile.objects.get(id=rec_user_id)
                 recommended_users.append({
